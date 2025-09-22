@@ -375,8 +375,8 @@
 				const type = list.getAttribute('class');
 				const name = document.createElement('span');
 				const button = list.querySelector('button');
-				name.append(type);
-				list.append(name);
+				// name.append(type);
+				// list.append(name);
 				button.addEventListener('click', () => {
 					window.location.href = `${src}/CUI.html?type=${type}`;
 				});
