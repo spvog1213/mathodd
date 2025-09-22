@@ -1,0 +1,69 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	background-position: 184px 40px;
+	width: 1292px;
+	height: 768px;
+}
+
+#answerObject1, #answerObject2, #answerObject3, #question1, #question2, #question3 {
+	background: none;
+}
+
+.circle {
+	width: 167px;
+	height: 167px;
+	border: 0px;
+	border-radius: 0px;
+	background: rgba(0, 0, 0, 0.0);
+	z-index: 2;
+	line-height: 181px;
+	font-size: 60px;
+}
+
+#puzzleBg {
+	position: absolute;
+	width: 683px;
+	height: 684px;
+	top: 42px;
+	left: 94px;
+	background: rgba(0, 0, 0, 0.0);
+}
+
+#choiceBg{
+	position: absolute;
+	left: -1px;
+	z-index: -25;
+}
+
+#number{
+	position: absolute;
+	width: 668px;
+	top: 48px;
+	left: 102px;
+}
+
+.numberText{
+	width: 167px;
+	height: 167px;
+	font-size: 60px;
+	text-align: center;
+	line-height: 176px;
+	float: left;
+	font-family: NanumGothicExtraBold;
+	cursor: default;
+
+}
+
+#bgBackground{
+	position: absolute;
+	width: 683px;
+	height: 684px;
+	top: 42px;
+	left: 94px;
+	background: rgba(0, 0, 0, 0.0);
+}

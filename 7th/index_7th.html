@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd2</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<style type="text/css">
+			body {
+				padding: 0;
+				margin: 0;
+			}
+			ul {
+				width: 100%;
+				padding: 0;
+				list-style-type : none;
+			}
+			ul li {
+				padding: 6px 20px 6px 20px;
+				background-color: #ededed;
+				color: #333;
+				font-weight: bold;
+				line-height: 26px;
+				border-bottom: 1px solid #ccc;
+
+			}
+			ul li:nth-child(1) {
+				padding: 8px 20px 9px 20px;
+				background-color: #333;
+				color: #fff;
+				font-size: 20px;
+
+			}
+			button {
+				/*position: absolute;*/
+				/*right: 20px;*/
+				width: 70px;
+				height: 25px;
+
+			}
+			li span {
+				vertical-align: top;
+			}
+		</style>
+		<script type="text/javascript">
+			function loadingDemo (type) {
+				window.location.href = 'CUI.html?type=' + type;
+			}
+
+
+
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>MathOdd - 7th</li>
+			<!-- 1st -->
+			<li class="7th_dollshooting"><span>인형사격장</span></li>
+			<li class="7th_connectTrain"><span>기차 분수 계산</span></li>
+			<li class="7th_findNumber"><span>수찾기</span></li>
+			<li class="7th_flyballoon"><span>풍선날리기 분수 계산</span></li>
+			<li class="7th_verticalSum_prNumber"><span>소수 세로셈</span></li>
+			<li class="7th_pairCard"><span>짝찾기</span></li>
+			<li class="7th_parking2"><span>주차하기2</span></li>
+			<li class="7th_slotMachine"><span>슬롯머신 분수계산</span></li>
+			<li class="7th_frogJump"><span>개구리 점프3</span></li>
+			<li class="7th_secondFloorTrain"><span>기차_큰 수</span></li>
+			<li class="7th_convertDivision"><span>나눗셈 변환</span></li>
+			
+			<!-- 2st -->
+			<li class="7th_prNumberHanger"><span>소수로 나누기 가로셈</span></li>
+			<li class="7th_buyGoods"><span>물건 구매</span></li>
+			<li class="7th_multipleFraction"><span>진분수×자연수</span></li>
+			<li class="7th_makeSimpleFraction"><span>매쓰실린더_기약분수</span></li>
+			<li class="7th_divideWool"><span>털실 나누기</span></li>
+			<li class="7th_shootingDrop"><span>레일</span></li>
+			<li class="7th_shootingNumber"><span>레일_자리숫자</span></li>
+			<li class="7th_shootingOrder"><span>레일_계산 순서</span></li>
+			<li class="7th_matchDcPoint"><span>소수점 맞추기</span></li>
+			<li class="7th_findDcPoint"><span>소수점 위치 찾기</span></li>
+
+			<!-- 3st -->
+			<li class="7th_numCardSum"><span>세로셈_숫자카드</span></li>
+			<li class="7th_makeFormula"><span>식 만들기</span></li>
+			<li class="7th_moveBox"><span>카드 옮기기(힌트)</span></li>
+			<li class="7th_moveBox_noHint"><span>카드 옮기기</span></li>
+			<li class="7th_comparePrice"><span>가격 비교</span></li>
+			<li class="7th_seesaw"><span>시소(힌트)</span></li>
+			<li class="7th_seesaw_noHint"><span>시소(힌트없음)</span></li>
+			<li class="7th_submarine"><span>잠수함</span></li>
+
+			<!-- 4st -->
+			<li class="7th_panBalance"><span>양팔저울(힌트)</span></li>
+			<li class="7th_panBalance_noHint"><span>양팔저울(힌트없음)</span></li>
+			<li class="7th_sumPrFraction"><span>진분수그림 계산</span></li>
+			<li class="7th_subtractMixFraction"><span>대분수 뺄셈 그림 계산</span></li>
+			<li class="7th_addMixFraction"><span>대분수 덧셈 그림 계산</span></li>
+			<li class="7th_GCD_LCM"><span>최대공약수, 최소공배수</span></li>
+			<li class="7th_transport"><span>화물선</span></li>
+
+			<!-- 5st -->
+			<li class="7th_mobile"><span>모빌</span></li>
+			<li class="7th_changeBlockM"><span>블록 교체(곱셈)</span></li>
+			<li class="7th_reduceBlock_2"><span>블록 약분(두 수)</span></li>
+			<li class="7th_changeBlockD"><span>블록 교체 (나눗셈)</span></li>
+			<li class="7th_reduceBlock_3"><span>블록 약분(세 수)</span></li>
+			<li class="7th_changeBlockD_addSymbol"><span>블록 교체(세 수 나눗셈)</span></li>
+			<li class="7th_changeGoods"><span>화물 교체</span></li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		window.onload = function () {
+			var list = document.querySelectorAll('li'),
+				nameArray = [];
+
+			for (var i = 0; i < list.length; i++) {
+				if (list[i].getAttribute('class')) {
+					var name = list[i].classList[0],
+						clickBtn = document.createElement('button');
+
+					nameArray.push(name);
+					clickBtn.innerHTML = "click";
+					clickBtn.className = "clickBtn_" + i;
+					clickBtn.style.marginLeft = '20px';
+					clickBtn.addEventListener('mousedown', function(e){
+						var idx = e.target.className.split('_')[1];
+						loadingDemo(nameArray[idx-1]);
+					});
+
+					list[i].childNodes[0].innerHTML += '('+name+')';
+					list[i].appendChild(clickBtn);
+				}
+			}
+		}
+	</script>
+</html>

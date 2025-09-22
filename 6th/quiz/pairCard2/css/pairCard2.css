@@ -1,0 +1,74 @@
+body {
+/*    background: url("../images/bgImg.png") no-repeat;
+    background-position: 0 -116px;
+    width: 1024px;
+    height: 768px;
+    background-size: cover;
+*/}
+
+#bgCanvas {
+    /*position: absolute;*/
+    /*left: 285px;*/
+    width: 1229px;
+    height: 768px;
+}
+
+/*#cardWrap {
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    width: 1024px;
+    height: 768px;
+    line-height: 768px;
+}
+
+#cardAlign {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 0px;
+}
+*/
+.cardContainer{
+/*    width: 100%;
+*/    position: absolute;
+    top: 90px;
+    /*padding-left: 100px;*/
+}
+.cardBox {
+    position: relative;
+    display: inline-block;
+    width: 240px;
+    height: 243px;
+    margin: 10px 15px;
+    cursor: default;
+}
+
+.cardText {
+    position: absolute;
+    left: 20px;
+    font-family: NanumGothicExtraBold;
+    font-size: 44px;
+    color: #000000;
+    width: 200px;
+    /*line-height: 141px;*/
+    height: 243px;
+    display: table;
+    text-align: center;
+    cursor: default;
+    z-index: 5;
+    /*margin-top: 45px;*/
+    margin-left: 20px;
+}
+.cardTextMiddle{
+    display: table-cell;
+    vertical-align: middle;
+}
+.cardBack ,.cardObj {
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    z-index: -1
+}
+.cardBack{
+    opacity: 0;
+}

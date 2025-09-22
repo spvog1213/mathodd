@@ -1,0 +1,95 @@
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+	font-family: NanumGothicExtraBold;
+	font-size: 70px;
+}
+.doneBtn, .doneBtn_on{
+	position: absolute;
+	width: 98px;
+	height: 106px;
+	top:50px;
+}
+.doneBtn{
+	left : 960px;
+    top: 520px;
+	background:	url(../../../images/common/checkBtnRed.png) no-repeat;
+}
+.doneBtn_on{
+	z-index:100;
+	visibility:hidden;
+}
+
+.swBg {
+	position:absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+}
+
+.swSlotsWrapper {
+	position:relative;
+	display: block;
+	width: 100%;
+	overflow: hidden;
+}
+
+.swSlots li {
+	width: 100px;
+	height : 100px;
+	line-height: 210px;
+	opacity : 0.3;
+}
+
+[class*="slot_"] {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	/*background:url(../images/mathStick.png) no-repeat;*/
+	width:106px;
+	height:218px;
+	margin-right: -2px;
+	/*height: 180px;*/
+	overflow: hidden;
+	/*z-index: 20;*/
+}
+
+[class*="quizText_"]{
+	position: absolute;
+	display: inline-block;
+	width: 200px;
+	height: 80px;
+}
+
+.num{
+	letter-spacing:58px;
+}
+
+
+[class*="slotBack_"] {
+	background:url(../images/mathStick.png) no-repeat;
+	display: inline-block;
+	width: 106px;
+	height: 226px;
+}
+
+/*.slotBack_1,.slotBack_4,.slotBack_7{
+	background:url("") no-repeat;
+}*/
+/*
+.slotBack_1{
+	margin-left:-10px;
+}
+
+.slotBack_3,.slotBack_6{
+	margin-left:-3px;
+}
+
+.slotBack_4,.slotBack_7{
+	width: 50px;
+	padding-right: 35px;
+	margin-left:-25px;
+}*/

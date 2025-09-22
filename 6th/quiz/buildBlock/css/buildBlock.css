@@ -1,0 +1,110 @@
+#bgCanvas {
+	position: absolute;
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+	font-family: NanumGothicExtraBold;
+}
+
+.quizTextBox{
+	display: inline-block;
+	margin-top: 50px;
+	margin-right: 400px;
+	width: 700px;
+	height: 170px;
+	font-size:50px;
+	line-height: 160px;
+	background: url(../images/textBox.png) no-repeat;
+}
+
+.explainBox{
+	position: absolute;
+	text-align: left;
+	width: 300px;
+	top: 105px;
+	left: 850px;
+	font-size:27px;
+	color: #603813;
+}
+
+.sampleBuildImage {
+	position: absolute;
+	width: 260px;
+	height: 260px;
+	top : 330px;
+	left: 70px;
+}
+
+.buildBlockArea {
+	position: absolute;
+	background: url(../images/buildBlockArea.png) no-repeat;
+	border-radius: 10px;
+	width: 403px;
+	height: 334px;
+	vertical-align: middle;
+	top:280px;
+	left:370px;
+}
+
+.buildBtnConatinerBack{
+	position: absolute;
+	left: 830px;
+	top:190px;
+	width: 346px;
+	height: 360px;
+	background: url(../images/btnBox.png) no-repeat;
+	text-align: center;
+
+}
+
+.buildBtnConatiner {
+	display: inline-block;
+	width: 276px;
+	font-size: 0;
+	margin-top: 35px;
+
+	vertical-align: middle;
+}
+
+
+.blockBtn {
+	display: inline-block;
+	vertical-align: middle;
+	float: left;
+	width: 92px;
+	height: 92px;
+	font-size: 50px;
+	font-family: NanumGothicExtraBold;
+	-webkit-text-stroke: 1px #fff;
+	line-height: 90px;
+	background:url(../images/btn.png) no-repeat;
+}
+
+.block {
+	position: absolute;
+	width: 86px;
+	height: 104px;
+	background: url(../images/buildBlock_sampleBlock_wood.png) no-repeat;
+}
+
+[class*="resetBtn"]{
+	position: absolute;
+	width: 98px;
+	height:106px;
+	top : 560px;
+	left: 880px;
+}
+
+[class*="correctBtn"]{
+	position: absolute;
+	width: 98px;
+	height: 106px;
+	top : 560px;
+	left: 1040px;
+}
+
+
+
+
+
+

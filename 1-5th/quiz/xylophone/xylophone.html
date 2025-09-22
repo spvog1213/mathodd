@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>MathOdd : keypadCountClick</title>
+        <link rel="stylesheet" type="text/css" href="../../css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/xylophone.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+        <script type="text/javascript" src="../../js/libs/event.js"></script>
+        <script type="text/javascript" src="../../js/libs/scene.js"></script>
+        <script type="text/javascript" src="../../js/libs/dragdrop.js"></script>
+        <script type="text/javascript" src="../../js/libs/animation.js"></script>
+        <script type="text/javascript" src="../../js/libs/sound.js"></script>
+        <script type="text/javascript" src="../../js/libs/logCounter.js"></script>
+        <script type="text/javascript" src="js/xylophone.js"></script>
+    </head>
+
+    <body>
+        <div id="bgCanvas">
+            <div class="bg">
+                <div id="currentQuestion"><img src="images/checkmark.png">
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+			function setDrillContentsInit(val, answer) {
+
+				gameManager.TOTAL_ANSWER_ARRAY = val;
+				gameManager.CURRENT_ANSWER = answer;
+
+				var streamSound;
+
+				gameManager.keypadImgArray = ['images/xylophone_1.png', 'images/xylophone_2.png', 'images/xylophone_3.png', 'images/xylophone_4.png', 'images/xylophone_5.png', 'images/xylophone_6.png', 'images/xylophone_7.png', 'images/xylophone_8.png'];
+				gameManager.keypadImgHoverArray = ['images/xylophone_1_click.png', 'images/xylophone_2_click.png', 'images/xylophone_3_click.png', 'images/xylophone_4_click.png', 'images/xylophone_5_click.png', 'images/xylophone_6_click.png', 'images/xylophone_7_click.png', 'images/xylophone_8_click.png'];
+				gameManager.SoundArray = ['media/Xylophone_0.mp3', 'media/Xylophone_1.mp3', 'media/Xylophone_2.mp3', 'media/Xylophone_3.mp3', 'media/Xylophone_4.mp3', 'media/Xylophone_5.mp3', 'media/Xylophone_6.mp3', 'media/Xylophone_7.mp3'];
+				gameManager.choiceQuestion = [gameManager.TOTAL_ANSWER_ARRAY[1], gameManager.TOTAL_ANSWER_ARRAY[2]];
+				gameManager.choiceQuestionText = [gameManager.TOTAL_ANSWER_ARRAY[1], gameManager.TOTAL_ANSWER_ARRAY[2]];
+				gameManager.CURRENT_TYPE = 'click';
+				gameManager.sliceQuestion = [];
+				for (var i = 1; i < gameManager.TOTAL_ANSWER_ARRAY.length; i++) {
+					gameManager.sliceQuestion[i] = gameManager.TOTAL_ANSWER_ARRAY[i];
+
+				}
+
+				gameManager.choiceQuestion = [ typeof (gameManager.sliceQuestion[1]) === 'number' ? gameManager.sliceQuestion[1] : convertNumber(gameManager.sliceQuestion[1]), typeof (gameManager.sliceQuestion[2]) === 'number' ? gameManager.sliceQuestion[2] : convertNumber(gameManager.sliceQuestion[2])];
+				gameManager.zoomRate = 0;
+				gameManager.choiceQuestionPosition = [];
+				gameManager.btnimg = ['images/num_box.png', 'images/num_box.png']
+
+				initScale();
+
+				initScene();
+
+				initxylophone();
+
+				initSound();
+
+				logCounter = new LogCounter();
+				logCounter.startTime();
+				logCounter.onTimer();
+			}
+
+			/*---------- test code start -----------*/
+			window.onload = function() {
+
+				setDrillContentsInit([9, '여덟째', '아홉째'], [9]);
+
+			}
+			/*---------- test code end -----------*/
+        </script>
+    </body>
+</html>

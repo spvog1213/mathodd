@@ -1,0 +1,146 @@
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0;
+	font-family: NanumGothicExtraBold;
+}
+.title {
+	position: absolute;
+	top: 35px;
+	left: 0;
+	width: 1230px;
+	color: #fff;
+	line-height: 75px;
+	font-size: 45px;
+	text-align: center;
+}
+.titleInner {
+	position: relative;
+	display: inline-block;
+	background: url(../images/textLine.png) center bottom / 100% auto no-repeat;
+}
+
+/* dropArea */
+[class*="dropArea"] {
+	position: absolute;
+	width: 187px;
+	height: 194px;
+	background: url(../images/block_3.png) no-repeat;
+}
+[class*="dropArea"] .text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font-size: 50px;
+	color: #000;
+	text-align: center;
+	line-height: 175px;
+}
+[class*="dropArea"] .text .bunsuDiv {
+	margin-left: -10px;
+}
+/* // dropArea */
+
+/* dragObj */
+.dragObj {
+	position: absolute;
+	width: 190px;
+	height: 194px;
+	background: url(../images/block_1.png) no-repeat;
+}
+.dragObj .text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font-size: 50px;
+	color: #fff;
+	text-align: center;
+	line-height: 175px;
+	cursor: pointer;
+}
+/* // dragObj */
+
+.guide {
+	position: absolute;
+	top: 140px;
+	left: 186px;
+	width: 840px;
+	height: 45px;
+	color: #b1e9ff;
+	text-align: center;
+	font-size: 35px;
+	line-height: 45px;
+}
+
+/* 분수, 분자, 분모 */
+.text span {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	color: #4a3313;
+}
+.text .int {
+	width: 80px;
+	height: 81px;
+	margin-right: 12px;
+	margin-left: -10px;
+	line-height: 70px;
+}
+.text .prop {
+	width: 80px;
+	height: 175px;
+}
+.text .prop > span {
+	display: block;
+	width: 80px;
+	height: 81px;
+	line-height: 70px;
+}
+.text .prop .bunja {
+	margin-bottom: 15px;
+}
+
+[class*="block_"] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: center / 100% auto no-repeat;
+}
+.block_1.img { background-image: url(../images/blockCircle_1.png); }
+.block_2.img { background-image: url(../images/blockCircle_2.png); }
+.block_3.img { background-image: url(../images/blockCircle_3.png); }
+
+.block_1.pushedImg { background-image: url(../images/blockCircle_1_push.png); }
+.block_2.pushedImg { background-image: url(../images/blockCircle_2_push.png); }
+.block_3.pushedImg { background-image: url(../images/blockCircle_3_push.png); }
+
+.pushedImg {
+	opacity: 1;
+	visibility: visible;
+}
+.pushedImg {
+	opacity: 0;
+	visibility: hidden;
+}
+.pushed .img {
+	opacity: 0;
+	visibility: hidden;
+}
+.pushed .pushedImg {
+	opacity: 1;
+	visibility: visible;
+}
+
+.value {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/* // 분자, 분모 */

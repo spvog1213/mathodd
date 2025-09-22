@@ -1,0 +1,103 @@
+body {
+	/*background: url('../images/bgImg.png') no-repeat;*/
+	/*background-position: 0 -116px;*/
+	/*background-size: cover;*/
+}
+#bgCanvas {
+	width: 1024px;
+	height: 768px;
+	font-family: NanumGothicExtraBold;
+	font-size: 25px;
+	/*background: url('../images/buyGoods_bg.png') no-repeat;
+	background-size: 1024px 768px;*/
+}
+.obgBg{
+	position: absolute;
+	top: 50px;
+	left: 70px;
+	width: 398px;
+	height: 416px;
+	background: url(../images/moneyBoard.png);
+}
+.moneyBg{
+	position: absolute;
+	top: 30px;
+	right: -80px;
+	width: 564px;
+	height: 458px;
+	background: url(../images/moneyPlate.png);
+}
+.moneyBgText{
+	position: absolute;
+	font-family: NanumGothicExtraBold;
+	font-size: 46px;
+	top: 195px;
+	left: 140px;
+	color: rgba(0, 0, 0, .5);
+}
+.object{
+	position: absolute;
+	width: 300px;
+	z-index: 1;
+}
+.moneyText{
+	position: absolute;
+    top: 386px;
+    left: 72px;
+    width: 350px;
+    height: 60px;
+    font-size: 46px;
+    text-align: right;
+}
+
+.checkBtn{
+    position: absolute;
+    top: 388px;
+    right: -190px;
+    width: 98px;
+    height: 106px;
+    background: url(../../../images/common/checkBtnRed.png) no-repeat;
+    cursor: pointer;
+}
+.doneBtn_on{
+	z-index:100;
+	visibility:hidden;
+}
+
+.drag{
+	position: absolute;
+	width:312px;
+	height:113px;
+	cursor: pointer;
+}
+
+.dropArea {
+	position: absolute;
+	top: 120px;
+	right: -65px;
+	width: 530px;
+	height: 358px;
+	z-index: 1;
+	pointer-events: none;
+	/*border: 1px dotted red;*/
+}
+
+.drag_9{
+	pointer-events: none;
+	cursor: default;
+}
+
+.moneyCount{
+	position: absolute;
+	width:124px;
+	height:86px;
+	z-index: 1;
+	background: url(../images/moneyQuantity.png);
+}
+.moneyCount span{
+	display: inline-block;
+	font-family: NanumGothicExtraBold;
+	font-size: 46px;
+	margin-left: 28px;
+	margin-top: 14px;
+}

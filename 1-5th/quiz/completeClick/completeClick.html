@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd : CoinCountClick</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/completeClick.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<script type="text/javascript" src="../../js/libs/event.js"></script>
+		<script type="text/javascript" src="../../js/libs/scene.js"></script>
+		<script type="text/javascript" src="../../js/libs/animation.js"></script>
+		<script type="text/javascript" src="../../js/libs/sound.js"></script>
+		<script type="text/javascript" src="../../js/libs/logCounter.js"></script>
+		<script type="text/javascript" src="../../js/libs/convertNumber.js"></script>
+		<script type="text/javascript" src="js/completeClick.js"></script>
+	</head>
+
+	<body>
+		<div id="bgCanvas">
+			<img src="images/keypad_confirm.png" id = "checkBtn"/> 
+		</div>
+
+		<script type="text/javascript">
+
+			function setDrillContentsInit(val, answer) {
+
+				gameManager.TOTAL_ANSWER_ARRAY = val;
+                gameManager.CURRENT_ANSWER = answer;
+
+			
+				gameManager.choiceQuestionText = [];
+				gameManager.choiceQuestion = [];
+				gameManager.choiceQuestionPosition = [];
+					
+				gameManager.coinArray100=[];
+				gameManager.coinArray10=[];
+				gameManager.coinArray1=[];
+				
+				gameManager.coinArray=[gameManager.coinArray100,gameManager.coinArray10,gameManager.coinArray1];
+				gameManager.CURRENT_TYPE = 'click'; 
+				gameManager.selectedQuestion = [];
+				gameManager.zoomRate = 0;
+				
+				
+				gameManager.zoomRate = 0
+
+				var streamSound;
+
+				initScale();
+
+				initScene();
+
+				initCoin();
+
+				initSound();
+
+				logCounter = new LogCounter();
+				logCounter.startTime();
+				logCounter.onTimer();
+
+			}
+
+			/*---------- test code start -----------*/ 
+			window.onload = function () {
+
+				setDrillContentsInit([431], [400,30,1]);
+
+			}
+			/*---------- test code end -----------*/ 
+
+		</script>
+	</body>
+</html>

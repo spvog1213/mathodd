@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd : fingerNumberCutDrag</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/finNum.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<script type="text/javascript" src="../../js/libs/event.js"></script>
+		<script type="text/javascript" src="../../js/libs/scene.js"></script>
+		<script type="text/javascript" src="../../js/libs/dragdrop.js"></script>
+		<script type="text/javascript" src="../../js/libs/animation.js"></script>
+		<script type="text/javascript" src="../../js/libs/sound.js"></script>
+		<script type="text/javascript" src="../../js/libs/logCounter.js"></script>
+		<script type="text/javascript" src="../../js/libs/convertNumber.js"></script>
+		<script type="text/javascript" src="js/finNuma.js"></script>
+	</head>
+
+	<body>
+		<div id="bgCanvas">
+
+			<div id="finger"></div>
+			<div id="UiText"></div>
+		</div>
+
+		<script type="text/javascript">
+
+			function setDrillContentsInit(val, answer) {
+
+				gameManager.TOTAL_ANSWER_ARRAY = val;
+                gameManager.CURRENT_ANSWER = answer;
+
+                gameManager.calculation = gameManager.TOTAL_ANSWER_ARRAY[gameManager.TOTAL_ANSWER_ARRAY.length-2];
+
+				gameManager.question = typeof (gameManager.TOTAL_ANSWER_ARRAY[0]) === 'number' ? gameManager.TOTAL_ANSWER_ARRAY[0] : convertNumber(gameManager.TOTAL_ANSWER_ARRAY[0]);
+				
+				gameManager.CURRENT_TYPE ='click';
+				gameManager.choiceQuestion = [];
+				for (var i = 2; i < gameManager.TOTAL_ANSWER_ARRAY.length-2; i++) {
+					gameManager.choiceQuestion.push(gameManager.TOTAL_ANSWER_ARRAY[i]);
+				}
+				gameManager.fingerImgArray = ['images/hand_0.png', 'images/hand_1.png', 'images/hand_2.png', 'images/hand_3.png', 'images/hand_4.png', 'images/hand_5.png'];
+
+				gameManager.choiceQuestionPosition = [];
+				gameManager.zoomRate = 0
+
+				var streamSound;
+
+				initScale();
+
+				initScene();
+
+				initNumber();
+
+				initSound();
+
+				logCounter = new LogCounter();
+				logCounter.startTime();
+				logCounter.onTimer();
+				
+			}	
+
+			/*---------- test code start -----------*/ 
+			window.onload = function () {
+			
+				setDrillContentsInit([3, 2, 3, 4, 5, '+' ,'A'], [5]);					
+
+			}
+			/*---------- test code end -----------*/ 
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,143 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	background: url("../images/cake_card.png") no-repeat;
+	background-position: 184px 40px;
+	width: 1292px;
+	height: 768px;
+}
+
+.fruits {
+	cursor: pointer;
+}
+
+#fruitsContainer {
+	text-align: center;
+	background: #FDFDFD;
+	border-radius: 25px;
+	height: 120px;
+	position: absolute;
+	border: 7px solid #66d1f1;
+}
+
+#UiText {
+	position: absolute;
+	top: 72%;
+	left: 175px;
+	font-family: NanumGothicExtraBold;
+	font-size: 100px;
+	color: #66d1f1;
+}
+
+#answerObject1 {
+	width: 100px;
+	height: 104px;
+	border: 0px;
+	border-radius: 0px;
+	background: rgba(0, 0, 0, 0.0);
+	cursor: default;
+	background: url('../images/cake_questionbox.png') no-repeat;
+}
+
+#answerObject2 {
+	width: 100px;
+	height: 104px;
+	border: 0px;
+	border-radius: 0px;
+	background: rgba(0, 0, 0, 0.0);
+	cursor: default;
+	background: url('../images/cake_questionbox.png') no-repeat;
+}
+
+#answerObject3 {
+	width: 100px;
+	height: 104px;
+	border: 0px;
+	border-radius: 0px;
+	background: rgba(0, 0, 0, 0.0);
+	cursor: default;
+	background: url('../images/cake_questionbox.png') no-repeat;
+}
+
+#question1, #question2, #question3 {
+	width: 136px;
+	height: 138px;
+	border: 0px;
+	border-radius: 0px;
+	background: rgba(0, 0, 0, 0.0);
+	/*background: url('../images/numpad_6.png') no-repeat;*/
+	z-index: 2;
+	cursor: default;
+}
+#question2 {
+	/*background: url('../images/numpad_2.png') no-repeat;*/
+}
+.circle {
+	width: 100px;
+	height: 104px;
+	border: 0px;
+	border-radius: 0px;
+	background: rgba(0, 0, 0, 0.0);
+	background: url('../images/cake_numbox.png') no-repeat;
+	z-index: 2;
+	line-height: 100px;
+	font-size: 60px;
+}
+
+.line {
+	width: 9px;
+	height: 100%;
+	top: 0px;
+	left: 743px;
+}
+
+#numpadBg {
+	position: absolute;
+	width: 312px;
+	height: 170px;
+	top: 256px;
+	left: 294px;
+	background: rgba(0, 0, 0, 0.0);
+	background: url('../images/cake_2.png') no-repeat;
+}
+
+#currentAnswer span, #currentNumber {
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;
+	color: #000;
+}
+
+#currentAnswer {
+	position: absolute;
+	/*top: 510px; */
+	left: 178px;
+	z-index: 1;
+}
+
+#cakeId {
+	position: absolute;
+	top: 150px;
+	cursor: default;
+}
+
+#cakeIdUnits {
+	position: absolute;
+	top: 270px;
+	cursor: default;
+}
+
+#cakeIdUnitsTree {
+	position: absolute;
+	top: 480px;
+	cursor: default;
+}
+
+#cakeIdThree {
+	position: absolute;
+    top: 390px;
+    cursor: default;
+}

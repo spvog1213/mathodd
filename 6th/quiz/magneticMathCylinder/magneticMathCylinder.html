@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd : magneticMathCylinder</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/magneticMathCylinder.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<script src="../../js/libs/require.js"></script>
+	</head>
+
+	<body>
+		<div id="bgCanvas">
+			<div id="result"></div>
+		</div>
+
+		<script type="text/javascript">
+		var cellHeight = 110;
+			function setDrillContentsInit(val, answer) {
+
+				console.log('> setDrillContentsInit! ', val, answer);
+
+				require.config({
+					baseUrl: '../../js/libs'
+				});
+
+				require(['event', 'sound', 'common', 'scene_n', 'dragdrop_n', 'animation_n', 'logCounter', 'convertNumber', '../../quiz/magneticMathCylinder/js/spinPicker', '../../quiz/magneticMathCylinder/js/magneticMathCylinder'],
+				function (Event, Sound, Scene, Dragdrop, Animation, lCounter, ConvertNumber, Fishing) {
+
+					var optionArray = [];
+					function convertOption (val) {
+						for (var i = 0; i < val.length; i++) {
+							if (val[i][0] == 'number') {
+								for (var j = 0; j < val[i][1].length; j++) {
+									var option = [[val[i][0], val[i][1][j]], 'readonly', 0];
+									optionArray.push(option);
+								}
+								// console.log('adsfsag',val[i][1],i)
+								for (var j = 0; j < val[i][1].length; j++) {
+									if(val[i][1][j] == ''){
+
+									}
+								}
+							} else {
+								// console.log('symbol :',val[i][1] == '')
+
+								if(val[i][1] == ''){
+									var option = [[val[i][0], ['+','-','*','/']], 'spin', 0];
+									optionArray.push(option);
+								} else{
+									var option = [[val[i][0], val[i][1]], 'readonly', 0];
+									optionArray.push(option);
+								}
+							}
+						}
+					}
+					convertOption(val);
+					gameManager.QUIZ_val = val;
+					gameManager.QUIZ_OPTION = optionArray;
+					gameManager.QUIZ_ANSWER = answer;
+					console.log('QUIZ_OPTION', gameManager.QUIZ_OPTION, optionArray)
+
+					gameManager.quizObj = [];
+
+					for (var i = 0; i < gameManager.QUIZ_OPTION.length; i++) {
+						gameManager.quizObj.push(gameManager.QUIZ_OPTION[i]);
+					}
+
+					gameManager.wrapperPos = [{top:236, left:12}];
+					gameManager.zoomRate = 0;
+					gameManager.BOUNDING_TYPE = 'left';
+					gameManager.soundEffct = 'media/connect.mp3';
+					gameManager.quizPosition = [];
+
+					gameManager.dabCount = 0;
+					gameManager.dropArea = [];
+					gameManager.dropIdx;
+
+					gameManager.value = [];
+					gameManager.key = [];
+					var streamSound;
+
+					initScale();
+
+					initScene();
+
+					initSound();
+
+					logCounter = new LogCounter();
+					logCounter.startTime();
+					logCounter.onTimer();
+
+				});
+
+
+			}
+
+			/*---------- test code start -----------*/
+			window.onload = function() {
+
+				setDrillContentsInit([['number', [1,1]], ['symbol', ['+']], ['number', [1]], ['symbol', ['=']], ['number', ['', '', '']]], [0,2,1]);
+			}
+
+
+
+			/*---------- test code end -----------*/
+
+		</script>
+	</body>
+</html>

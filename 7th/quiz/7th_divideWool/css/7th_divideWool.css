@@ -1,0 +1,171 @@
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+	font: 50px NanumGothicExtraBold;
+}
+
+.title {
+	position: relative;
+	top: 89px;
+	left: 100px;
+	width: 560px;
+	height: 80px;
+	background: #fff;
+	line-height: 1.6;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: inset 0px 3px rgba(0, 0, 0, .15);
+}
+
+.questionImg {
+	position: absolute;
+	width: 210px;
+	height: 170px;
+	background: center no-repeat;
+	/*background-color: rgba(0, 0, 0, .1);*/
+}
+
+.questionImg > .number {
+	line-height: 180px;
+}
+
+.answerImg {
+	position: absolute;
+	top: 129px;
+	left: 739px;
+	width: 100px;
+	height: 100px;
+	background: center no-repeat;
+	z-index: 1;
+}
+.answerImg_0 {
+	background-size: 100% auto;
+}
+.answerImg_1 {
+	left: 975px;
+}
+
+.slotBg {
+	position: absolute;
+	top: 118px;
+	left: 712px;
+	width: 153px;
+	height: 419px;
+	background: url(../images/verticalSpinBox.png);
+}
+.slotBg_1 {
+	left: 948px;
+}
+
+.swWrapper {
+	position:absolute;
+	width: 335px;
+}
+
+.swBg {
+	position:absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 239px;
+	border-width: 16px;
+}
+.swSlotsWrapper {
+	position:relative;
+	/*left: -60px;*/
+/*	z-index: 999;*/
+	display: block;
+	width: 100%;
+	height: 239px;
+	/*padding: 0 11px;*/
+	overflow: hidden;
+}
+.swSlots {
+	display: block;
+	/*outline: 1px solid*/
+	width: 100%;
+	height: 100%;
+}
+.swSlots > div {
+	position: relative;
+	display: block;
+	top: 40px;
+	height: 100%;
+	width: 100px;
+	text-align: center;
+	vertical-align: top;
+}
+.swSlots > div.slot_0 { float: left; }
+.swSlots > div.slot_1 { float: right; }
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.swSlots li {
+	height: 110px;
+	/*margin-top: 25px;*/
+	overflow: hidden;
+	font-size: 0;
+	opacity: 0.2;
+	position: relative;
+}
+.swSlots li > div{
+	height: 100%;
+	width: 100px;
+	text-align: center;
+	vertical-align: top;
+	font-size: 54px;
+	/*padding-top: 107px;*/
+	line-height: 155px;
+}
+.swSlots li > img, .swSlots li > div{
+	/*position: absolute;
+	left:50%;
+	top:50%;
+	transform: translateX(-50%) translateY(-50%);*/
+}
+.doneBtn, .doneBtn_on {
+	position: absolute;
+	top: 563px;
+	left: 1088px;
+	width: 98px;
+	height: 106px;
+}
+.doneBtn {
+	background:	url(../../../images/common/checkBtnRed.png) center / 100% auto no-repeat;
+}
+.doneBtn_on {
+	z-index:100;
+	visibility:hidden;
+}
+
+/* 분수 css */
+.bunsuDiv {
+    display: inline-block;
+    vertical-align: middle;
+}
+.bunsuDiv > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+.int {
+    margin-right: 5px;
+}
+.prop {
+    position: relative;
+    line-height: 1.25em;
+}
+.prop > div {
+    display: block;
+}
+.prop::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - .05em);
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-top: .1em solid black;
+}

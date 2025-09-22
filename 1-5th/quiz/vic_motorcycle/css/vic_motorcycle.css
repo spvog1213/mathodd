@@ -1,0 +1,92 @@
+body {
+    background: url("../images/bgImg.png") no-repeat;
+    background-position: 0 -116px;
+}
+
+#bgCanvas {
+    position: absolute;
+    width: 1024px;
+    height: 768px;
+    left: 285px;
+}
+
+#bgAni {
+    top: -116px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+#panel {
+    position: absolute;
+    display: inline-block;
+    top: -7%;
+    left: 345px;
+    width: 362px;
+    height: 312px;
+    background: url(../images/vic_motorcycle_textbg.png) no-repeat;
+}
+
+#questionTxt, .question {
+    position: absolute;
+    top: 76px;
+    z-index: 5;
+    font-family: NanumGothicExtraBold;
+    font-size: 55px;
+    color: #ffffff;
+    width: 350px;
+    height: 160px;
+    text-align: center;
+    line-height: 94px;
+    cursor: default;
+    pointer-events: none;
+    padding-left: 8px;
+}
+
+.question{
+    position: relative;
+    top: 204px;
+    color: #000;
+    font-size: 41px;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin-left: 15.8px;
+    padding-left: 0px;
+}
+.mole {
+    position: absolute;
+    cursor: default;
+}
+
+.holeFront, .moleHand {
+    position: absolute;
+    cursor: default;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.motorcycleTxt {
+    position: absolute;
+    top: 144px;
+    font-size: 45px;
+    width: 158px;
+    height: 153px;
+    line-height: 153px;
+    text-align: center;
+    color: #333333;
+    cursor: default;
+    font-family: NanumGothicExtraBold;
+    pointer-events: none;
+    z-index: 4;
+}
+
+.motorcycleWrap {
+    display: inline-block;
+    width: 158px;
+    height: 338px;
+    overflow: hidden;
+}

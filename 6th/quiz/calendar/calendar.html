@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd : Circle_Diameter</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/calendar.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<script src="../../js/libs/require.js"></script>
+	</head>
+
+	<body>
+		<div id="bgCanvas">
+
+		</div>
+
+		<script type="text/javascript">
+
+			function setDrillContentsInit(val,answer) {
+
+				require.config({
+					baseUrl: '../../js/libs'
+				});
+
+				require(['event', 'sound', 'common', 'scene_n', 'dragdrop_n', 'animation_n', 'logCounter', 'convertNumber', '../../quiz/calendar/js/calendar'],
+
+					function (Event, Sound, Scene, Dragdrop, Animation, lCounter, ConvertNumber, sentenceComplete) {
+
+	                gameManager.QUIZ_ANSWER = answer;
+					gameManager.QUIZ_TYPE = 'calendar';
+					gameManager.quizConvert = [(val[0])[0], (val[0])[1]];
+
+					gameManager.quizText = val[2];
+					gameManager.dayNumArray = [];
+
+					var quizMake = val[1];
+					for(var i = 1; i < (quizMake[1]+1); i++){ gameManager.dayNumArray.push(i);}
+
+					gameManager.quizPosition = [];
+					gameManager.zoomRate = 0;
+					gameManager.dabCount = 0;
+					gameManager.dropArea = [];
+					gameManager.soundEffct = 'media/calendar.mp3';
+					gameManager.startPostion = weekNum(quizMake[0]);
+
+					console.log('>> gameManager : ', gameManager);
+
+					initScale();
+					initSound();
+
+					initScene();
+					initObject();
+
+					logCounter = new LogCounter();
+					logCounter.startTime();
+					logCounter.onTimer();
+
+
+				});
+
+			}
+
+			/*---------- test code start -----------*/
+			window.onload = function(){
+				
+				setDrillContentsInit([ ['셋째 주 화요일은','일입니다.'], ["금", 30], ['14','17','21','22'] ], ['21']);
+				
+			}
+			/*---------- test code end -----------*/
+
+		</script>
+	</body>
+</html>

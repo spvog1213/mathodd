@@ -1,0 +1,62 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+.circle {
+	position: absolute;
+	width: 102px;
+	height: 102px;
+	font-size: 50px;
+	border: 0px;
+	background: none;
+	text-align: center;
+	line-height: 0px;
+	z-index: 0;
+}
+#choiceQuestionBg{
+	position: absolute;
+	top: -50px;
+	left: 0px;
+	z-index: -2;
+}
+
+#queTxtBg{
+	position: absolute;
+	width: 624px;
+	height: 65px;
+	top: 85px;
+	left: 278px;
+	line-height: 67px;
+	letter-spacing: 1px;
+	font-size: 45px;
+}
+
+/*버스*/
+.bus{
+	position: absolute;
+}
+
+#busContainer{
+	top: 297px;
+	left: 220px;
+}
+
+#childs{
+	top: 68px;
+	left: 202px;
+}
+
+.txt{
+	display: inline-block;
+}
+#txt2{
+	padding-left: 12px;
+	padding-right: 12px;
+	color: #db0000;
+}

@@ -1,0 +1,98 @@
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	font-family: NanumGothicExtraBold;
+	font-size: 60px;
+}
+.quizContainer{
+	position: absolute;
+	top:140px;
+	width:1229px;
+	height:306px;
+}
+.backgroundGroup{
+	position: absolute;
+	top: -236px;
+	left: -107px;
+	z-index: -2;
+}
+.swWrapper {
+	position:absolute;
+}
+.swBg {
+	position:absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height:100%;
+}
+
+.swSlotsWrapper {
+	position: relative;
+	display: block;
+	width: 100%;
+	left: 3px;
+	overflow: hidden;
+}
+
+.swSlots {
+	display: inline-block;
+	height:100%;
+}
+
+.swSlots div {
+	position: relative;
+	display: inline-block;
+	height: 231px;
+	width: 100px;
+	text-align: center;
+	overflow: hidden;
+	vertical-align: top;
+}
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.swSlots ul {
+	left: 0;
+	width: 100%;
+	margin-top: 65px;
+}
+.swSlots li {
+	height: 110px;
+	line-height: 110px;
+	font-family: NanumGothicExtraBold;
+	background: url(../images/mathCylinder_bar.png) center center no-repeat;
+}
+.swSlots li > * {
+	opacity: 0.2;
+}
+
+.swSlots li:last-child {
+	background: url(../images/mathCylinder_bar2.png) center center no-repeat;
+}
+
+.doneBtn, .doneBtn_on{
+	position: absolute;
+	width: 98px;
+	height: 106px;
+}
+
+.doneBtn{
+	left: 1059px;
+	top: 535px;
+	background:	url(../../../images/common/checkBtnRed.png) no-repeat;
+}
+
+.doneBtn_on{
+	z-index:100;
+	visibility:hidden;
+}
+.symbol{
+	font-size: 0;
+	line-height: 298px;
+}
+.symbol li{
+	line-height: 160px;
+}

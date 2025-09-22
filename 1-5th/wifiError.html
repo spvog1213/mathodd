@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>mathOdd : wifi error</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<style type="text/css">
+			html, body {
+				margin: 0;
+				padding: 0;
+				background: #000000;
+				overflow: hidden;
+			}
+
+			#errorPage {
+				width: 2560px;
+				height: 1600px;
+
+			}
+
+			#wifiErrorClose {
+				position: absolute;
+				top: 50px;
+				right : 50px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="errorPage" >
+			<img src="wifiError.png">
+			<a href="javascript:window.android.exit()"><img id="wifiErrorClose" src="wifiErrorClose.png"></a>
+		</div>
+		<script type="text/javascript">
+
+			function setContentsUIScale(scaleWidth, scaleHeight) {
+				console.log('setContentsUIScale...');
+
+				var screenWidth = document.body.clientWidth,
+				    screenHeight = document.body.clientHeight,
+				    container = document.querySelector('#errorPage'),
+				    zoomVertical = screenHeight / scaleHeight,
+				    zoomHorizontal = screenWidth / scaleWidth;
+
+				document.body.style.height = scaleHeight * zoomHorizontal + "px";
+				setScaleContiner(container, zoomHorizontal);
+				
+			}
+
+			function setScaleContiner(targetElement, zoomRate) {
+				targetElement.setAttribute('style', '-ms-transform: scale(' + zoomRate + ',' + zoomRate + ');' + '-webkit-transform: scale(' + zoomRate + ',' + zoomRate + ');' + 'transform: scale(' + zoomRate + ',' + zoomRate + ');' + 'transform-origin: 0% 0%; -webkit-transform-origin: 0% 0%; -ms-transform-origin: 0% 0%;');
+			}
+
+			setContentsUIScale(2560, 1600);
+			
+		</script>
+	</body>
+</html>

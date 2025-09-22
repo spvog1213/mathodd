@@ -1,0 +1,67 @@
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+	font-size: 50px;
+	font-family: NanumGothicExtraBold;
+}
+.currentAnswer{
+	position: absolute;
+	top:24px;
+	left:44px;
+	width:780px;
+	height:180px;
+	background: url('../images/textBoard.png') no-repeat;
+}
+
+.dropArea {
+	width: 264px;
+	height: 117px;
+	display: inline-block;
+	background: url("../images/questionBox.png") no-repeat;
+	vertical-align:middle;
+}
+.quizText {
+	display: inline-block;
+	margin-top:51px;
+}
+
+
+[class*="choiceQuizText_"]{
+	position: absolute;
+	width:264px;
+	height: 117px;
+	line-height: 110px;
+	text-align: center;
+	cursor: pointer;
+	cursor: default;
+	background: url('../images/dragBox.png') no-repeat;
+}
+
+.quizContainer{
+	position: absolute;
+	top: 240px;
+	width: 500px;
+	height: 300px;
+}
+.rulerBox{
+	position: relative;
+	z-index: 20;
+	top: 171px;
+	left: -253px;
+}
+.objectBig{
+	position: absolute;
+	width:300px;
+	height:300px;
+	border-radius: 50%;
+	top: 61px;
+	left: 293px;
+	overflow: hidden;
+}
+#ruler{
+	position: absolute;
+	top: 25px;
+	left: 42px;
+	pointer-events: none;
+}

@@ -1,0 +1,66 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0px;
+}
+
+
+#pierrotboxBg{
+	position: absolute;
+	top: -10px;
+	left: -39px;
+	z-index: -5;
+}
+
+.rect{
+	width: 150px;
+	height: 115px;
+	border: 0;
+	border-radius: 0px;
+	line-height: 204px;
+	font-size: 50px;
+	background: none;
+	z-index: 10;
+}
+
+#coicetxt2,#coicetxt4,#coicetxt7{
+	position: absolute;
+	width: 150px;
+	text-align: center;
+	top: 7px;
+	left: 0px;
+	line-height: 78px;
+}
+
+
+.line{
+	position: absolute;
+	left: -2px;
+	top: -27px;
+	letter-spacing: -5px;
+}
+
+
+#choiceBg{
+    position: absolute;
+    left: 0px;
+    z-index: -15;
+}
+
+#box{
+	position: absolute;
+	left: 49%;
+	top: 11%;
+}
+
+#answerMark {
+	position: absolute;
+	display: none;
+	z-index: 10;
+}

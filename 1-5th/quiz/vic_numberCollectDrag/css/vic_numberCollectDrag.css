@@ -1,0 +1,78 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	background-position: 184px 40px;
+	width: 1292px;
+	height: 768px;
+}
+
+.circle {
+	/*height: 240px;*/
+	border: 0px;
+	border-radius: 0px;
+	/*background: #000;*/
+	background: none;
+	z-index: 2;
+	/*line-height: 350px;*/
+	font-size: 50px;
+	position: absolute;
+}
+.hangerText{
+	position: absolute;
+	width: 143px;
+	font-size: 60px;
+	font-family: NanumGothicExtraBold;
+	color: #333333;
+	text-align: center;
+	z-index: 10;
+	line-height: 300px;
+}
+
+/*#choiceQuestion_0, #choiceQuestion_1, #choiceQuestion_2{*/
+	/*margin-left: -33px;*/
+	/*z-index: -5555;*/
+/*}*/
+
+#numcardBg {
+	position: absolute;
+	/*width: 1187px;*/
+	/*height: 80px;*/
+	left: 150px;
+	top: 110px;
+	background: rgba(0, 0, 0, 0.0);
+	z-index: -5;
+}
+
+#Hanger {
+	position: absolute;
+	top: 90px;
+}
+
+.hanger{
+	position: absolute;
+	width: 176px;
+}
+
+.Num{
+	position: absolute;
+	font-family: NanumGothicExtraBold;
+	font-size: 60px;
+	color: #333333;
+	text-align: center;
+}
+
+#butterfly{
+	position: absolute;
+	top: -18px;
+	left: -17px;
+	z-index: -1;
+}
+
+.butterfly{
+	position: absolute;
+}
+

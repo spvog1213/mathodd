@@ -1,0 +1,33 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 20px;
+}
+.abso,.vic,.cal{
+	position: absolute;
+	cursor: default;
+}
+.carrotText,.vicText {
+	position: absolute;
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;
+	color: #333333;
+	width: 220px;
+	text-align: center;
+}
+.vicText{
+	width: 109px;
+}
+
+#rabbit{
+	position: absolute;
+	left: 920px;
+	top: 32px;
+	z-index: 0;
+}

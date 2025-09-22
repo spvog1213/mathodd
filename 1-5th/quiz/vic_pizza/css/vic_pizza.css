@@ -1,0 +1,89 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+
+.abso{
+	position: absolute;
+}
+
+.pizza {
+	position: absolute;
+	cursor: default;
+}
+
+#pizzaCounter {
+	position: absolute;
+	width: 340px;
+	height: 340px;
+	top: 248px;
+	left: 182px;
+	z-index: 2;
+}
+
+#wrap{
+	display: inline-block;
+    vertical-align: middle;
+    line-height: 0px;
+    width: 424px;
+}
+
+
+#answerObject1{
+	position: absolute;
+    width: 556px;
+    height: 392px;
+    pointer-events: none;
+	text-align: center;
+}
+
+#checkBtn{
+	width: 196px;
+	height: 80px;
+	position: absolute;
+	bottom: 40px;
+	left: 79%;
+	z-index: 0;
+	background: url(../images/checkbtn.png) no-repeat;
+}
+
+/*문제*/
+#questionTextWrap{
+	position: absolute;
+	width: 626px;
+	height: 208px;	
+	left: 35%;
+	top: -50px;
+	text-align: center;
+	background: url(../images/vic_pizza_textbox.png) no-repeat;
+	padding-top: 88px;
+	padding-left: 7px;
+	cursor: default;
+}
+.questionBox{
+	display: inline-block;
+	font-family: NanumGothicExtraBold;
+	font-size: 43px;
+}
+
+.questionText{
+	height: 25px;
+}
+#line{
+	letter-spacing: -7px;
+	margin-left: -8px;
+}
+#bigFountain,#question{
+	vertical-align: top;
+	line-height: 100px;
+	
+}
+#bigFountain{
+	margin-right: 8px;
+}

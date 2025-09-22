@@ -1,0 +1,117 @@
+
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;
+	text-align: center;
+}
+
+.content{
+	display: inline-block;
+	margin-top: 100px;
+	width: 1014px;
+	height: 530px;
+	background:url("../images/calendarBack.png") no-repeat;
+}
+
+
+[class*="checkBtn"]{
+	position: absolute;
+	display: inline-block;
+	width: 98px;
+	height: 106px;
+	top : 560px;
+	left: 1070px;
+}
+
+.checkBtn{
+	background:url("../../../images/common/checkBtnRed.png") no-repeat;
+}
+.checkBtn_on{
+	background:url("../../../images/common/checkBtnRed_on.png") no-repeat;
+}
+
+
+
+
+[class*="textBoard_"]{
+	position: absolute;
+	display: inline-block;
+	text-align: center;
+	left: 235px;
+	top : 120px;
+	width: 266px;
+}
+
+.textBoard_1{
+	left: 730px;
+	color: white;
+}
+
+.upBtn_0, .downBtn_0, .upBtn_on_0, .downBtn_on_0{
+	position: absolute;
+	left: 815px;
+}
+
+.upBtn_0, .upBtn_on_0{top : 220px;}
+.downBtn_0,.downBtn_on_0{top : 480px;}
+
+
+.upBtn_1, .downBtn_1, .upBtn_on_1, .downBtn_on_1{
+	position: absolute;
+	left: 955px;
+}
+
+.upBtn_1,.upBtn_on_1{top : 220px;}
+.downBtn_1,.downBtn_on_1{top : 480px;}
+
+[class*="upBtn_on"], [class*="downBtn_on"]{
+	visibility: hidden;
+}
+
+
+
+.months_0, .day_0, .week_0{
+	position: absolute;
+	background:url("../images/calendarBox.png") no-repeat;
+	width: 134px;
+	height: 194px;
+}
+.months_0,.monthsText_0{ left:160px; }
+.day_0,.dayText_0{ left: 300px; }
+.week_0,.weekText_0{ left: 440px; }
+
+.months_1, .day_1, .week_1{
+	position: absolute;
+	background:url("../images/answerBox.png") no-repeat;
+	width: 134px;
+	height: 194px;
+	color: #fffb70;
+}
+
+.months_1,.monthsText_1{ left:655px; }
+.day_1,.dayText_1{ left:795px; }
+.week_1,.weekText_1{ left:935px; }
+
+
+
+[class*="day_"], [class*="week_"],[class*="months_"]{
+	font-size : 80px;
+	top : 280px;
+	line-height : 240px;
+}
+
+
+
+[class*="dayText_"], [class*="weekText_"], [class*="monthsText_"]{
+	position: absolute;
+	display: inline-block;
+	top : 290px;
+	color: #808080;
+	z-index: 1000;
+	width: 134px;
+	font-size: 40px;
+}
+
+

@@ -1,0 +1,76 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0px;
+}
+
+
+#digitalBg{
+	position: absolute;
+	left: 194px;
+	top: 100px;
+	z-index: 0;
+}
+.circle{
+	width: 180px;
+	height: 160px;
+	border: 0;
+	border-radius: 0px;
+	line-height: 164px;
+}
+.queText{
+	position: absolute;
+	font-family: NanumGothicExtraBold;
+    font-size: 56px;
+    color: #333333;
+    line-height: 110px;
+    text-align: center;
+    cursor: default;
+    z-index: 10;
+}
+.answerText{
+	position: absolute;
+	bottom: 165px;
+	left: 424px;
+	font-family: NanumGothicExtraBold;
+    font-size: 60px;
+    color: #ffea00;
+    /*line-height: 110px;*/
+    text-align: center;
+    cursor: default;
+    z-index: 10;
+}
+
+#queTxt{
+	position: absolute;
+	width: 500px;
+	height: 149px;
+	left: 214px;
+	top: 120px;
+	z-index: 5;
+}
+
+#choiceQuestion_0{
+	background: url('../images/digital_balance_beaker_1.png') no-repeat;
+}
+#choiceQuestion_1{
+	background: url('../images/digital_balance_beaker_2.png') no-repeat;
+}
+#choiceQuestion_2{
+	background: url('../images/digital_balance_beaker_3.png') no-repeat;
+}
+
+#ballonContainer{
+	position: absolute;
+}
+
+.ballonAnswer {
+	position: absolute;
+	z-index: 3;
+}

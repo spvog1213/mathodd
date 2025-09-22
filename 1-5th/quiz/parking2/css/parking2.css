@@ -1,0 +1,91 @@
+body {
+    background:url("../images/bgImg.png") no-repeat;
+    background-position: 0 -116px;  
+}
+
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 285px;
+	/*background-image: url('../images/fruitsCountDrag/bgCanvas.png');*/
+}
+
+.fruits {
+	cursor: pointer;
+}
+
+#fruitsContainer {
+	text-align: center;
+	background: #FDFDFD;
+	border-radius: 25px;
+	height: 120px;
+	position: absolute;
+	border: 7px solid #66d1f1;
+}
+
+#UiText {
+	position: absolute;
+	top: 72%;
+	left: 175px;
+	font-family: KoPubDotumBold;
+	font-size: 100px;
+	color: #66d1f1;
+}
+
+#answerObject {
+	width: 621px;
+	height: 140px;
+	border: 0px;
+	border-radius: 0px;
+	/*background: #fff;*/
+	background: none;
+}
+
+#question1, #question2, #question3, #question4 {
+	width: 278px;
+	height: 108px;
+	border: 0px;
+	border-radius: 0px;
+	background: none;
+	z-index: 2;
+	pointer-events: none;
+	color: #fff;
+	font-size: 61px;
+}
+#choiceQuestion_0 {
+	width: 330px;
+	height: 204px;
+	border: 0px;
+	border-radius: 0px;
+	background: rgba(0, 0, 0, 0.0);
+	z-index: 2;
+	line-height: 211px;
+	/*background: url('../images/parking/parking_bus_1.png') 0px 0px no-repeat;*/
+	font-size: 60px;
+	color: #000;
+}
+
+#choiceQuestion_0 img {
+	position: absolute;
+	left: 19px;
+}
+
+#parentObj_text {
+	position: absolute;
+	top: 5px;
+	left: 37px;
+	width: 193px;
+	text-align: center;
+	font-size: 38px;
+	cursor: default;
+}
+
+
+#numpadBg {
+	width: 1024px;
+	height: 768px;
+	/*background: rgba(0, 0, 0, 0.0);*/
+	/*background: url('../images/bg.png') no-repeat;*/
+}

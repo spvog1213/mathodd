@@ -1,0 +1,73 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0px;
+}
+.circle{
+	width: 126px;
+	height: 98px;
+	border: 0px;
+	border-radius: 0px;
+	cursor: default;
+	line-height: 52px;
+	background: url('../images/vic_monkey_questionbox.png') no-repeat;
+	z-index: 4;
+
+}
+.vic, .vicText, .banana {
+	position: absolute;
+	width: 126px;
+	height: 98px;
+	font-family: NanumGothicExtraBold;
+	font-size: 45px;
+	color: #333333;
+	text-align: center;
+	line-height: 100px;
+}
+
+.banana {
+	background: url('../images/vic_monkey_banana.png') no-repeat;
+}
+
+#treeWrap{
+	position:absolute;
+	width: 1300px;
+	top: 100px;
+	left: 90px;
+}
+#tree{
+	display: inline-block;
+	width: 280px;
+	height:307px;
+	background: url('../images/vic_monkey_tree.png') no-repeat;
+}
+#startBtn {
+	position: absolute;
+	cursor: pointer;
+	top: 51%;
+	left: 12.6%;
+	z-index: 3;
+}
+#multipleWrap{
+	position: absolute;
+	width: 1000px;
+	left: 172px;
+	top: 329px;
+}
+#multiple{
+	display: none;
+	width: 206px;
+	height: 80px;
+	text-align: center;
+	margin-left: 80px;
+	font-family: NanumGothicExtraBold;
+	font-size: 33px;
+	line-height: 96px;
+	background: url('../images/vic_monkey_arrow.png') no-repeat;
+}

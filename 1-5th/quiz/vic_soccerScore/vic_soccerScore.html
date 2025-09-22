@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd : soccerScore</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/vic_soccerScore.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<script type="text/javascript" src="../../js/libs/event.js"></script>
+		<script type="text/javascript" src="../../js/libs/scene.js"></script>
+		<script type="text/javascript" src="../../js/libs/dragdrop.js"></script>
+		<script type="text/javascript" src="../../js/libs/animation.js"></script>
+		<script type="text/javascript" src="../../js/libs/sound.js"></script>
+		<script type="text/javascript" src="../../js/libs/logCounter.js"></script>
+		<script type="text/javascript" src="js/vic_soccerScore.js"></script>
+	</head>
+
+	<body>
+		<div id="bgCanvas">
+			<div id="currentAnswer"></div>
+		</div>
+
+		<script type="text/javascript">
+			function setDrillContentsInit(val, answer) {
+
+				gameManager.TOTAL_ANSWER_ARRAY = val;
+				gameManager.CURRENT_ANSWER = answer;
+
+				gameManager.calculationFirst = gameManager.TOTAL_ANSWER_ARRAY[gameManager.TOTAL_ANSWER_ARRAY.length - 2];
+				gameManager.calculation = gameManager.TOTAL_ANSWER_ARRAY[gameManager.TOTAL_ANSWER_ARRAY.length - 1];
+
+				gameManager.choiceQuestion = [];
+
+				for (var i = 3; i < gameManager.TOTAL_ANSWER_ARRAY.length -2; i++) {
+					gameManager.choiceQuestion.push(gameManager.TOTAL_ANSWER_ARRAY[i]);
+				}
+				gameManager.CURRENT_TYPE = 'vic_soccer';
+				gameManager.choiceQuestionPosition = [];
+				gameManager.zoomRate = 0
+
+				var streamSound;
+
+				initScale();
+
+				initScene();
+
+				initNumber();
+
+				initSound();
+
+				logCounter = new LogCounter();
+				logCounter.startTime();
+				logCounter.onTimer();
+
+			}
+
+			/*---------- test code start -----------*/
+			window.onload = function() {
+
+				setDrillContentsInit([123, 456, 789, 9999, 999, 999, '+', '-'], [9999]);
+
+			}
+			/*---------- test code end -----------*/
+
+		</script>
+	</body>
+</html>

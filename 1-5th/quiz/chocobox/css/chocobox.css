@@ -1,0 +1,106 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0px;
+}
+#ChocoContainer{
+	position: absolute;
+	width: 684px;
+	left: 30%;
+	top: 7%;
+}
+
+#ChocoGroup{
+	position: absolute;
+}
+#questionBox{
+	position: absolute;
+	width: 694px;
+	height: 140px;
+	top: 266px;
+	left: -4px;
+    font-family: NanumGothicExtraBold;
+    font-size: 50px;
+    color: #333333;
+    background: url('../images/chocobox_textbox.png') no-repeat;
+    cursor: pointer;
+    cursor: default;
+}
+#grayBox{
+	position: absolute;
+	width: 101px;
+	height: 121px;
+	background: url('../images/chocobox_questionbox.png') no-repeat;
+	left: 400px;
+	top: 7%;
+	text-align: center;
+	line-height: 121px;
+}
+#questiontxt1, #questiontxt2{
+	position: absolute;
+	line-height: 136px;
+}
+
+#grayBox div{
+	position: absolute;
+	width:101px;
+	text-align: center;
+}
+.ChocoBox{
+	width: 114px;
+	font-family: NanumGothicExtraBold;
+    font-size: 50px;
+    color: #a88442;
+    line-height: 118px;
+    text-align: center;
+	height: 124px;
+	background: url('../images/chocobox_box.png') no-repeat;
+	float: left;
+}
+#choco{
+	float:left;
+}
+.rect{
+	width: 140px;
+	height: 145px;
+	border: 0;
+	border-radius: 0px;
+	line-height: 193px;
+	font-size: 45px;
+	background: none;
+	z-index: 10;
+}
+
+#coicetxt2,#coicetxt4,#coicetxt7{
+	position: absolute;
+	width: 140px;
+	text-align: center;
+	top: -10px;
+	/*left: 2px;*/
+	line-height: 101px;
+}
+
+.line{
+	position: absolute;
+	left: -2px;
+	top: -27px;
+	letter-spacing: -5px;
+}
+
+#choiceBg{
+    position: absolute;
+    left: 0px;
+    z-index: -15;
+}
+
+#answerMark {
+	position: absolute;
+	display: none;
+	z-index: 10;
+}

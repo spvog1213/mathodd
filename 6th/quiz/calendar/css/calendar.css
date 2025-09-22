@@ -1,0 +1,85 @@
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	font-family: NanumGothicExtraBold;
+	text-align: center;
+}
+
+[class*="choiceQuizText_"]{
+	position: absolute;
+	width: 95px;
+	height: 90px;
+	font-size: 40px;
+	line-height: 80px;
+	text-align: center;
+	cursor: pointer;
+	cursor: default;
+}
+
+.calendarTable{
+	position: absolute;
+	width: 478px;
+	height: 350px;
+	left: 230px;
+	top:160px;
+	z-index:100;
+}
+
+[class*="cell_"]{
+	width: 68px;
+	height: 68px;
+	font-size: 40px;
+	vertical-align: middle;
+}
+
+.content{
+	position: absolute;
+	background:url("../images/calendar_back.png") no-repeat;
+	width: 728px;
+	height: 530px;
+	left : 100px;
+	top : 100px;
+}
+
+[class*='calendar_']{
+	position: absolute;
+	top: 60px;
+	left:132px;
+	width: 665px;
+	height: 455px;
+}
+
+.calendar_0{
+	background:url("../images/calendar_0.png") no-repeat;
+
+}
+
+.calendar_1{
+	background:url("../images/calendar_1.png") no-repeat;
+}
+
+.question{
+	position: absolute;
+	width: 700px;
+	height: 100px;
+	top:425px;
+	left:15px;
+	font-size:50px;
+	color:#754d24;
+}
+
+.drop{
+	display: inline-block;
+	vertical-align: middle;
+	background:url("../images/answerbox.png") no-repeat;
+	width: 95px;
+	height: 90px;
+}
+
+.dropArea{
+	position: absolute;
+	width: 95px;
+	height: 90px;
+}
+
+

@@ -1,0 +1,87 @@
+body {
+	background: url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 285px;
+}
+
+#machineWrap {
+	position: absolute;
+	top: 253px;
+	left: 114px;
+	width: 800px;
+	height: 440px;
+	z-index: 5;
+	/*background: url("../images/vendingmachine_machine.png") no-repeat;*/
+}
+
+#bucket {
+	position: absolute;
+	top: 75px;
+	left: 169px;
+}
+
+.machin_btn {
+	position: absolute;
+	width: 267px;
+	height: 110px;
+}
+
+.calculation {
+	position: absolute;
+	z-index: 5;
+}
+
+.btnText {
+	position: absolute;
+	z-index: 5;
+	font-family: NanumGothicExtraBold;
+	font-size: 55px;
+	color: #333333;
+	width: 169px;
+	text-align: center;
+	cursor: default;
+	pointer-events: none;
+}
+
+#questionTxt {
+	top: 136px;
+	left: 183px;
+}
+
+#cup {
+	position: absolute;
+	z-index: 5;
+}
+
+#cupTxt {
+	position: absolute;
+	top: 15px;
+	width: 145px;
+}
+
+.juice {
+	position: absolute;
+	top: 443px;
+	z-index: 5;
+}
+
+.btnWrap {
+	position: absolute;
+	z-index: 5;
+	display:inline-block;
+	top: 0px;
+	left: 0px;
+}
+
+#cupWrap {
+	position: absolute;
+	display: inline-block;
+	top: 536px;
+	left: 444px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd : tableCalendar_A</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/tableCalendar_A.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<script src="../../js/libs/require.js"></script>
+	</head>
+
+	<body>
+		<div id="bgCanvas"></div>
+
+		<script type="text/javascript">
+			var streamSound, logCounter;
+			function setDrillContentsInit (val, answer) {
+
+				require.config({
+					baseUrl: '../../js/libs'
+				});
+
+				require(['event', 'sound', 'common', 'scene_n', 'dragdrop_n', 'animation_n', 'logCounter', 'convertNumber', '../../quiz/tableCalendar_A/js/tableCalendar_A'],
+					function (Event, Sound, Scene, Dragdrop, Animation, lCounter, ConvertNumber, Fishing) {
+
+	                gameManager.QUIZ_ANSWER = answer;
+					gameManager.QUIZ_TYPE = 'tableCalendar_A';
+					gameManager.week = ["월","화","수","목","금","토","일"];
+					gameManager.quizText = ["월","일","요일"];
+					gameManager.zoomRate = 0;
+					gameManager.quizImgArray = ["../../images/common/upButton.png", "../../images/common/downButton.png","../../images/common/upButton_on.png", "../../images/common/downButton_on.png"];
+					gameManager.soundEffct = 'media/tableCalendar_A.mp3';
+
+					console.log('>> gameManager : ', gameManager);
+
+					initScale();
+					initSound();
+
+					initScene(val);
+					initObject(val);
+
+					logCounter = new LogCounter();
+					logCounter.startTime();
+					logCounter.onTimer();
+
+
+				});
+
+
+			}
+
+			//==== test code start ======================================================================
+			window.onload = function () {
+				
+				setDrillContentsInit([ ["오늘","15일 후"], ["7","19","목"], ["7","21","일"] ], ["8","3","금"] );
+				
+			}
+			//==== test code end ========================================================================
+
+		</script>
+
+	</body>
+</html>

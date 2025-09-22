@@ -1,0 +1,77 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+
+#calculation {
+	position: absolute;
+	top: 239px;
+	left: 762px;
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;
+	color: #333333;
+	z-index:1;
+	width:207px;
+	text-align: center;
+}
+
+.circle {
+	border-radius: 20%;
+	width: 226px;
+	height: 197px;
+	font-size: 50px;
+	border: 0px;
+	border-radius: 2px;
+	background: none;
+	line-height: 198px;
+	text-align: center;
+	z-index: 1;
+	background: url(../images/frogjump1_lotusleaf.png) no-repeat;
+	padding-left: 4px;
+}
+
+
+#question1 {
+	position: absolute;
+	text-align: center;
+	border: 0px;
+	width: 226px;
+	height: 197px;
+	background: none;
+	line-height: 199px;
+	background: url(../images/frogjump1_lotusleaf.png) no-repeat;
+	cursor: default;
+}
+
+#answerObject {
+	padding: 0px;
+	width: 226px;
+	height: 197px;
+	background: url(../images/frogjump1_questionbox.png) 2px 2px no-repeat;
+	text-align: center;
+	cursor: default;
+}
+
+.backBox {
+	position: absolute;
+	width: 254px;
+	height: 174px;
+}
+
+#frogMotion {
+	position: absolute;
+	top: 7%;
+	right: -22%;
+	z-index: 2;
+}
+
+#frogBg{
+	position: absolute;
+	right: -22%;
+}

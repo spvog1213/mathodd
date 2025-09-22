@@ -1,0 +1,105 @@
+body {
+/*    background: url("../images/bgImg.png") no-repeat;
+    background-position: 0 -116px;
+    width: 1024px;
+    height: 768px;
+    background-size: cover;
+*/}
+
+#bgCanvas {
+    /*position: absolute;*/
+    /*left: 285px;*/
+    width: 1229px;
+    height: 768px;
+}
+
+/*#cardWrap {
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    width: 1024px;
+    height: 768px;
+    line-height: 768px;
+}
+
+#cardAlign {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 0px;
+}
+*/
+.cardContainer{
+    width:80%;
+    position: absolute;
+    top: 55px;
+    left: 120px;
+}
+.cardBox {
+    position: relative;
+    display: inline-block;
+    width: 240px;
+    height: 243px;
+    margin: 30px 40px;
+    cursor: default;
+}
+
+.cardText {
+    position: absolute;
+    left: 14px;
+    font-family: NanumGothicExtraBold;
+    font-size: 44px;
+    color: #000000;
+    width: 200px;
+    height: 243px;
+    display: table;
+    text-align: center;
+    cursor: default;
+    z-index: 5;
+    margin-left: 20px;
+}
+.cardTextMiddle{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.cardBack ,.cardObj {
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    z-index: -1
+}
+.cardBack{
+    opacity: 0;
+}
+
+
+/* 
+분수 css
+.bunsuDiv {
+    display: inline-block;
+    vertical-align: middle;
+}
+.bunsuDiv div {
+    display: inline-block;
+    vertical-align: middle;
+}
+.int {
+    margin-right: 5px;
+}
+.prop {
+    position: relative;
+    line-height: 1.25em;
+}
+.prop > div {
+    display: block;
+}
+.prop::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - .05em);
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-top: .1em solid black;
+}
+ */

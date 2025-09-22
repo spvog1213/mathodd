@@ -1,0 +1,132 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+
+.vegetable {
+	position: absolute;
+	cursor: pointer;
+	cursor: default;
+	float: left;
+	z-index: 2;
+}
+
+#vegetableCounter {
+	position: absolute;
+	width: 508px;
+	height: 333px;
+	top: 226px;
+	left: 144px;
+	padding: 32px 51px;
+	z-index: 2;
+	display: none;
+}
+
+#cuttingBg{
+	position: absolute;
+	width: 480px;
+	height: 424px;
+	background: url('../images/cook_cuttingboard.png') no-repeat;
+	top: 260px;
+	left: 110px;
+	z-index: 0;
+}
+
+#firstVegetable{
+	position:absolute;
+	left: 165px;
+	top: 29px;
+    padding-top: 135px;
+}
+
+#questionTop {
+	position: absolute;
+	width: 1086px;
+	height: 228px;
+	top:-60px; 
+	left:11%;
+	background: url('../images/chocoplate_textbox.png') no-repeat;
+	padding-left: 75px;
+}
+.questionTop{
+	font-family: NanumGothicExtraBold;
+	font-size: 41px;
+	text-align: center;
+	line-height: 335px;
+	float:left;
+}
+
+#answerObject1{
+	position: absolute;
+    width: 478px;
+    height: 500px;
+    pointer-events: none;
+    z-index: 1;
+    top:150px;
+	left: 689px;
+	text-align: center;
+	padding-top: 257px;
+}
+#wrap{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 0px;
+    width: 319px;
+}
+#cook_arrow{
+	position: absolute;
+	left: 211px;
+	top: 74px;
+}
+#pot{
+	position: absolute;
+	top:150px;
+	left: 689px;
+}
+
+#checkBtn{
+	width: 196px;
+	height: 80px;
+	position: absolute;
+	bottom: 30px;
+	left: 831px;
+	z-index: 0;
+	background: url(../images/boxfill_checkbtn.png) no-repeat;
+	
+}
+
+#questionBox{
+	position: absolute;
+	width: 620px;
+	height: 138px;
+	top: 30px;
+	left: 350px;
+    font-family: NanumGothicExtraBold;
+    font-size: 50px;
+    color: #333333;
+    background: url('../images/cook_textbox.png') no-repeat;
+    cursor: pointer;
+    cursor: default;
+}
+#questionBox div{
+	position: absolute;
+	line-height: 130px;
+}
+#grayBox{
+	position: absolute;
+	width: 101px;
+	height: 121px;
+	left: 187px;
+	top: 6%;
+}
+#grayBox div{
+	position: absolute;
+	width:101px;
+	text-align: center;
+}

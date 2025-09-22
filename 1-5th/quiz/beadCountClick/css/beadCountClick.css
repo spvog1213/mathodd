@@ -1,0 +1,66 @@
+body {
+	background: url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+
+.rect {
+	width: 272px;
+	height: 115px;
+	/* border: 0px; */
+	/* border-radius: 2px; */
+	background: url('../images/numbox.png') no-repeat;
+	line-height: 115px;
+	text-align: center;
+	z-index: 2;
+	font-size: 45px;
+}
+
+#totalBeadContainer {
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    width: 1113px;
+    left: 106px;
+    height: 506px;
+    line-height: 502px;
+}
+#beadBox0, #beadBox1, #beadBox2 {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 0px;
+	    padding: 0 21px;
+}
+
+#beadBox0{
+	width: 414px;
+}
+#beadBox1{
+	width: 324px;
+}
+#beadBox2{
+	width: 198px;
+}
+#beadBox0 img {
+	padding: 14px 14px;
+}
+
+#beadBox1 img {
+	padding: 14px 14px;
+}
+
+#beadBox2 img {
+	padding: 14px 14px;
+}
+
+
+#answerMark {
+	position: absolute;
+	display: none;
+	z-index: 10;
+}

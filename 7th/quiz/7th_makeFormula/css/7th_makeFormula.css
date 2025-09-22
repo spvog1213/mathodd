@@ -1,0 +1,56 @@
+#bgCanvas {
+	position: absolute;
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+	font-family: NanumGothicExtraBold;
+}
+
+.title {
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	width: 780px;
+	height: 210px;
+	padding-top: 88px;
+	font-size: 45px;
+	background: url(../images/textBox.png) center top no-repeat;
+}
+
+.dragObj {
+	position: absolute;
+	font-size: 50px;
+	border-radius: 50%;
+}
+
+.dragObj img {
+	vertical-align: middle;
+}
+
+.dragObj .text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	line-height: 110px;
+}
+
+.dropArea_0 {
+	position: absolute;
+	height: 120px;
+}
+
+[class*="checkBtn"]{
+	position: absolute;
+	top: 550px;
+	left: 1050px;
+	width: 98px;
+	height: 106px;
+}
+
+.checkBtn{
+	background:url("../../../images/common/checkBtnRed.png") no-repeat;
+}
+.checkBtn_on{
+	background:url("../../../images/common/checkBtnRed_on.png") no-repeat;
+}

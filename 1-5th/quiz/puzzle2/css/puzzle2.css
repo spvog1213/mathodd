@@ -1,0 +1,65 @@
+body {
+    background: url("../images/bgImg.png") no-repeat;
+    background-position: 0 -116px;
+}
+
+#bgCanvas {
+    position: absolute;
+    width: 1024px;
+    height: 768px;
+}
+
+.answer, .puzzle {
+    display: inline-block;
+    position: absolute;
+    width: 134px;
+    height: 134px;
+    text-align: center;
+    cursor: default;
+}
+
+.puzzleBg {
+    display: inline-block;
+    position: absolute;
+    top: 41px;
+    left: 93px;
+    width: 683px;
+    height: 683px;
+}
+
+.puzzleTxt {
+    position: absolute;
+    width: 132px;
+    height: 132px;
+    font-size: 50px;
+    color: #333333;
+    text-align: center;
+    line-height: 132px;
+    cursor: default;
+    z-index: 5;
+    font-family: NanumGothicExtraBold;
+    pointer-events: none;
+}
+
+
+
+.puzzleText {
+    position: absolute;
+    width: 132px;
+    height: 132px;
+    font-size: 60px;
+    color: #333333;
+    text-align: center;
+    line-height: 132px;
+    cursor: default;
+    z-index: 5;
+    font-family: NanumGothicExtraBold;
+    pointer-events: none;
+}
+
+#puzzleBgEnd{
+    position:absolute;
+    left:0px;
+    top:0px;
+    opacity: 0;
+}

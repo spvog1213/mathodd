@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd : dragFigure</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/dragFigure.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<script src="../../js/libs/require.js"></script>
+	</head>
+
+	<body>
+		<div id="bgCanvas"></div>
+
+		<script type="text/javascript">
+			var streamSound, logCounter;
+
+			function setDrillContentsInit (val, answer) {
+				console.log('> setDrillContentsInit! ', val, answer);
+
+				require.config({
+					baseUrl: '../../js/libs'
+				});
+
+				require(['event', 'sound', 'common', 'scene_n', 'dragdrop_n', 'animation_n', 'logCounter', 'convertNumber', '../../quiz/dragFigure/js/dragFigure'],
+					function (Event, Sound, Scene, Dragdrop, Animation, lCounter, ConvertNumber, Fishing) {
+
+	                gameManager.QUIZ_ANSWER = answer;
+	                gameManager.dabCount = 0;
+					gameManager.QUIZ_TYPE = 'dragFigure';
+					gameManager.soundEffct = 'media/dragFigure.mp3'
+					gameManager.dropArea = [];
+
+					gameManager.answerPosition = [];
+					gameManager.choicePosition = [];
+					gameManager.zoomRate = 0;
+					gameManager.answerLeftTop;
+					gameManager.choiceLeftTop;
+					gameManager.quizText = val[0]
+
+					console.log('>> gameManager : ', gameManager);
+
+					initScale();
+					initSound();
+
+					initScene();
+					initObject(val);
+
+					logCounter = new LogCounter();
+					logCounter.startTime();
+					logCounter.onTimer();
+				});
+
+
+			}
+
+			//==== test code start ======================================================================
+			window.onload = function () {
+
+				setDrillContentsInit([ ['figure','triangle_1_4','모양'], ['figure','triangle_3_3'], ['figure','triangle_5_5'], ['figure','triangle_1_1'], ['figure','square_3_4'], ['figure','square_5_3'], ['figure','square_4_1'] ],[1,2,3]);
+			}
+			//==== test code end ========================================================================
+
+		</script>
+
+	</body>
+</html>

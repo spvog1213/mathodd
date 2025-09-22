@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd : objectCount</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/objectCount.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<script src="../../js/libs/require.js"></script>
+	</head>
+
+	<body>
+		<div id="bgCanvas">
+			<div id="currentAnswer"></div>
+		</div>
+
+		<script type="text/javascript">
+			function setDrillContentsInit(val, answer) {
+
+				// console.log('> setDrillContentsInit! ', val, answer);
+								
+				require.config({
+					baseUrl: '../../js/libs'
+				});
+
+				require(['event', 'sound', 'common', 'scene_n', 'dragdrop_n', 'animation_n', 'logCounter', 'convertNumber', '../../quiz/objectCount/js/objectCount'], 
+				function (Event, Sound, Scene, Dragdrop, Animation, lCounter, ConvertNumber, Fishing) {
+
+					gameManager.QUIZ_OPTION = val;
+					gameManager.QUIZ_ANSWER = answer;
+
+					gameManager.quizObj = [];
+
+					for (var i = 4; i < gameManager.QUIZ_OPTION.length; i++) {
+						gameManager.quizObj.push(gameManager.QUIZ_OPTION[i]);
+					}
+
+					gameManager.quizPosition = [];
+					gameManager.zoomRate = 0;
+					// gameManager.BOUNDING_TYPE = 'left';
+					gameManager.temp;
+
+					gameManager.dabCount = 0;
+					gameManager.dropArea = [];
+					gameManager.dropIdx;
+					gameManager.soundEffct = 'media/objectCount.mp3';
+
+
+
+					var streamSound;
+
+					initScale();
+
+					initScene();
+
+					initSound();
+
+					logCounter = new LogCounter();
+					logCounter.startTime();
+					logCounter.onTimer();
+
+				});	
+
+			}
+
+			/*---------- test code start -----------*/
+			window.onload = function() {
+
+				setDrillContentsInit([[['figureReal', 'circle_pizza'], [4]], [['figureReal', 'circle_watermelon'], [5]], ['text', '이등변네'], ['img', 'figureReal', 'circle_watermelon', '모양'], 3, 4, 5, 6], [4, 5] );
+			}
+			/*---------- test code end -----------*/
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,79 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	/*background: url("../images/cake_card.png") no-repeat;*/
+	background-position: 184px 40px;
+	width: 1292px;
+	height: 768px;
+}
+
+
+#UiText {
+	position: absolute;
+	top: 72%;
+	left: 175px;
+	font-family: NanumGothicExtraBold;
+	font-size: 100px;
+	color: #66d1f1;
+}
+
+.currentAnswerText{
+	font-size: 50px;
+	/*font-weight: bold; */
+	color:#000;
+	font-family: NanumGothicExtraBold;
+}
+
+.circle {
+	width: 152px;
+	height: 149px;
+	border: 0px;
+	border-radius: 0px;
+	background: rgba(0, 0, 0, 0.0);
+	/*background: url('../images/cake_numbox.png') no-repeat;*/
+	/*z-index: 2;*/
+	line-height: 120px;
+	font-size: 50px;
+	color : #000;
+}
+
+#currentAnswer span, #currentNumber {
+	font-family: NanumGothicExtraBold;
+	font-size: 40px;
+	color: #000;
+}
+
+#currentAnswer {
+	position: absolute;
+	/*top: 510px; */
+	left: 178px;
+	z-index: 1;
+}
+
+.vic_fancylamp_line{
+	position: absolute;
+	top:50px;
+	z-index: 10;
+}
+
+.vic_fancylamp_lamp{
+	position: absolute;
+	top : -20px;
+	left : 0px;
+	z-index: -1;
+}
+
+.vic_fancylamp_lamp_symbol{
+	position: absolute;
+	top : 0px;
+	left : 0px;
+	z-index: -1;
+}
+
+#calculationFirstBox{position:absolute; top:230px; left:144px; width:92px; height:96px; line-height: 100px;}
+#calculationBox{position:absolute; top:230px; left:440px; width:92px; height:96px; line-height: 100px;}
+#vic_equalsBox{position:absolute; top:230px; left:736px; width:92px; height:96px; line-height: 100px;}

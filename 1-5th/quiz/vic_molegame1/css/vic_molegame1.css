@@ -1,0 +1,110 @@
+body {
+    background: url("../images/bgImg.png") no-repeat;
+    background-position: 0 -116px;
+}
+
+#bgCanvas {
+    position: absolute;
+    width: 1024px;
+    height: 768px;
+    left: 285px;
+}
+
+#machine {
+    position: absolute;
+    top: 8%;
+    left: 19%;
+    width: 640px;
+    height: 644px;
+    background: url(../images/machine.png) no-repeat;
+}
+
+.hole {
+    position: absolute;
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    background: url(../images/molegame1_hole.png) no-repeat;
+    pointer-events: none;
+}
+
+#questionTxt {
+    position: absolute;
+    top: 62px;
+    left: 50px;
+    z-index: 5;
+    font-family: NanumGothicExtraBold;
+    font-size: 55px;
+    color: #333333;
+    width: 541px;
+    height: 96px;
+    text-align: center;
+    line-height: 96px;
+    cursor: default;
+    pointer-events: none;
+}
+
+.mole {
+    position: absolute;
+    cursor: default;
+}
+
+.holeFront, .moleHand {
+    position: absolute;
+    cursor: default;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.moleTxt {
+    position: absolute;
+    z-index: 4;
+    font-family: NanumGothicExtraBold;
+    font-size: 35px;
+    color: #000;
+    width: 163px;
+    text-align: center;
+    line-height: 86px;
+    cursor: default;
+    pointer-events: none;
+}
+
+.moleWrap {
+    display: inline-block;
+    width: 160px;
+    height: 155px;
+    overflow: hidden;
+}
+
+
+
+
+/*추가된 txt + 연산자*/
+#queTxt_wrap{
+    position: absolute;
+    left: 244px;
+    top: 124px;
+    z-index: 10;
+}
+.queText{
+    font-family: NanumGothicExtraBold;
+    font-size: 65px;
+    color: #333333;
+    cursor: default;
+    z-index: 10;
+    line-height: 92px;
+}
+#queTxt{
+    width: 542px;
+    height: 95px;
+    text-align: center;
+}
+#queTxt div{
+    display: inline;
+}
+
+#cal_img{
+    vertical-align: center; 
+    padding-left: 5px;
+    padding-right: 5px;
+}

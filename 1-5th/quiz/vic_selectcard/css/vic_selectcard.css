@@ -1,0 +1,81 @@
+body {
+	background: url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+#cardCounter {
+	position: relative;
+	width: 910px;
+	top: 190px;
+	left: 207px;
+	text-align: center;
+}
+.cardWrap{
+	display: inline;
+	margin-right: 2px;
+
+}
+
+#checkBtn{
+	position: absolute;
+	width: 196px;
+	height: 80px;
+	left: 95%;
+	bottom: 5%;
+	z-index: 10;
+	background: url(../images/checkBtn.png) no-repeat;
+}
+
+#answerMark {
+	position: absolute;
+	margin-top: 20px;
+	margin-left: -130px;
+	z-index: 999;
+}
+
+.parentObj,#question{
+	vertical-align: top;
+	padding-right:2px;
+}
+
+#questionBg{
+	position: absolute;
+	top: 35px;
+	left: 425px;
+	width: 470px;
+	height: 130px;
+	background: url('../images/vic_selectcard_textbox.png') no-repeat;
+	text-align: center;
+	cursor: default;
+
+}
+#bignum, #num{
+	line-height: 75px;
+	display: inline-block;
+}
+
+#bignum{
+	vertical-align: top;
+	line-height: 130px;
+	padding-right: 5px;
+}
+.num{
+	font-size: 50px;
+	height: 30px;
+	color: #000;
+	font-family: NanumGothicExtraBold;
+}
+#line{
+	letter-spacing: -5px;
+	margin-left: -3px;
+}
+#question{
+	margin-left: 10px;
+	line-height: 136px;
+	display: inline-block;
+}

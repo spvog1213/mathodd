@@ -1,0 +1,136 @@
+body {
+	background: url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 285px;
+}
+
+#fruitsContainer {
+	text-align: center;
+	background: #FDFDFD;
+	border-radius: 25px;
+	height: 120px;
+	position: absolute;
+	border: 7px solid #66d1f1;
+}
+
+#currentQuestion {
+	position: absolute;
+	display: none;
+	z-index: 10;
+}
+
+.rect {
+	width: 210px;
+	height: 115px;
+	top: 100px;
+	background: url('../images/lotto_numbox.png') no-repeat;
+	cursor: default;
+	line-height: 111px;
+	font-size: 72px;
+	text-align: center;
+}
+
+#startBtn {
+	position: absolute;
+	cursor: pointer;
+	top: 13%;
+	left: 22.5%;
+	z-index: 3;
+}
+
+#firstHands {
+	position: absolute;
+	top: 3%;
+	left: 12%;
+	width: 406px;
+	height: 408px;
+	/*background: url('../images/lotto_cap_0.png') no-repeat;*/
+	z-index: 2;
+}
+#lotto_bg {
+	position: absolute;
+	top: 3%;
+	left: 12%;
+	width: 406px;
+	height: 408px;
+	background: url('../images/lotto_cap_0.png') no-repeat;
+	z-index: 2;
+}
+
+#handMotion, #fist {
+	position: absolute;
+	top: 30%;
+	left: 17%;
+}
+
+#fisthandBox{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 439px;
+	left: 27%;
+	z-index: 3;
+}
+
+#hand {
+	position: absolute;
+	z-index: 10;
+}
+
+#fist {
+	position: absolute;
+	z-index: 8;
+}
+#handText{
+	position: absolute;
+	width: 102px;
+	height: 104px;
+	font-family: NanumGothicExtraBold;
+	text-align: center;
+	line-height: 99px;
+	color: #333333;
+	font-size: 49px;
+	z-index: 10;
+}
+
+#fistText {
+	position: absolute;
+	width: 102px;
+	height: 104px;
+	font-family: NanumGothicExtraBold;
+	text-align: center;
+	line-height: 99px;
+	color: #333333;
+	font-size: 49px;
+	z-index: 8;
+}
+
+#question {
+	position: absolute;
+	left: 17.6%;
+	font-family: NanumGothicExtraBold;
+	font-size: 62px;
+	color: #fff;
+	top: 51%;
+	width: 293px;
+	height: 170px;
+	line-height: 205px;
+	text-align: center;
+	z-index: 1;
+	background: url('../images/lotto_body.png') no-repeat;
+}
+
+#lotto_tray {
+	position: absolute;
+	width: 290px;
+	height: 139px;
+	left: 180px;
+	top: 590px;
+	background: url(../images/lotto_tray.png) no-repeat;
+}

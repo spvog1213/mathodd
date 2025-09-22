@@ -1,0 +1,98 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0px;
+}
+
+#answerObject1 {
+	width: 140px;
+	height: 121px;
+	border: 0px;
+	border-radius: 0px;
+	cursor: default;
+	line-height: 52px;
+	background: url('../images/trainAnswer_0.png') no-repeat;
+}
+
+#answerObject2 {
+	width: 140px;
+	height: 121px;
+	border: 0px;
+	border-radius: 0px;
+	cursor: default;
+	line-height: 52px;
+	background: url('../images/trainAnswer_0.png') no-repeat;
+}
+
+#question1, #question2{
+	border: 0px;
+	border-radius: 0px;
+	background: rgba(0, 0, 0, 0.0);
+	/*background: url('../images/numpad_6.png') no-repeat;*/
+	z-index: 2;
+	cursor: default;
+}
+
+#trainContainer {
+	position: absolute;
+}
+
+.train {
+	position: absolute;
+	cursor: pointer;
+}
+
+.trainText {
+	position: absolute;
+	font-family: NanumGothicExtraBold;
+	font-size: 45px;
+	color: #333333;
+	width: 130px;
+	text-align: center;
+}
+
+
+.trainAnswer {
+	position: absolute;
+}
+
+#trainHead {
+	position: absolute;
+	top: 270px;
+	left: 210px;
+}
+
+#trainRoad {
+	position: absolute;
+	left: 0px;
+	top: 305px;
+}
+
+.train{
+	position: absolute;
+	width: 130px;
+	height: 202px;
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;
+	color: #333333;
+	text-align: center;
+	cursor: pointer;
+}
+
+.flyballoonText{
+	position: absolute;
+	width: 130px;
+	line-height: 78px;
+	text-align: center;
+}
+#trainHead {
+	position: absolute;
+	top: 180px;
+	left: 830px;
+}

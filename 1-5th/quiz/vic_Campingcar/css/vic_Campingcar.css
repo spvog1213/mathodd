@@ -1,0 +1,64 @@
+body {
+	background: url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0px;
+}
+
+#campingContainer {
+	position: absolute;
+}
+
+.train {
+	position: absolute;
+	cursor: pointer;
+}
+.campingAnswer{
+	position: absolute;
+	z-index: 2;
+}
+.campingBar {
+	position: absolute;
+}
+
+#trainHead {
+	position: absolute;
+	top: 180px;
+	left: 830px;
+}
+
+#trainRoad {
+	position: absolute;
+	left: 0px;
+	top: 305px;
+}
+.campingcar {
+	display: inline-block;
+	position: absolute;
+}
+
+.campingcarText{
+	position: absolute;
+	font-family: NanumGothicExtraBold;
+	font-size: 55px;
+	color: #333333;
+	width: 148px;
+	text-align: center;
+	cursor: default;
+}
+
+.compingText{
+	position: absolute;
+	font-family: NanumGothicExtraBold;
+	font-size: 55px;
+	color: #333333;
+	width: 130px;
+	text-align: center;
+	z-index: 5;
+	cursor: default;
+}

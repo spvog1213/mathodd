@@ -1,0 +1,81 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0px;
+}
+
+#balanceContainer {
+	position: absolute;
+	left: 322px;
+	top: 100px;
+}
+
+#rightContainer {
+	position: absolute;
+}
+
+#balanceCenter {
+	position: absolute;
+	left: 287px;
+	z-index: 6;
+}
+
+#balanceBar {
+	position: absolute;
+	top: 8px;
+	z-index: 5;
+}
+
+#answerObject {
+	position: absolute;
+}
+
+#leftQuestionBox {
+	position: absolute;
+	width: 269px;
+	height: 83px;
+	height: 73px;
+	background: url('../images/balanceSmalBarl_line.png') no-repeat;
+	left: -108px;
+	top: 79px;
+}
+
+#questionContainer {
+}
+
+#leftQuestionLine {
+	position: absolute;
+	width: 5px;
+	height: 84px;
+	background: url('../images/balanceLine.png') no-repeat;
+	left: 33px;
+	top: 108px;
+
+}
+
+#rightQuestionLine {
+	position: absolute;
+	width: 5px;
+	height: 84px;
+	background: url('../images/balanceLine.png') no-repeat;
+	top: 39px;
+	left: 959px;
+
+}
+
+#leftQuestionBoxLine {
+	position: absolute;
+	z-index: 5;
+	top: 55px;
+}
+
+.questionBack {
+	width: 236px;
+	height: 173px;
+}

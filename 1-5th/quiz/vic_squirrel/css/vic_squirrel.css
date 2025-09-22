@@ -1,0 +1,72 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+.circle {
+	position: absolute;
+	width: 84px;
+	height: 118px;
+	font-size: 42px;
+	border: 0px;
+	text-align: center;
+	line-height: 56px;
+	z-index: 5;
+	background: none;
+
+}
+#choiceQuestionBg{
+	position: absolute;
+	top: -50px;
+	left: 0px;
+	z-index: -2;
+}
+#answerObject_1,#answerObject_2{
+	width: 84px;
+	height: 118px;
+	background: url('../images/vic_squirrel_questionbg.png') no-repeat;
+	z-index: 1;
+}
+
+/*나무*/
+#treeContainer{
+	position: absolute;
+	width: 824px;
+	height: 778px;
+	background:url("../images/vic_squirrel_tree.png") no-repeat;
+	bottom: 0px;
+	left: 230px;
+}
+#queTextWrap{
+	position: absolute;
+	width: 252px;
+	height: 107px;
+	top: 400px;
+	left: -7px;
+	background:url("../images/vic_squirrel_textbg.png") no-repeat;
+	font-family: NanumGothicExtraBold;
+	line-height: 105px;
+	font-size: 50px;
+	text-align: center;
+}
+#squirrel{
+	position: absolute;
+	left: 850px;
+	top: 402px;
+	z-index: -1;
+}
+.txt{
+	display: inline-block;
+}
+#division{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.TextImg{
+	position: absolute;
+}

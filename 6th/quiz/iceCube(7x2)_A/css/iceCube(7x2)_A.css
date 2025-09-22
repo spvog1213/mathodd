@@ -1,0 +1,52 @@
+
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+}
+
+div[class*="question_"]{
+	position: absolute;
+	width: 110px;
+	height: 116px;
+	text-align: center;
+	font-size:0;
+	background:url("../images/icecube_icebox.png") no-repeat;
+}
+
+img[class*="question_"]{
+	width: 90px;
+	height: 90px;
+	margin: 10px;
+}
+
+
+div[class*="drag_"]{
+	position: absolute;
+	width: 110px;
+	height: 116px;
+	font-size:0;
+	background:url("../images/icecube_icebox.png") no-repeat;
+}
+
+img[class*="drag_"]{
+	width: 90px;
+	height: 90px;
+	margin: 10px;
+}
+
+[class*="dropArea_"]{
+	position:absolute;
+	background:blue;
+	background:url("../images/icecube_questionbox.png") no-repeat;
+	width: 110px;
+	height: 116px;
+}
+
+.content {
+	display: inline-block;
+	width:930px;
+	height:308px;
+	margin-top: 80px;
+}
+

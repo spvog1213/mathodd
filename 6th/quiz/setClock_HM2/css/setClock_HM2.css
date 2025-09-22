@@ -1,0 +1,170 @@
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;
+}
+
+.quizClockTime {
+	font-family: DsDigitalBold;
+	font-size: 80px;
+	margin-top: 50px;
+	display: inline-block;
+}
+.quizClock span {
+	margin: 0 8px;
+}
+.clockContainer {
+	position: absolute;
+	top: 318px;
+	left: 82px;
+	width: 360px;
+	height: 364px;
+	background: url(../images/mainClock.png);
+}
+.clockCenter {
+	position: relative;
+	width: 360px;
+	height: 364px;
+	background: url(../images/clockDot.png);
+}
+.hour {
+	position: absolute;
+	width: 360px;
+	height: 364px;
+	background: url(../images/hour.png);
+}
+.minute {
+	position: absolute;
+	width: 360px;
+	height: 364px;
+	background: url(../images/minute.png);
+}
+.second {
+	position: absolute;
+	width: 360px;
+	height: 364px;
+	background: url(../images/second.png);
+}
+
+
+.hourBtnContainer{
+	position: absolute;
+	top: 387px;
+	left: 483px;
+	width: 293px;
+	height: 203px;
+	background: url(../images/btn_box_1.png) no-repeat;
+}
+.minutBtnContainer{
+	position: absolute;
+	top: 387px;
+	left: 800px;
+	width:293px;
+	height:323px;
+	background: url(../images/btn_box_1.png) no-repeat;
+}
+.hourBtnContainer .clickBtnBg {
+	width: 235px;
+	height: 102px;
+	margin: 70px 28px;
+	background: url(../images/btn_hour.png);
+}
+.minutBtnContainer .clickBtnBg {
+	width: 235px;
+	height: 102px;
+	margin: 15px 28px;
+	background: url(../images/btn_minute.png);
+}
+.clickBtnBg > span {
+	position: relative;
+	top: 16px;
+	width: 70px;
+	height: 50px;
+	font-size: 40px;
+	display: inline-block;
+}
+.hourBtnContainer .hour_10 {
+	display: none;
+}
+.minutBtnContainer .minute_10 {
+	margin-top: 70px;
+
+}
+.minutBtnContainer .minute_1 {
+	margin-top: 70px;
+	display: none;
+}
+.btnContainerText{
+	position: absolute;
+	left: 109px;
+	font-size: 40px;
+	top: 11px;
+	color: #755935;
+}
+.mainClock_light{
+	position: absolute;
+	width:360px;
+	height:364px;
+	background: url(../images/mainClock_light.png) no-repeat;
+}
+.digitalClock_light{
+	position: absolute;
+	width:430px;
+	height:185px;
+	z-index: 50;
+	background: url(../images/digitalClock_light.png) no-repeat;
+}
+
+.minus{
+	position: absolute;
+	top: 37px;
+	left: -22px;
+	height: 30px;
+	width: 38px;
+	display: inline-block;
+}
+.plus{
+	position: absolute;
+	top: 31px;
+	left: 22px;
+	width:38px;
+	height:38px;
+	display: inline-block;
+}
+.minus_0{
+	top:104px;
+	left:48px;
+}
+.minus_1{
+	top:104px;
+	left:48px;
+}
+.minus_3{
+	top: 104px;
+	left:48px;
+}
+.plus_0{
+	top: 98px;
+	left: 205px;
+}
+.plus_1{
+	top: 98px;
+	left: 205px;
+}
+
+.plus_3{
+	top: 98px;
+	left: 205px;
+}
+.minus > img{
+	position: relative;
+	top:-26px;
+	pointer-events: none;
+}
+.plus > img{
+	position: relative;
+	top:-7px;
+	pointer-events: none;
+}

@@ -1,0 +1,68 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0px;
+}
+
+.rect{
+	width: 200px;
+	height: 460px;
+	border: 0;
+	border-radius: 0px;
+	line-height: 207px;
+	font-size: 45px;
+	background: none;
+	z-index: 10;
+
+}
+#numBox{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: -32;
+}
+#handGroup{
+	position: absolute;
+	bottom: -3px;
+	right: -70px;
+	pointer-events : none;
+	z-index: 20;
+
+}
+#hand{
+	margin-left: 139px;
+
+}
+
+#choiceBg{
+    position: absolute;
+    left: 0px;
+    z-index: -15;
+}
+
+.queText{
+	font-family: NanumGothicExtraBold;
+    font-size: 60px;
+    color: #333333;
+    cursor: default;
+    z-index: 10;
+}
+
+#queTxt_wrap{
+	position: absolute;
+	left: 371px;
+	top: 136px;
+}
+#queTxt{
+	width: 578px;
+	text-align: center;
+}
+#queTxt div{
+	display: inline;
+}

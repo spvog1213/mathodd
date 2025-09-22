@@ -1,0 +1,103 @@
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;
+}
+.imgTable {
+}
+
+.productTable {
+	/*width: 450px;*/
+	height: 387px;
+	/*background: url("../images/mathTable_bg_3x3.png") no-repeat;*/
+	position: absolute;
+	top: 170px;
+	left: 250px;
+	padding: 5px 5px 5px 5px ;
+	border: 2px solid;
+	border-radius: 20px;
+}
+.quizBox {
+	position: relative;
+	width: 70px;
+	height: 76px;
+	display: inline-block;
+	/*border : 1px solid;*/
+}
+.checkBtn {
+	position: absolute;
+	top: 55px;
+	left: 1122px;
+	width: 98px;
+	height: 106px;
+	background: url('../../../images/common/checkBtnRed.png') no-repeat;
+}
+.quizTableText {
+	position: absolute;
+	width:50px;
+	height:50px;
+	color: #fff;
+	font-size: 40px;
+}
+.gaugeBox {
+	position:relative;
+	top: 66px;
+	width:96px;
+	margin-right:10px;
+	display:inline-block; 
+}
+.gaugeBox_0 {left:15px;}
+.gaugeBox_1 {left:40px;}
+.gaugeBox_2 {left:63px;}
+
+.gauge {
+	width:85px;
+	height:60px; 
+	outline:2px solid #fff;
+}
+.gauge_0_0{margin-bottom: 2px;}
+.gauge_0_1{margin-bottom: 2px;}
+.gauge_0_2{margin-bottom: 2px;}
+.gauge_0_3{margin-bottom: 2px;}
+
+.gauge_1_0{margin-bottom: 2px;}
+.gauge_1_1{margin-bottom: 2px;}
+.gauge_1_2{margin-bottom: 2px;}
+.gauge_1_3{margin-bottom: 2px;}
+
+.gauge_2_0{margin-bottom: 2px;}
+.gauge_2_1{margin-bottom: 2px;}
+.gauge_2_2{margin-bottom: 2px;}
+.gauge_2_3{margin-bottom: 2px;}
+
+#clickBoxImg{
+	position: absolute;
+	left: 24px;
+	width:70px;
+	height:76px;
+	pointer-events: none;
+	margin-top: 8px;
+	/*z-index: 5;*/
+}
+/*.quizBox_0_0{top:50px; left:39px;}
+.quizBox_1_0{top:50px; left:-240px;}
+.quizBox_2_0{top:38px; left:-100px;}
+
+.quizBox_0_0{top:50px; left:39px;}
+.quizBox_1_0{top:50px; left:-240px;}
+.quizBox_2_0{top:38px; left:-100px;}*/
+.innerImg{
+	pointer-events: none;
+	position: relative;
+	top: -354px;
+}
+
+
+.clickBoxBtn, .clickBoxDown {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+}

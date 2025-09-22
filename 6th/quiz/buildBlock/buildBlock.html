@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd : buildBlock_sample</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/buildBlock.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<script src="../../js/libs/require.js"></script>
+	</head>
+
+	<body>
+		<div id="bgCanvas">
+			<div class="buildBlockArea"></div>
+		</div>
+
+		<script type="text/javascript">
+
+		function setDrillContentsInit(val, answer) {
+			require.config({
+				baseUrl: '../../js/libs'
+			});
+
+			require(['event', 'sound', 'common', 'scene_n', 'dragdrop_n', 'animation_n', 'logCounter', 'convertNumber', '../../quiz/buildBlock/js/buildBlock'],
+
+				function (Event, Sound, Scene, Dragdrop, Animation, lCounter, ConvertNumber, sentenceComplete) {
+
+				gameManager.CURRENT_ANSWER = answer;
+				gameManager.standardNum = val[1];
+				gameManager.quizText =  ["똑같은 모양을 쌓아보세요.","각 칸을 터치하는 수만큼 블록이 쌓여요."];
+				gameManager.quizImgStr = "images/buildSample_"+(val[0])[0]+"_"+(val[0])[1]+"_"+(val[0])[2]+".png";
+				gameManager.CURRENT_TYPE = 'buildBlock';
+				gameManager.choiceQuestionPosition = [];
+				gameManager.zoomRate = 0
+				gameManager.clickArray;
+				gameManager.soundEffct = 'media/buildBlock.mp3';
+
+
+				initScale();
+				initSound();
+
+				initScene();
+				initObject();
+
+				logCounter = new LogCounter();
+				logCounter.startTime();
+				logCounter.onTimer();
+
+			   });
+			}
+
+			/*---------- test code start -----------*/
+			window.onload = function () {
+
+				setDrillContentsInit([[3,5,2], [7]], [0,0,0,0,3,1,0,1,0]);
+
+			}
+			/*---------- test code end -----------*/
+	</script>
+	</body>
+</html>

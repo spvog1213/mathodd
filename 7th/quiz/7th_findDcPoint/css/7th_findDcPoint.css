@@ -1,0 +1,255 @@
+#bgCanvas {
+	position: absolute;
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+	font-family: NanumGothicExtraBold;
+}
+
+#queTxt{
+	position: absolute;
+	top: 55px;
+	left: 125px;
+	width: 830px;
+	padding-left: 60px;
+	line-height: 120px;
+	text-align: center;
+	font-size:48px;
+	color:#68421e;
+	/*font-weight: bold;*/
+}
+#queTxt > span {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+}
+#queTxt > span > img {
+	width: auto;
+	height: 96px;
+	margin: -20px 5px 0;
+	vertical-align: middle;
+}
+#queTxt > span > span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	line-height: 90px;
+	text-align: center;
+	color: #68421e;
+}
+
+#queTxt .txt{
+	display: inline-block;
+	margin-top:28px;
+}
+
+#questionContainer {
+	position: absolute;
+	display: block;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-image:url('../images/textBox.png');
+	background-repeat: no-repeat;
+	background-position: 122px 28px;
+	background-size: 900px 626px;
+}
+
+#contentContainer{
+	position: absolute;
+	display: block;
+	top:220px;
+	left:0px;
+	width: 100%;
+	text-align: center;
+}
+
+#contentContainer > .top {
+	top:0px;
+}
+
+#contentContainer > .bottom {
+	top:110px;
+}
+
+#contentContainer > .text1 {
+	position: absolute;
+	padding-right:10px;
+	left:317px;
+	width:124px;
+	height:89px;
+	text-align: right;
+}
+
+#contentContainer > .text1 > span{
+	display: inline-block;
+	font-size: 43px;
+	color:#66431d;
+	line-height: 89px;
+}
+
+#contentContainer > .text2 {
+	position: absolute;
+	left:451px;
+	width:70px;
+	height:89px;
+	text-align: center;
+}
+
+#contentContainer > .text2 > span{
+	display: inline-block;
+	font-size: 43px;
+	color:#75bb37;
+	line-height: 89px;
+}
+
+#contentContainer > .text3 {
+	position: absolute;
+	padding-right:10px;
+	left:521px;
+	width:124px;
+	height:89px;
+	text-align: right;
+}
+
+#contentContainer > .text3 > span{
+	display: inline-block;
+	font-size: 43px;
+	color:#66431d;
+	line-height: 89px;
+}
+
+#contentContainer > .text4 {
+	position: absolute;
+	left:655px;
+	width:70px;
+	height:89px;
+	text-align: center;
+}
+
+#contentContainer > .text4 > span{
+	display: inline-block;
+	font-size: 43px;
+	color:#75bb37;
+	line-height: 89px;
+}
+
+#contentContainer > .text5 {
+	position: absolute;
+	padding-left:10px;
+	left:725px;
+	width:253px;
+	height:89px;
+	text-align: left;
+}
+
+#contentContainer > .text5 > span{
+	display: inline-block;
+	font-size: 43px;
+	color:#66431d;
+	line-height: 89px;
+}
+
+#contentContainer > .bottom.text5 {
+	text-align: center;
+	background-image:url('../images/box_answer.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#peaContainer{
+	position: absolute;
+	display: block;
+	top:0px;
+	/*top:487px;*/
+	left:0px;
+	width: 100%;
+	height:100px;
+}
+
+#peaContainer > div{
+	position: absolute;
+	display: block;
+	top:487px;
+}
+
+#peaContainer > div:nth-child(1){
+	left:350px;
+}
+
+#peaContainer > div:nth-child(2){
+	left:445px;
+}
+
+#peaContainer > div:nth-child(3){
+	left:540px;
+}
+
+#peaContainer > div:nth-child(4){
+	left:635px;
+}
+
+#peaContainer > div:nth-child(5){
+	left:730px;
+}
+
+#peaContainer > div:nth-child(6){
+	left:825px;
+}
+
+#peaContainer > div:nth-child(7){
+	left:920px;
+}
+
+#peaContainer > .pea{
+	width:90px;
+	height:96px;
+}
+
+#peaContainer > .pea > span{
+	display: inline-block;
+	text-align: center;
+	font-size:48px;
+	line-height: 90px;
+	color:#68421e;
+}
+
+#peaContainer > .text{
+	background-image:url('../images/btn_pea.png');
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+}
+
+#peaContainer > .point{
+	background-image:url('../images/btn_point_pea.png');
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+	cursor: pointer;
+}
+
+#checkContainer{
+	position: absolute;
+	display: block;
+	top: 215px;
+	left:0px;
+	width: 100%;
+	text-align: center;
+}
+
+#checkContainer .check_btn{
+	position: absolute;
+	display: block;
+	top:109px;
+	left:1044px;
+	width:96px;
+	height:104px;
+	cursor: pointer;
+	background-image: url('../../../images/common/checkBtnRed.png');
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+}
+#checkContainer .check_btn.on {
+	background-image: url('../../../images/common/checkBtnRed_on.png');
+}

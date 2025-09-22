@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd : BeadCountDrag</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/vic_busStop_C.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<script type="text/javascript" src="../../js/libs/event.js"></script>
+		<script type="text/javascript" src="../../js/libs/scene.js"></script>
+		<script type="text/javascript" src="../../js/libs/dragdrop.js"></script>
+		<script type="text/javascript" src="../../js/libs/animation.js"></script>
+		<script type="text/javascript" src="../../js/libs/sound.js"></script>
+		<script type="text/javascript" src="../../js/libs/logCounter.js"></script>
+		<script type="text/javascript" src="js/vic_busStop_C.js"></script>
+	</head>
+
+	<body>
+		<div id="bgCanvas">
+		</div>
+
+		<script type="text/javascript">
+
+			function setDrillContentsInit(val, answer) {
+
+				gameManager.TOTAL_ANSWER_ARRAY = val;
+                gameManager.CURRENT_ANSWER = answer;
+
+				gameManager.choiceQuestion = [];
+				for (var i = 1; i < gameManager.TOTAL_ANSWER_ARRAY.length; i++) {
+					gameManager.choiceQuestion.push(gameManager.TOTAL_ANSWER_ARRAY[i]);
+				}
+				
+				gameManager.CURRENT_TYPE = 'busstop_A';
+				gameManager.choiceQuestionPosition = [];
+				gameManager.zoomRate = 0
+
+				var streamSound;
+
+				initScale();
+
+				initScene();
+
+				initSound();
+
+				logCounter = new LogCounter();
+				logCounter.startTime();
+				logCounter.onTimer();
+
+			}
+
+			/*---------- test code start -----------*/ 
+			window.onload = function () {
+
+				setDrillContentsInit(['큰', 0,9,8] , [9,8,0]);
+
+			}
+			/*---------- test code end -----------*/ 
+
+		</script>
+	</body>
+</html>

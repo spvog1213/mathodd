@@ -1,0 +1,74 @@
+#bgCanvas {
+	position: absolute;
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+	font-family: NanumGothicExtraBold;
+}
+
+
+[class*="drag_"]{
+	position:absolute;
+	width:170px;
+	height:170px;
+}
+
+.content{
+	display: inline-block;
+	margin-top: 50px;
+	margin-left: 0px;
+	width:940px;
+	height:406px;
+	background: url("../images/figureBox.png") no-repeat;
+}
+
+
+.quizBox{
+	position: absolute;
+	text-align: center;
+	background: url("../images/quizBox.png") no-repeat;
+	line-height: 75px;
+	left: 320px;
+	top : 100px;
+	font-size: 50px;
+	width: 600px;
+	height: 92px;
+}
+
+.question{
+	width:100px;
+	height:92px;
+	vertical-align: middle;
+}
+
+
+[class*="dropArea_"]{
+	position: absolute;
+	width:940px;
+	height:250px;
+}
+
+.dropArea_0{
+	margin-top:80px;
+}
+
+.dropArea_1{
+	margin-top:50px;
+}
+
+[class*="checkBtn"]{
+	position: absolute;
+	width: 98px;
+	height: 106px;
+	top : 210px;
+	left: 1100px;
+}
+
+.checkBtn{
+	background:url("../../../images/common/checkBtnRed.png") no-repeat;
+}
+.checkBtn_on{
+	background:url("../../../images/common/checkBtnRed_on.png") no-repeat;
+}
+
+

@@ -1,0 +1,48 @@
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;
+	/*background: url('../images/bgImg.png') no-repeat;*/
+}
+
+.currentAnswer{
+	position: absolute;
+	top:30px;
+	left:305px;
+	width:590px;
+	height:90px;
+	background: url('../images/textBoard.png') no-repeat;
+}
+.quizText{
+	margin-top: 16px;
+	display: inline-block;
+}
+.quizContainer{
+	position: absolute;
+	top:140px;
+	width:1229px;
+	height:306px;
+	background: url('../images/dropHanger.png') no-repeat;
+}
+
+[class*='dropArea_'] {
+	width: 210px;
+	height:210px;
+	position: absolute;
+	top:210px;
+	cursor: default;
+}
+
+[class*='dragObj_'] {
+	width: 316px;
+	height: 78px;
+	border: 0px;
+	position: absolute;
+	border-radius: 0px;
+	background: rgba(0, 0, 0, 0.0);
+	background-size: 316px 78px;
+	z-index: 2;
+	line-height: 190px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>MathOdd : NumberCutDrag</title>
+        <link rel="stylesheet" type="text/css" href="../../css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/parking2.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+        <script type="text/javascript" src="../../js/libs/event.js"></script>
+        <script type="text/javascript" src="../../js/libs/scene.js"></script>
+        <script type="text/javascript" src="../../js/libs/dragdrop.js"></script>
+        <script type="text/javascript" src="../../js/libs/animation.js"></script>
+        <script type="text/javascript" src="../../js/libs/sound.js"></script>
+        <script type="text/javascript" src="../../js/libs/logCounter.js"></script>
+        <script type="text/javascript" src="../../js/libs/convertNumber.js"></script>
+        <script type="text/javascript" src="js/parking2.js"></script>
+    </head>
+
+    <body>
+        <div id="bgCanvas">
+
+        </div>
+
+        <script type="text/javascript">
+			function setDrillContentsInit(val, answer) {
+
+                gameManager.TOTAL_ANSWER_ARRAY = val;
+                gameManager.CURRENT_ANSWER = answer;
+		
+				// gameManager.CURRENT_ANSWER = [gameManager.TOTAL_ANSWER_ARRAY[3]];
+				gameManager.choiceQuestion = [gameManager.CURRENT_ANSWER[0]];
+				gameManager.choiceQuestionPosition = [];
+				gameManager.zoomRate = 0;
+				gameManager.CURRENT_TYPE = 'parking';
+
+				/*랜덤 버스*/
+				var random = 3;
+				BusTypes = Math.floor(random * Math.random());
+
+				initSound();
+
+				initScale();
+
+				initScene();
+
+				initBus(gameManager.busimg);
+
+				initNumber(gameManager.TOTAL_ANSWER_ARRAY);
+
+				logCounter = new LogCounter();
+				logCounter.startTime();
+				logCounter.onTimer();
+
+			}
+
+			/*---------- test code start -----------*/
+			window.onload = function() {
+
+			     setDrillContentsInit(['백이십일', 100, 111, 121], [121]);
+			}
+			/*---------- test code end -----------*/
+        </script>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0px;
+}
+
+
+#ballonContainer,.ballonAnswer{
+	position: absolute;
+}
+
+.rect{
+	width: 216px;
+	height: 394px;
+	border: 0;
+	border-radius: 0px;
+	line-height: 355px;
+	font-size: 38px;
+	background: none;
+	z-index: 10;
+
+}
+
+.txt{
+	position: absolute;
+	font-family: NanumGothicExtraBold;
+    font-size: 50px;
+    color: #333333;
+    text-align: center;
+    cursor: default;
+}
+
+#lineTxt{
+	width: 54px;
+	letter-spacing: -5px;
+}
+
+#coicetxt0,#coicetxt1,#coicetxt2{
+	position: absolute;
+	text-align: center;
+	line-height: 78px;
+}
+
+
+#choiceBg{
+    position: absolute;
+    left: 0px;
+    z-index: -15;
+}
+
+#choiceQuestion_0,#choiceQuestion_1,#choiceQuestion_2{
+	margin-top: 420px;
+}
+
+.queText{
+	position: absolute;
+	font-family: NanumGothicExtraBold;
+    font-size: 55px;
+    color: #333333;
+    line-height: 110px;
+    text-align: center;
+    cursor: default;
+    z-index: 10;
+}

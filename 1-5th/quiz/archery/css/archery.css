@@ -1,0 +1,102 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+#question1, #question2{
+	background: none;
+}
+
+.circle {
+	position: absolute;
+	border-radius: 20%;
+	width: 122px;
+	height: 122px;
+	font-size: 60px;
+	border: 0px;
+	border-radius: 2px;
+	line-height: 120px;
+	text-align: center;
+	cursor: default;
+	z-index: 1;
+	background: url(../images/archery_numbox.png) no-repeat;
+	padding-left: 0px;
+	color: #ffea00;
+}
+
+
+#answerObject {
+	padding: 0px;
+	width: 122px;
+	height: 122px;
+	background: none;
+	padding-top: 100px;
+	/*text-align: center;*/
+	background: none;
+	cursor: default;
+	line-height: 0px;
+}
+
+.backBox {
+	position: absolute;
+	width: 226px;
+	height: 197px;
+	/*background: url(../images/frogjump2_lotusleaf.png) no-repeat;*/
+}
+
+#archeryHit {
+	position: absolute;
+	top: 7%;
+	right: -18%;
+	z-index: 2;
+}
+
+#arrowBg{
+	position: absolute;
+	right: -22%;
+}
+
+#panel{
+	position: absolute;
+	display: none;
+	width: 540px;
+	height: 312px;
+	top: -8%;
+	right: -18%;
+	background: url('../images/archery_panel.png') no-repeat;
+
+}
+
+.number{
+	position: absolute;
+	display: none;
+	width: 122px;
+	height: 122px;
+	font-family: NanumGothicExtraBold;
+	font-size: 60px;
+	color: #ffea00;
+	text-align: center;
+	line-height: 120px;
+	cursor: default;
+	background: url('../images/archery_numbox.png') no-repeat;
+}
+
+#correct{
+	color: #333333;
+	background: url('../images/archery_questionbox.png') no-repeat;
+}
+
+#target{
+	position: absolute;
+	width: 386px;
+	height: 358px;
+	top: 60px;
+	left: 191px;
+	background: url('../images/archery_target.png') no-repeat;
+
+}

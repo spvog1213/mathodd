@@ -1,0 +1,140 @@
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;
+	/*background: url('../images/bgImg.png') no-repeat;*/
+}
+
+.quizContainer {
+	position: absolute;
+	top: 190px;
+	left: 66px;
+	width: 1100px;
+	height: 472px;
+	background: url(../images/machine.png) center / 100% 100% no-repeat;
+}
+
+.bgGlitter {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background:	url(../images/bgImg2.png) no-repeat;
+	background-size: 1229px 768px;
+}
+
+.machineTitle{
+	display: inline-block;
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 50px;
+    margin-top: 58px;
+    box-shadow: 3px 3px 5px #b99913;
+	z-index: 5;
+    z-index: 1;
+}
+
+.swWrapper {
+	position:absolute;
+	width: 902px;
+}
+.swBg {
+	position:absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 314px;
+	border-width: 16px;
+}
+.swSlotsWrapper {
+	position:relative;
+	display: block;
+	width: 100%;
+	height: 314px;
+	overflow: hidden;
+}
+.swSlots {
+	display: inline-block;
+	height:100%;
+}
+.swSlots > div {
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	width: 300px;
+	margin-top: 75px;
+	text-align: center;
+	vertical-align: top;
+}
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	width: 100%;
+}
+.swSlots li {
+	height: 155px;
+	overflow: hidden;
+	font-size:0;
+	opacity: 0.2;
+	position: relative;
+}
+.swSlots li > div{
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	vertical-align: top;
+	font-size: 54px;
+	padding-top:50px;
+}
+.swSlots li > img, .swSlots li > div{
+	position: relative;
+}
+.doneBtn, .doneBtn_on{
+	position: absolute;
+	width: 98px;
+	height: 106px;
+}
+.doneBtn{
+	left : 1041px;
+	top : 470px;
+	background:	url(../../../images/common/checkBtnRed.png) no-repeat;
+	background-size: 100% 100%;
+}
+.doneBtn_on{
+	z-index:100;
+	visibility:hidden;
+
+}
+
+/* 분수 css */
+.bunsuDiv {
+    display: inline-block;
+    vertical-align: middle;
+}
+.bunsuDiv > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+.int {
+    margin-right: 5px;
+}
+.prop {
+    position: relative;
+    line-height: 1.25em;
+}
+.prop > div {
+    display: block;
+}
+.prop::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - .05em);
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-top: .1em solid black;
+}

@@ -1,0 +1,84 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0px;
+}
+
+#UiText {
+	position: absolute;
+	top: 50%;
+	left: 300px;
+	font-family: NanumGothicExtraBold;
+	font-size: 100px;
+	color: #66d1f1;
+
+}
+
+.fish {
+	position: absolute;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.float {
+	position: absolute;
+
+}
+
+#fisher {
+	position: absolute;
+	top: 190px; 
+	left: 550px;
+}
+
+#boat {
+	position: absolute;
+}
+
+#cat {
+	position: absolute;
+	left: -350px;
+	top: -230px;
+}
+
+#basket_front {
+	position: absolute;
+	left: 240px;
+	top: -75px;
+	z-index: 5;
+}
+
+#basket_back {
+	position: absolute;
+	left: 240px;
+	top: -75px;
+}
+
+.fishText {
+	position: absolute;
+	width: 190px;
+	font-family: NanumGothicExtraBold;
+	font-size: 33px;
+	color: #333333;
+
+}
+
+#fishNumber {
+	position: absolute;
+	width: 100px;
+	height: 55px;
+	top: -17px;
+	left: 250px;
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;
+	text-align: center;
+	border-radius: 10px;
+	z-index: 6;
+
+}

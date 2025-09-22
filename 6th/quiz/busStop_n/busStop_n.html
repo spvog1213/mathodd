@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd : busStop</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/busStop.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<script type="text/javascript" src="../../js/libs/event.js"></script>
+		<script type="text/javascript" src="../../js/libs/sound.js"></script>
+		<script type="text/javascript" src="../../js/libs/common.js"></script>
+		<script type="text/javascript" src="../../js/libs/scene.js"></script>
+		<script type="text/javascript" src="../../js/libs/dragdrop.js"></script>
+		<script type="text/javascript" src="../../js/libs/animation.js"></script>
+		<script type="text/javascript" src="../../js/libs/logCounter.js"></script>
+		<script type="text/javascript" src="../../js/libs/convertNumber.js"></script>
+		<script type="text/javascript" src="js/busStop.js"></script>
+	</head>
+
+	<body>
+		<div id="bgCanvas">
+		</div>
+
+		<script type="text/javascript">
+
+			function setDrillContentsInit(val, answer) {
+
+					gameManager.QUIZ_OPTION = val;
+					gameManager.QUIZ_ANSWER = answer;
+
+					gameManager.quizConvertNumber = [];
+					for (var i = 1; i < gameManager.QUIZ_OPTION.length; i++) {
+						gameManager.quizConvertNumber.push(gameManager.QUIZ_OPTION[i]);
+					}
+					
+					gameManager.quizPosition = [];
+					gameManager.zoomRate = 0
+
+
+					initScale();
+					initScene();
+					initSound();
+
+					logCounter = new LogCounter();
+					logCounter.startTime();
+					logCounter.onTimer();
+
+
+			}
+
+			/*---------- test code start -----------*/ 
+			window.onload = function () {
+
+				setDrillContentsInit(['큰', 0,9,8,7] , [9,8,7,0]);
+
+			}
+			/*---------- test code end -----------*/ 
+
+		</script>
+	</body>
+</html>

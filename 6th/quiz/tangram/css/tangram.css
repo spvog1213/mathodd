@@ -1,0 +1,60 @@
+
+#bgCanvas {
+	position: absolute;
+	width: 1229px;
+	height: 768px;
+	background-position: 130px 150px;
+}
+.circleImg{
+	width: 600px;
+	height: 460px;
+	position: absolute;
+	top: 53px;
+	left: 320px;
+}
+.circleBg{
+	width: 600px;
+	height: 460px;
+	position: absolute;
+}
+.circleText{
+	font-size: 45px;
+	font-family: NanumGothicExtraBold;
+	position: absolute;
+	background: #fff;
+	border-radius: 50%;
+}
+
+
+.dropObj{
+	position: absolute;
+}
+
+
+.dragObj{
+
+	font-size: 55px;
+	text-align: center;
+	line-height: 92px;
+	font-family: NanumGothicExtraBold;
+	position: absolute;
+}
+
+
+/*-----------------------------------*/
+.board{
+	width: 624px;
+	height: 542px;
+	background: url(../images/tangram_board.png);
+	position: absolute;
+	top: 87px;
+	left: 140px;
+	z-index: -1
+}
+.tangramWrap{
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	left: 250px;
+	top: 167px;
+}

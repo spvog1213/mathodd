@@ -1,0 +1,1188 @@
+function initContentsUI(scaleWidth, scaleHeight, currentType, iconName) {
+	console.log('setContentsUIScale...');
+
+	var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+	    screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
+	    container = document.querySelector('#contentsContainer'),
+	    zoomVertical = screenHeight / container.clientHeight,
+	    zoomHorizontal = screenWidth / container.clientWidth;
+
+
+	if (!eventCheck) {
+		document.body.style.height = scaleHeight * zoomHorizontal + "px";
+		document.body.style.width = scaleWidth * zoomHorizontal + "px";
+		setScaleContiner(container, zoomHorizontal);
+	} else {
+		if (screenWidth < screenHeight)	{
+			document.body.style.height = scaleHeight * zoomHorizontal + "px";
+			document.body.style.width = scaleWidth * zoomHorizontal + "px";
+			setScaleContiner(container, zoomHorizontal);
+
+		} else {
+
+			document.body.style.height = scaleHeight * zoomVertical + "px";
+			// document.body.style.width = (scaleWidth * zoomVertical) + ((screen.width - scaleWidth * zoomVertical) / 2) + "px";
+			document.body.style.width = (scaleWidth * zoomVertical) + "px";
+			document.body.style.margin = '0 auto';
+			setScaleContiner(container, zoomVertical);
+
+			// container.style.left = (screen.width - scaleWidth * zoomVertical) / 2 + 'px';
+
+		}
+	}
+
+	if(document.getElementsByTagName('iframe').length !== 0) {
+		setContentType(currentType); return;
+	}
+
+	setTimeout(function() {
+
+		document.querySelector('#topMenuBar').innerHTML = '<div id="buttonBack"><img src="images/buttonBack.png"></div><div id="contentUITitle"></div><div><button id="fullScreenBtn">전체화면</button></div><div id=' + iconName +'><img src="images/'+ iconName +'_empty.png"><img src="images/'+ iconName +'_empty.png"><img src="images/'+ iconName +'_empty.png"><img src="images/'+ iconName +'_empty.png"><img src="images/'+ iconName +'_empty.png"><img src="images/'+ iconName +'_empty.png"><img src="images/'+ iconName +'_empty.png"><img src="images/'+ iconName +'_empty.png"><img src="images/'+ iconName +'_empty.png"><img src="images/'+ iconName +'_empty.png"></div><div id="clock"></div>';
+
+		var frameObj = document.createElement('iframe');
+		frameObj.setAttribute('id', 'frame');
+		frameObj.setAttribute('scrolling', 'no');
+		frameObj.setAttribute('frameborder', '0');
+		frameObj.setAttribute('style', 'width:' + scaleWidth + 'px; height:' + scaleHeight + 'px; overflow: hidden');
+
+		if (currentType.indexOf('beadCountClick') !== -1)
+			frameObj.src = 'quiz/' + currentType.replace(/[0-9]/, '') + '/' + currentType + '.html';
+		else
+			frameObj.src = 'quiz/' + currentType + '/' + currentType + '.html';
+
+		document.querySelector('#contentFrame').appendChild(frameObj);
+
+		setContentType(currentType);
+
+		document.querySelector('#buttonBack').addEventListener(gameManager.eventSelector.downEvent, function() {
+			log('click back button!');
+			window.history.back();
+		}, false);
+
+		document.querySelector('#fullScreenBtn').addEventListener(gameManager.eventSelector.downEvent, function() {
+			log('click fullScreen button!');
+			setFullScreen();
+		}, false);
+
+	}, 10);
+}
+
+function setScaleContiner(targetElement, zoomRate) {
+	targetElement.setAttribute('style', '-ms-transform: scale(' + zoomRate + ',' + zoomRate + ');' + '-webkit-transform: scale(' + zoomRate + ',' + zoomRate + ');' + 'transform: scale(' + zoomRate + ',' + zoomRate + ');' + 'transform-origin: 0% 0%; -webkit-transform-origin: 0% 0%; -ms-transform-origin: 0% 0%;');
+}
+
+function getURLParameter(sParam) {
+	var sPageURL = window.location.search.substring(1),
+	    sURLVariables = sPageURL.split('&');
+
+	for (var i = 0; i < sURLVariables.length; i++) {
+		var sParameterName = sURLVariables[i].split('=');
+		if (sParameterName[0] == sParam) {
+			return sParameterName[1];
+		}
+	}
+}
+
+function stopClockTimer() {
+	clearInterval(gameManager.clockTimerInterval);
+}
+
+/*function initClockTimer(limitTime) {
+ setTimeout(function() {
+ log('@ initClockTimer ...');
+
+ var clockBox = document.querySelector('#clock'),
+ timerNumber = document.createElement('div'),
+ minuteCircle = document.createElement('div'),
+ clockTimer = document.createElement('img'),
+ timeCounter = 0,
+ visibleTimerNumber = 0,
+ minute;
+
+ clockTimer.src = 'images/clockTimer_0.png';
+ timerNumber.setAttribute('id', 'timerNumber');
+ timerNumber.innerHTML = visibleTimerNumber;
+
+ minuteCircle.setAttribute('id', 'minuteCircle');
+
+ clockBox.appendChild(clockTimer);
+ clockBox.appendChild(timerNumber);
+ clockBox.appendChild(minuteCircle);
+
+ gameManager.clockTimerInterval = setInterval(function() {
+
+ timeCounter++;
+ visibleTimerNumber++;
+ timerNumber.innerHTML = visibleTimerNumber;
+
+ if (timeCounter === limitTime) {
+ clearInterval(gameManager.clockTimerInterval);
+ }
+
+ minute = timeCounter / 60;
+ if (minute >= 1) {
+ minuteCircle.innerHTML = parseInt(minute);
+ minuteCircle.style.display = 'block';
+
+ if (minute === 1 || minute === 2 || minute === 3 || minute === 4 || minute === 5 || minute === 6 || minute === 7 || minute === 8 || minute === 9 || minute === 10) {
+ visibleTimerNumber = 0;
+ timerNumber.innerHTML = 0;
+
+ }
+ }
+
+ log(timeCounter);
+
+ }, 1000);
+
+ }, 20);
+ }*/
+
+function initClockTimer() {
+	setTimeout(function() {
+		log('@ initClockTimer ...');
+
+		var clockBox = document.querySelector('#clock'),
+		    timerNumber = document.createElement('div'),
+		    minuteCircle = document.createElement('div'),
+		    clockTimer = document.createElement('img'),
+		    timeCounter = 0,
+		    visibleTimerNumber = 0,
+		    minute;
+
+		clockTimer.src = 'images/clockTimer_0.png';
+		timerNumber.setAttribute('id', 'timerNumber');
+		timerNumber.innerHTML = visibleTimerNumber;
+
+		minuteCircle.setAttribute('id', 'minuteCircle');
+
+		clockBox.appendChild(clockTimer);
+		clockBox.appendChild(timerNumber);
+		clockBox.appendChild(minuteCircle);
+
+		gameManager.clockTimerInterval = setInterval(function() {
+
+			timeCounter++;
+			visibleTimerNumber++;
+			timerNumber.innerHTML = visibleTimerNumber;
+
+			minute = timeCounter / 60;
+			if (minute >= 1) {
+				minuteCircle.innerHTML = parseInt(minute);
+				minuteCircle.style.display = 'block';
+
+				if (minute === 1 || minute === 2 || minute === 3 || minute === 4 || minute === 5 || minute === 6 || minute === 7 || minute === 8 || minute === 9 || minute === 10) {
+					visibleTimerNumber = 0;
+					timerNumber.innerHTML = 0;
+
+				}
+			}
+
+			log(timeCounter);
+
+		}, 1000);
+
+	}, 20);
+}
+
+function stampStarIcon(currentStar,iconName) {
+	log('stampStarIcon!');
+
+	var starBox = document.querySelector('#'+ iconName),
+	    starDustObj = document.createElement('img'),
+	    adjustLeft = -25,
+	    adjustTop = -20,
+	    top = 0,
+	    left = currentStar * 62,
+	    lastTop = top + adjustTop,
+	    lastLeft = left + adjustLeft;
+
+	starDustObj.src = 'images/'+ iconName +'Stamp.png';
+	starDustObj.setAttribute('style', 'position: absolute; top:' + lastTop + 'px; left:' + lastLeft + 'px; opacity:0;');
+
+	starBox.appendChild(starDustObj);
+
+	var starStampAlpha = 1,
+	    stampScale = 1,
+	    starStampScaleInterval = setInterval(function() {
+		starDustObj.style.WebkitTransform = 'scale(' + stampScale + ',' + stampScale + ')';
+		starDustObj.style.msTransform = 'scale(' + stampScale + ',' + stampScale + ')';
+		starDustObj.style.transform = 'scale(' + stampScale + ',' + stampScale + ')';
+		starDustObj.style.WebkitTransformOrigin = '50 50';
+		starDustObj.style.msTransformOrigin = '50 50';
+		starDustObj.style.transformOrigin = '50 50';
+
+		starStampAlpha = starStampAlpha - 0.01;
+		stampScale = stampScale + 0.01;
+		starDustObj.style.opacity = starStampAlpha;
+
+		if (stampScale > 4) {
+			clearInterval(starStampScaleInterval);
+			starDustObj.style.display = 'none';
+		}
+
+	}, 3);
+
+	starBox.childNodes[currentStar].src = 'images/'+ iconName +'.png';
+
+}
+
+function setFullScreen() {
+	if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+		if (document.documentElement.requestFullscreen)
+			document.documentElement.requestFullscreen();
+		else if (document.documentElement.msRequestFullscreen)
+			document.body.msRequestFullscreen();
+		else if (document.documentElement.mozRequestFullScreen)
+			document.documentElement.mozRequestFullScreen();
+		else if (document.documentElement.webkitRequestFullscreen)
+			document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+	} else {
+
+		if (document.exitFullscreen)
+			document.exitFullscreen();
+		else if (document.msExitFullscreen)
+			document.msExitFullscreen();
+		else if (document.mozCancelFullScreen)
+			document.mozCancelFullScreen();
+		else if (document.webkitExitFullscreen)
+			document.webkitExitFullscreen();
+	}
+}
+
+function showPopUpLayer(topScore) {
+	log('@ showPopUpLayer!');
+
+	var popUpLayer = document.querySelector('#popUpLayer');
+	log(popUpLayer);
+
+	if (popUpLayer) {
+		popUpLayer.innerHTML = '';
+	} else {
+		var popUpLayer = document.createElement('div');
+	}
+
+	popUpLayer.setAttribute('id', 'popUpLayer');
+	popUpLayer.innerHTML = '<div id="topScoreTitle"></div><div id="popUpContainer"><img src="images/popUp.png"><div id="popUpTextTitle"></div><div id="popUpTextContent"></div><img id="confirmBtn" src="images/confirmBtn.png" ><img id="retryBtn" src="images/retryBtn.png" ></div>';
+
+	document.querySelector('#contentsContainer').appendChild(popUpLayer);
+
+	if (topScore) {
+		var topScoreTitle = document.createElement('img');
+		topScoreTitle.src = 'images/topScore.png';
+		document.querySelector('#topScoreTitle').appendChild(topScoreTitle);
+	}
+
+	document.querySelector('#popUpTextTitle').innerHTML = '받아내림이 없는 (몇십 몇) - (몇십 몇)';
+	document.querySelector('#popUpTextContent').innerHTML = '평가 총 소요시간 : <span style="color:red">3분 27초</span>';
+
+	document.querySelector('#confirmBtn').addEventListener(gameManager.eventSelector.downEvent, function() {
+		log('@confirmBtn');
+
+	}, false);
+	document.querySelector('#retryBtn').addEventListener(gameManager.eventSelector.downEvent, function() {
+		log('@retryBtn');
+
+	}, false);
+
+	stopClockTimer();
+}
+
+function setContentType(type) {
+
+	var title;
+
+	switch (type) {
+	// case 'fruitsCountClick':
+	// 	title = '그림의 수 읽고 쓰기';
+	// 	break;
+	// case 'fruitsCountClick2':
+	// 	title = '색칠하기_10까지의 수';
+	//
+	// 	break;
+	// case 'fishing':
+	// 	title = '낚시하기';
+	//
+	// 	break;
+	// case 'Train3Row':
+	// 	title = '기차 연결하기 - 3열';
+	// 	break;
+	// case 'Train4Row':
+	// 	title = '기차 연결하기 - 4열';
+	// 	break;
+	// case 'numberCardClick':
+	// 	title = '숫자 카드';
+	// 	break;
+	// case 'paintingCountClick':
+	// 	title = '색칠하기_개수와순서 스마일';
+	//
+	// 	break;
+	// case 'keypadCountClickH':
+	// 	title = '가로셈';
+	//
+	// 	break;
+	// case 'keypadCountClickV':
+	// 	title = '세로셈';
+	// 	break;
+	// case 'xylophone':
+	// 	title = '실로폰';
+	// 	break;
+	// case 'numberCutDrag':
+	// 	title = '가르기';
+	//
+	// 	break;
+	// case 'numberCollectDrag':
+	// 	title = '모으기';
+	// 	break;
+	// case 'handCountClick':
+	// 	title = '짤짤이';
+	// 	break;
+	// case 'finNum':
+	// 	title = '손가락셈';
+	// 	break;
+	// case 'beadCountDrag':
+	// 	title = '구슬계산';
+	// 	break;
+	// case 'balance':
+	// 	title = '양팔저울';
+	// 	break;
+	// case 'balance2':
+	// 	title = '양팔저울';
+	// 	break;
+	// case 'donutDevideDrag':
+	// 	title = '나누어 담기';
+	// 	break;
+	// case 'fruitsCountDrag1':
+	// 	title = '과일 가르기';
+	// 	break;
+	// case 'fruitsCountDrag2':
+	// 	title = '과일 모으기';
+	// 	break;
+	// case 'balloon':
+	// 	title = '주머니셈';
+	//
+	// 	break;
+	// case 'dessertCountDrag':
+	// 	title = '그림보고 문장완성';
+	// 	break;
+	// case 'numberCutDragB':
+	// 	title = '가르기';
+	//
+	// 	break;
+	// case 'fruitsCountDrag1B':
+	// 	title = '과일 가르기';
+	//
+	// 	break;
+	// case 'fruitsCountDrag1C':
+	// 	title = '과일 가르기';
+	//
+	// 	break;
+	// case 'fruitsCountDrag2B':
+	// 	title = '과일 모으기';
+	//
+	// 	break;
+	// case 'fruitsCountDrag2C':
+	// 	title = '과일 모으기';
+	//
+	// 	break;
+	// case 'piggyBank':
+	// 	title = '돼지 저금통';
+	//
+	// 	break;
+	// case 'boxfillDrag':
+	// 	title = '상자 채우기';
+	//
+	// 	break;
+	//
+	// case 'fruitsSumDrag':
+	// 	title = '과일 계산';
+	//
+	// 	break;
+	// case 'parking':
+	// 	title = '주차하기';
+	//
+	// 	break;
+	//
+	// case 'numberCandleDrag':
+	// 	title = '숫자초 - 2개';
+	//
+	// 	break;
+	//
+	// case 'beadCountClick':
+	// 	title = '그림의 수 읽고 쓰기';
+	// 	break;
+	// case 'beadCountClick1':
+	// 	title = '그림의 수 읽고 쓰기(2개)';
+	// 	break;
+	//
+	// case 'beadCountClick2':
+	// 	title = '그림의 수 읽고 쓰기(1개)';
+	// 	break;
+	//
+	// case 'skeweredDrag':
+	// 	title = '과일꼬치';
+	// 	break;
+	// case 'heightLengthBlock':
+	// 	title = '세로셈 블록';
+	// 	break;
+	// case 'heightLengthBlock_multi':
+	// 	title = '세로셈 블록';
+	// 	break;
+	// case 'vic_heightLengthBlock_multi':
+	// 	title = '세로셈 블록';
+	// 	break;
+	// case 'vic_heightLengthBlock':
+	// 	title = '세로셈 블록';
+	// 	break;
+	// case 'campingcar':
+	// 	title = '가로셈 캠핑카';
+	// 	break;
+	//
+	// case 'scale':
+	// 	title = '눈금 저울';
+	// 	break;
+	//
+	// case 'lockClick':
+	// 	title = '자물쇠';
+	// 	break;
+	//
+	// case 'lotto':
+	// 	title = '로또';
+	// 	break;
+	//
+	// case 'coloredPencilClick':
+	// 	title = '색연필 셈';
+	// 	break;
+	//
+	// case 'mathToy':
+	// 	title = '매스토이';
+	// 	break;
+	//
+	// case 'vic_mathToy':
+	// 	title = '매스토이';
+	// 	break;
+	//
+	// case 'vendingmachine':
+	// 	title = '세로셈 음료만들기';
+	// 	break;
+	//
+	// case 'frog':
+	// 	title = '가로셈 개구리';
+	// 	break;
+	//
+	// // case 'train':
+	// // 	title = '기차2';
+	// // 	break;
+	//
+	// case 'handCountClick2':
+	// 	title = '짤짤이(합)';
+	// 	break;
+	//
+	// case 'flyballon':
+	// 	title = '풍선 날리기';
+	// 	break;
+	//
+	// case 'pair':
+	// 	title = '짝찾기';
+	// 	break;
+	//
+	// case 'flyballon2':
+	// 	title = '풍선 날리기2';
+	// 	break;
+	//
+	// case 'Train5Row':
+	// 	title = '기차5열';
+	// 	break;
+	// case 'molegame1':
+	// 	title = '두더지게임1 ';
+	// 	break;
+	//
+	// case 'molegame2':
+	// 	title = '두더지게임2';
+	// 	break;
+	//
+	// case 'numberCandleDragThree':
+	// 	title = '숫자초-3개';
+	// 	break;
+	//
+	// case 'numberCandleDragThree':
+	// 	title = '그림보고 선택하기';
+	// 	break;
+	// case 'fruitsBasket':
+	// 	title = '그림보고 셈하기';
+	// 	break;
+	// case 'Train':
+	// 	title = '기차2';
+	// 	break;
+	// case 'completeClick':
+	// 	title = '그림보고 문장완성2';
+	// 	break;
+	// case 'frogJump1':
+	// 	title = '개구리 점프1';
+	// 	break;
+	// case 'frogJump2':
+	// 	title = '개구리 점프2';
+	// 	break;
+	// case 'pictureSelect':
+	// 	title = '그림보고 선택하기';
+	// 	break;
+	// case 'comparePencil':
+	// 	title = '그림보고 비교하기';
+	// 	break;
+	// case 'archery':
+	// 	title = '과녁 맞추기';
+	// 	break;
+	// case 'archery2':
+	// 	title = '과녁 맞추기2';
+	// 	break;
+	// case 'busStop':
+	// 	title = '버스 정류장';
+	// 	break;
+	// case 'basketball':
+	// 	title = '농구';
+	// 	break;
+	// case 'numberCardKeypad':
+	// 	title = '숫자카드 문자인식';
+	// 	break;
+	// case 'gameMachine2':
+	// 	title = '오락기2';
+	// 	break;
+	// case 'gameMachine':
+	// 	title = '오락기';
+	// 	break;
+	// case 'bus':
+	// 	title = '버스타기';
+	// 	break;
+	// case 'soccerScore':
+	// 	title = '축구';
+	// 	break;
+	// case 'soccerScore2':
+	// 	title = '축구-3개';
+	// 	break;
+	// case 'puzzle1':
+	// 	title = '퍼즐1';
+	// 	break;
+	// case 'puzzle2':
+	// 	title = '퍼즐2';
+	// 	break;
+	// case 'parking2':
+	// 	title = '주차하기2';
+	// 	break;
+	// case 'animalfence':
+	// 	title = '동물 울타리';
+	// 	break;
+	// case 'hanger':
+	// 	title = '옷걸이1';
+	// 	break;
+	// case 'hangerTwo':
+	// 	title = '행거2';
+	// 	break;
+	// case 'hangerTwoB':
+	// 	title = '행거2';
+	// 	break;
+	// case 'weight':
+	// 	title = '분동';
+	// 	break;
+	// case 'digital_balance':
+	// 	title = '디지털 저울';
+	// 	break;
+	// case 'spacecraft':
+	// 	title = '우주선';
+	// 	break;
+	// case 'catScale':
+	// 	title = '체중계';
+	// 	break;
+	// case 'fruitstree':
+	// 	title = '과일 나무';
+	// 	break;
+	// case 'dandelion':
+	// 	title = '민들레';
+	// 	break;
+	// case 'fraction_compare':
+	// 	title = '분수 크기비교(짝수)';
+	// 	break;
+	// case 'fraction_compare2':
+	// 	title = '분수 크기비교(홀수)';
+	// 	break;
+	// case 'hammergame_drag':
+	// 	title = '망치';
+	// 	break;
+	// case 'pierrotbox':
+	// 	title = '용수철 장난감';
+	// 	break;
+	// case 'chocoplate':
+	// 	title = '초콜릿 담기';
+	// 	break;
+	// case 'fraction':
+	// 	title = '그림보고 수쓰기_분수';
+	// 	break;
+	// case 'dogFood':
+	// 	title = '분수의 크기비교';
+	// 	break;
+	// case 'fraction_bit':
+	// 	title = '분수 조각';
+	// 	break;
+	// case 'chocobox':
+	// 	title = '초콜릿 상자';
+	// 	break;
+	// case 'dogFoodTwo':
+	// 	title = '분수의 크기비교-3개';
+	// 	break;
+	// case 'cook':
+	// 	title = '분수 나타내기';
+	// 	break;
+	// case 'divide_selection':
+	// 	title = '똑같이 나누기';
+	// 	break;
+	// case 'chocodivideOne':
+	// 	title = '초코렛 쪼개기_묶음';
+	// 	break;
+	// case 'chocodivideTwo':
+	// 	title = '초코렛 쪼개기_묶음';
+	// 	break;
+	// case 'dollshooting':
+	// 	title = '인형 사격장';
+	// 	break;
+	// case 'chocodivideThree':
+	// 	title = '초코렛 쪼개기_묶음';
+	// 	break;
+	// case 'butterfly':
+	// 	title = '나비와 꽃';
+	// 	break;
+	// case 'grapetree':
+	// 	title = '포도 나무';
+	// 	break;
+	// case 'colorpencilRibbon':
+	// 	title = '색연필 묶기';
+	// 	break;
+	// case 'candle':
+	// 	title = '초 꽂기';
+	// 	break;
+	// case 'robot1':
+	// 	title = '로봇';
+	// 	break;
+	// case 'robot2':
+	// 	title = '로봇2';
+	// 	break;
+	// case 'dogCatFoodA':
+	// 	title = '먹이주기 - 2개';
+	// 	break;
+	// case 'dogCatFoodB':
+	// 	title = '먹이주기 - 2개';
+	// 	break;
+	// case 'dogCatFoodTwoA':
+	// 	title = '먹이주기 - 3개';
+	// 	break;
+	// case 'dogCatFoodTwoB':
+	// 	title = '먹이주기 - 3개';
+	// 	break;
+	// case 'seeSaw':
+	// 	title = '시소';
+	// 	break;
+	// case 'mart':
+	// 	title = '장보기';
+	// 	break;
+	// case 'target':
+	// 	title = '과녁판';
+	// 	break;
+	// case 'vic_digital_balance':
+	// 	title = '디지털 저울';
+	// 	break;
+	// case 'vic_dollshooting':
+	// 	title = '인형 사격장';
+	// 	break;
+	// case 'vic_busStop':
+	// 	title = '버스 정류장';
+	// 	break;
+	// case 'vic_Train':
+	// 	title = '가로셈 기차';
+	// 	break;
+	// case 'vic_keypadCountClickH':
+	// 	title = '가로셈';
+	// 	break;
+	// case 'vic_keypadCountClickV':
+	// 	title = '세로셈';
+	// 	break;
+	// case 'vic_lockClick':
+	// 	title = '자물쇠';
+	// 	break;
+	// case 'vic_lotto':
+	// 	title = '로또';
+	// 	break;
+	// case 'vic_lotto':
+	// 	title = '로또';
+	// 	break;
+	// case 'vic_balloon':
+	// 	title = '주머니셈 3개';
+	// 	break;
+	// case 'vic_numberCollectDrag':
+	// 	title = '모으고 모으기';
+	// 	break;
+	// case 'vic_numberCutDrag':
+	// 	title = '가르고 가르기';
+	// 	break;
+	// case 'vic_target2':
+	// 	title = '과녁판2';
+	// 	break;
+	// case 'vic_target3':
+	// 	title = '과녁판3';
+	// 	break;
+	// case 'vic_busStop_A':
+	// 	title = '버스 정류장A';
+	// 	break;
+	// case 'vic_busStop_B':
+	// 	title = '버스 정류장B';
+	// 	break;
+	// case 'vic_busStop_C':
+	// 	title = '버스 정류장C';
+	// 	break;
+	// case 'vic_busStop_D':
+	// 	title = '버스 정류장D';
+	// 	break;
+	// case 'vic_basketball2':
+	// 	title = '농구2';
+	// 	break;
+	// case 'vic_basketball3':
+	// 	title = '농구3';
+	// 	break;
+	// case 'vic_donutDevideDragA':
+	// 	title = '도넛 나누기A';
+	// 	break;
+	// case 'vic_donutDevideDragB':
+	// 	title = '도넛 나누기B';
+	// 	break;
+	// case 'vic_dogCatFoodA':
+	// 	title = '먹이먹이기A';
+	// 	break;
+	// case 'vic_dogCatFoodB':
+	// 	title = '먹이먹이기B';
+	// 	break;
+	// case 'vic_molegame1':
+	// 	title = '두더지 게임1';
+	// 	break;
+	// case 'vic_molegame2':
+	// 	title = '두더지 게임2';
+	// 	break;
+	// case 'vic_numstick':
+	// 	title = '수막대 연산';
+	// 	break;
+	// case 'vic_selectcard':
+	// 	title = '카드 뒤집기';
+	// 	break;
+	// case 'vic_frog':
+	// 	title = '가로셈 개구리';
+	// 	break;
+	// case 'vic_rabbit':
+	// 	title = '토끼';
+	// 	break;
+	// case 'vic_pizza':
+	// 	title = '피자담기';
+	// 	break;
+	// case 'vic_soccerScore':
+	// 	title = '축구';
+	// 	break;
+	// case 'vic_carterpillar':
+	// 	title = '애벌레';
+	// 	break;
+	// case 'vic_fancylamp':
+	// 	title = '장식전구';
+	// 	break;
+	// case 'vic_motorcycle':
+	// 	title = '오토바이 타기';
+	// 	break;
+	// case 'vic_monkey':
+	// 	title = '원숭이';
+	// 	break;
+	// case 'vic_balloon2':
+	// 	title = '열기구';
+	// 	break;
+	// case 'vic_bowling':
+	// 	title = '볼링';
+	// 	break;
+	// case 'vic_scale1':
+	// 	title = '디지털 저울1';
+	// 	break;
+	// case 'vic_scale2':
+	// 	title = '디지털 저울2';
+	// 	break;
+	// case 'vic_submarine':
+	// 	title = '잠수함';
+	// 	break;
+	// case 'vic_slide':
+	// 	title = '미끄럼틀';
+	// 	break;
+	// case 'vic_rabbitcave':
+	// 	title = '토끼굴';
+	// 	break;
+	// case 'vic_tv':
+	// 	title = 'TV';
+	// 	break;
+	// case 'vic_pea':
+	// 	title = '완두콩';
+	// 	break;
+	// case 'vic_squirrel':
+	// 	title = '다람쥐';
+	// 	break;
+	//
+	//
+	// 	// 6st -->
+	// case 'seeSaw_n':
+	// 	title = '시소';
+	// 	break;
+	// case 'animalCage':
+	// 	title = '동물우리';
+	// 	break;
+	// case 'animalShip':
+	// 	title = '자료의 정리';
+	// 	break;
+	// case 'arrowLength':
+	// 	title = '과녁판4';
+	// 	break;
+	// case 'boomBalloon':
+	// 	title = '풍선터트리기';
+	// 	break;
+	// case 'boomBalloon_1':
+	// 	title = '풍선터트리기';
+	// 	break;
+	// case 'categorize':
+	// 	title = "분류 하기2";
+	// 	break;
+	// case 'circleCount':
+	// 	title = '분류하여 세기1';
+	// 	break;
+	// case 'connectTrain':
+	// 	title = '기차 (길이 재기)';
+	// 	break;
+	// case 'connectTrain2':
+	// 	title = '기차 (길이 재기2)';
+	// 	break;
+	// case 'compareA':
+	// 	title = '양 비교하기';
+	// 	break;
+	// case 'compareH':
+	// 	title = '길이 비교하기';
+	// 	break;
+	// case 'compareRuler':
+	// 	title = '길이 재기(비교)';
+	// 	break;
+	// case 'compareW':
+	// 	title = '무게 비교하기';
+	// 	break;
+	// case 'diameter':
+	// 	title = '원 - 드래그 드랍';
+	// 	break;
+	// case 'figureCount':
+	// 	title = "분류하여 세기2";
+	// 	break;
+	// case 'hangingCard_A':
+	// 	title = '매달린 카드(A)';
+	// 	break;
+	// case 'iceCube(7x1)_A':
+	// 	title = '아이스큐브(7×1_1)';
+	// 	break;
+	// case 'iceCube(7x2)_A':
+	// 	title = '아이스큐브(7×2_1)';
+	// 	break;
+	// case 'mathTable':
+	// 	title = '덧곱셈표(5×5)';
+	// 	break;
+	// case 'mathTable2':
+	// 	title = '덧곱셈표(4×4)';
+	// 	break;
+	// case 'mathTable3':
+	// 	title = '덧곱셈표(3×3)';
+	// 	break;
+	// case 'monkey':
+	// 	title = '원숭이';
+	// 	break;
+	// case 'numstick':
+	// 	title = '두 수의 차';
+	// 	break;
+	// case 'objectCount':
+	// 	title = "분류하여 세기2";
+	// 	break;
+	// case 'oxArrow':
+	// 	title = 'OX 퀴즈';
+	// 	break;
+	// case 'pairCard':
+	// 	title = '짝찾기(3×2)';
+	// 	break;
+	// case 'pairCard2':
+	// 	title = '짝찾기(4×2)';
+	// 	break;
+	// case 'radius':
+	// 	title = '원 - 드래그 드랍';
+	// 	break;
+	// case 'rotateFigure':
+	// 	title = '평면도형 조작';
+	// 	break;
+	// case 'ruler':
+	// 	title = '자로 재기';
+	// 	break;
+	// case 'sentenceComplete':
+	// 	title = '문장 완성';
+	// 	break;
+	// case 'dragBuildBlock':
+	// 	title = '쌓기나무 조작 - 드래그 드랍';
+	// 	break;
+	// case 'rulerLength':
+	// 	title = '길이 재기';
+	// 	break;
+	// case 'calendar':
+	// 	title = "달력";
+	// 	break;
+	// case 'tableCalendar_A':
+	// 	title = "디지털시계맞추기_A";
+	// 	break;
+	// case 'tableCalendar_B':
+	// 	title = "디지털시계맞추기_B";
+	// 	break;
+	// case 'tableCalendar_C':
+	// 	title = "디지털시계맞추기_C";
+	// 	break;
+	// case 'tangram':
+	// 	title = "칠교판";
+	// 	break;
+	// case 'spider':
+	// 	title = "거미줄_4*3";
+	// 	break;
+	// case 'spider_1':
+	// 	title = "거미줄_3*3";
+	// 	break;
+	// case 'dataCategorize':
+	// 	title = "자료의 정리 - 드래그 드랍";
+	// 	break;
+	// case 'dragFigure':
+	// 	title = "도형찾기";
+	// 	break;
+	// case 'setClock_HM':
+	// 	title = "바늘 시계 맞추기_시분";
+	// 	break;
+	// case 'setClock_HM2':
+	// 	title = "바늘 시계 맞추기_시분2";
+	// 	break;
+	// case 'setClock_MS':
+	// 	title = "바늘 시계 맞추기_분초";
+	// 	break;
+	// case 'setDigitalClock_HMS':
+	// 	title = "바늘 시계 읽기";
+	// 	break;
+	// case 'sumTime':
+	// 	title = "시간의 계산";
+	// 	break;
+	// case 'setDigitalClock_HM':
+	// 	title = "디지털시계 맞추기";
+	// 	break;
+	// case 'slotMachine':
+	// 	title = "슬롯머신(도형)";
+	// 	break;
+	// case 'buildBlock':
+	// 	title = "규칙 찾기-쌓기";
+	// 	break;
+	// case 'verticalSumTime3':
+	// 	title = "측정 세로셈(3열)";
+	// 	break;
+	// case 'verticalSumTime2':
+	// 	title = "측정 세로셈(2열)";
+	// 	break;
+	// case 'magneticMathCylinder':
+	// 	title = "mathCylinder(3*12)";
+	// 	break;
+	// case 'verticalSum':
+	// 	title = "가로셈";
+	// 	break;
+	// case 'tangram_square1':
+	// 	title = "tangram_square1";
+	// 	break;
+	// case 'tangram_square2':
+	// 	title = "tangram_square2";
+	// 	break;
+	// case 'tangram_square3':
+	// 	title = "tangram_square3";
+	// 	break;
+	// case 'tangram_square4':
+	// 	title = "tangram_square4";
+	// 	break;
+	// case 'tangram_square5':
+	// 	title = "tangram_square5";
+	// 	break;
+	// case 'tangram_square6':
+	// 	title = "tangram_square6";
+	// 	break;
+	// case 'tangram_square7':
+	// 	title = "tangram_square7";
+	// 	break;
+	// case 'tangram_square8':
+	// 	title = "tangram_square8";
+	// 	break;
+	// case 'tangram_triangle1':
+	// 	title = "tangram_triangle1";
+	// 	break;
+	// case 'tangram_triangle2':
+	// 	title = "tangram_triangle2";
+	// 	break;
+	// case 'tangram_triangle3':
+	// 	title = "tangram_triangle3";
+	// 	break;
+	// case 'tangram_triangle4':
+	// 	title = "tangram_triangle4";
+	// 	break;
+	// case 'tangram_house':
+	// 	title = "tangram_house";
+	// 	break;
+	// case 'tangram_candleLight':
+	// 	title = "tangram_candleLight";
+	// 	break;
+	// case 'tangram_ship':
+	// 	title = "tangram_ship";
+	// 	break;
+	// case 'tangram_bat':
+	// 	title = "tangram_bat";
+	// 	break;
+	// case 'tangram_tree':
+	// 	title = "tangram_tree";
+	// 	break;
+	// case 'iceCube1':
+	// 	title = "iceCube1";
+	// 	break;
+	// case 'iceCube2':
+	// 	title = "iceCube2";
+	// 	break;
+
+		// 7th -->
+	case '7th_dollshooting':
+		title = '인형사격장';
+		break;
+	case '7th_connectTrain':
+		title = '기차 분수 계산';
+		break;
+	case '7th_findNumber':
+		title = '수찾기';
+		break;
+	case '7th_flyballoon':
+		title = '풍선날리기_분수 계산';
+		break;
+	case '7th_verticalSum_prNumber':
+		title = '소수세로셈';
+		break;
+	case '7th_pairCard':
+		title = '짝찾기';
+		break;
+	case '7th_parking2':
+		title = '주차하기2';
+		break;
+	case '7th_slotMachine':
+		title = '슬롯머신 분수계산';
+		break;
+	case '7th_frogJump':
+		title = '개구리 점프3';
+		break;
+	case '7th_secondFloorTrain':
+		title = '기차_큰 수';
+		break;
+	case '7th_convertDivision':
+		title = '나눗셈 변환';
+		break;
+	case '7th_prNumberHanger':
+		title = '소수로 나누기 가로셈';
+		break;
+	case '7th_buyGoods':
+		title = '물건 구매';
+		break;
+	case '7th_multipleFraction':
+		title = '진분수×자연수';
+		break;
+	case '7th_secondFloorTrain':
+		title = '기차_큰';
+		break;
+	case '7th_makeSimpleFraction':
+		title = '매쓰실린더_기약분수';
+		break;
+	case '7th_divideWool':
+		title = '털실 나누기';
+		break;
+	case '7th_shootingDrop':
+		title = '레일';
+		break;
+	case '7th_shootingNumber':
+		title = '레일_자리숫자';
+		break;
+	case '7th_shootingOrder':
+		title = '레일_ 계산 순서';
+		break;
+	case '7th_matchDcPoint':
+		title = '소수점 맞추기';
+		break;
+	case '7th_findDcPoint':
+		title = '소수점 위치 찾기';
+		break;
+	case '7th_numCardSum':
+		title = '세로셈_숫자카드';
+		break;
+	case '7th_makeFormula':
+		title = '식 만들기';
+		break;
+	case '7th_moveBox':
+		title = '카드 옮기기(힌트)';
+		break;
+	case '7th_moveBox_noHint':
+		title = '카드 옮기기';
+		break;
+	case '7th_comparePrice':
+		title = '가격 비교';
+		break;
+	case '7th_seesaw':
+		title = '시소(힌트)';
+		break;
+	case '7th_seesaw_noHint':
+		title = '시소(힌트없음)';
+		break;
+	case '7th_submarine':
+		title = '잠수함';
+		break;
+	case '7th_panBalance':
+		title = '양팔저울(힌트)';
+		break;
+	case '7th_panBalance_noHint':
+		title = '양팔저울(힌트없음)';
+		break;
+	case '7th_sumPrFraction':
+		title = '진분수그림 계산';
+		break;
+	case '7th_subtractMixFraction':
+		title = '대분수 뺄셈 그림 계산';
+		break;
+	case '7th_addMixFraction':
+		title = '대분수 덧셈 그림 계산';
+		break;
+	case '7th_GCD_LCM':
+		title = '최대공약수, 최소공배수';
+		break;
+	case '7th_transport':
+		title = '화물선';
+		break;
+	case '7th_mobile':
+		title = '모빌';
+		break;
+	case '7th_changeBlockM':
+		title = '블록 교체(곱셈)';
+		break;
+	case '7th_reduceBlock_2':
+		title = '블록 약분(두 수)';
+		break;
+	case '7th_changeBlockD':
+		title = '블록 교체(나눗셈)';
+		break;
+	case '7th_reduceBlock_3':
+		title = '블록 약분(세 수)';
+		break;
+	case '7th_changeBlockD_addSymbol':
+		title = '블록 교체(세 수 나눗셈)';
+		break;
+	case '7th_changeGoods':
+		title = '화물 교체';
+		break;
+	}
+	contentsContainer.style.backgroundImage = 'url(quiz/' + type + '/images/bgImg.png)';
+	document.querySelector('#contentUITitle').innerHTML = title;
+}

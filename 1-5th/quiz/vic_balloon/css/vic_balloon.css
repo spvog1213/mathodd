@@ -1,0 +1,92 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 285px;
+}
+
+.balloon {
+	position: absolute;
+	cursor: pointer;
+	cursor: default;
+	z-index: 5;
+}
+
+.ball {
+	position: absolute;
+	top: 0px;
+	left: -15px;
+}
+
+.ballText {
+	position: absolute;
+	z-index: 1;
+	left: 5px;
+}
+
+.ballBox {
+	position: absolute;
+	font-family: NanumGothicExtraBold;
+	font-size: 55px;
+	color: #000000;
+	
+}
+
+#NumberPanel {
+	position: absolute;
+	top: 566px;
+	left: 395px;
+	
+}
+
+#bgCanvas{
+	left:175px;
+}
+
+#currentAnswer {
+	position: absolute;
+	top: 640px;
+	left: 395px;
+	z-index: 1;
+}
+
+#currentNumber {
+	position: absolute;
+	top: 20px;
+	left: 950px;
+	display: none;
+}
+
+#currentAnswer span, #currentNumber {
+	font-family: NanumGothicExtraBold;
+	font-size: 40px;
+	color: #000000;
+}
+
+.currentNumber {
+	color: red;
+}
+
+#countDown {
+	position: absolute;
+	top: 630px;
+	left: 900px;
+	color: red;
+	font-family: NanumGothicExtraBold;
+	font-size: 100px;
+	z-index: 10;
+}
+
+#gameResult {
+	position: absolute;
+	top: 400px;
+	left: 50px;
+	font-family: NanumGothicExtraBold;
+	font-size: 200px;
+}
+

@@ -1,0 +1,63 @@
+
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;
+}
+
+.currentAnswer{
+	position: absolute;
+	top:30px;
+	left:52px;
+	width:860px;
+	height:210px;
+	background: url('../images/textBoard.png') no-repeat;
+}
+
+.dapArea {
+	width: 130px;
+	height: 96px;
+	display: inline-block;
+	background: url("../images/questionBox.png") no-repeat;
+	line-height: 90px;
+	vertical-align:middle;
+}
+
+.quizText {
+	display: inline-block;
+	margin-top: 70px;
+}
+
+.quizContainer{
+	position: absolute;
+	top: 240px;
+	width: 500px;
+	height: 300px;
+}
+.rulerBox{
+	position: relative;
+	top: 70px;
+}
+
+#object{
+	position: relative;
+	top: 40px;
+	left:0;
+	margin-left: 0 auto;
+}
+
+[class*="quizText_"]{
+	font-family: NanumGothicExtraBold;
+	position: absolute;
+	width: 130px;
+	height: 102px;
+	line-height: 90px;
+	text-align: center;
+}
+#checkImg{
+	position: absolute;
+	top: 13px;
+	left: 20px;
+}

@@ -1,0 +1,148 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0;
+}
+
+.balance {
+	position: absolute;
+	top: 38px;
+	left: 216px;
+	width: auto;
+	height: 423px;
+}
+
+.eqBox {
+	position: absolute;
+	top: 88px;
+	left: 596px;
+	width: 33px;
+	font-size: 52px;
+	line-height: 26px;
+	text-align: center;
+	background: white;
+}
+
+.eqText {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font: 45px NanumGothicExtraBold;
+	text-align: center;
+	line-height: 88px;
+}
+
+[class*="dropArea"],
+.dragObj {
+	position: absolute;
+	/*opacity: 0.5;*/
+}
+
+[class*="dropArea"] img {
+	width: auto;
+	height: 100%;
+	vertical-align: middle;
+}
+
+[class*="dropArea"] .text {
+	position: absolute;
+	box-sizing: border-box;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font: 40px NanumGothicExtraBold;
+	color: #000;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 110px;
+}
+[class*="dropArea"] .text .bunsuDiv {
+	margin-top: -10px;
+    margin-left: -5px;
+}
+[class*="dropArea"] .text .bunsuDiv ~ span {
+	display: inline-block;
+	vertical-align: middle;
+}
+[class*="dropArea"] .text.cylinder { top: 25px; }
+
+.dragObj img {
+	width: auto;
+	height: 100%;
+	vertical-align: middle;
+}
+.dragObj .text {
+	position: absolute;
+	box-sizing: border-box;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font: 40px NanumGothicExtraBold;
+	color: #000;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 115px;
+}
+.dragObj .text .bunsuDiv {
+	margin-top: -10px;
+	margin-left: -5px;
+}
+.dragObj .text.cylinder { top: 20px; }
+.dragObj .text.cylinder .bunsuDiv {
+	margin-top: 5px;
+	margin-left: -5px;
+}
+.popup {
+	position: absolute;
+	display: none;
+	left: 167px;
+	top: 471px;
+	width: 900px;
+	height: 235px;
+	background: url(../images/hintPopup.png) center / auto 100% no-repeat;
+	z-index: 2;
+	text-align: center;
+	/*opacity: 0.5;*/
+}
+
+.popup.on {
+	display: block;
+}
+
+.popupTitle {
+	position: relative;
+	display: inline-block;
+	top: 15px;
+	left: -40px;
+	font: 35px NanumGothicExtraBold;
+	color: #fff;
+	letter-spacing: 3px;
+	text-shadow: 1px 0px 2px #648b56, 0px 1px 2px #648b56, -1px 0px 2px #648b56, 0px -1px 2px #648b56;
+}
+
+.hintBtn {
+	position: absolute;
+	left: 1093px;
+	top: 468px;
+	width: 118px;
+	height: 102px;
+	z-index: 3;
+	text-align: center;
+	cursor: pointer;
+	background: url(../images/hintBtn.png) center / auto 100% no-repeat;
+}
+.hintBtn.on {
+	top: 488px;
+	left: 973px;
+	width: 40px;
+	height: 40px;
+	background: none;
+	/*background-color: rgba(0, 0, 0, 0.1);*/
+}

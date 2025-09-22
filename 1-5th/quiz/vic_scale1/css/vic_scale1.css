@@ -1,0 +1,58 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+.circle {
+	position: absolute;
+	width: 122px;
+	height: 102px;
+	font-size: 55px;
+	border: 0px;
+	background: none;
+	text-align: center;
+	line-height: 18px;
+	z-index: 0;
+}
+#choiceQuestionBg{
+	position: absolute;
+	top: -50px;
+	left: 0px;
+	z-index: -2;
+}
+
+#queTxt, #answerTxt{
+	position: absolute;
+	width: 534px;
+	height: 65px;
+	top: 391px;
+	left: 193px;
+	line-height: 67px;
+	font-size: 55px;
+	z-index: 10;
+}
+#answerTxt{
+	width: 431px;
+	left: 245px;
+	top: 523px;
+	font-size: 70px;
+}
+#answerObject_1,#answerObject_2{
+	width: 241px;
+}
+/*저울*/
+.scale{
+	position: absolute;
+}
+
+#scaleContainer{
+	top: 215px;
+	left: 179px;
+}
+
+

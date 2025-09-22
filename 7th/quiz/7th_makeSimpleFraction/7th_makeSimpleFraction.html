@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd : 7th_makeSimpleFraction</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/7th_makeSimpleFraction.css">
+		<!-- <link rel="stylesheet" type="text/css" href="css/7th_makeSimpleFraction1.css"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<script src="../../js/libs/require.js"></script>
+	</head>
+
+	<body>
+		<div id="bgCanvas">
+			<div id="result"></div>
+		</div>
+
+		<script type="text/javascript">
+		var cellWidth = 90;//slot안에 숫자 div 넓이와 맞춰주면 됨.
+
+			function setDrillContentsInit(val, answer) {
+
+
+				require.config({
+					baseUrl: '../../js/libs'
+				});
+
+				require(['event', 'sound', 'common', 'scene_n', 'dragdrop_n', 'animation_n', 'logCounter', 'convertNumber', '../../quiz/7th_makeSimpleFraction/js/spinPicker', '../../quiz/7th_makeSimpleFraction/js/7th_makeSimpleFraction'],
+				function (Event, Sound, Scene, Dragdrop, Animation, lCounter, ConvertNumber, Fishing) {
+
+					//gameManager.QUIZ_TEXT = val[0][0];
+					gameManager.QUIZ_Number = val[0];
+					gameManager.QUIZ_TEXT2 = val[0][2];
+					gameManager.QUIZ_OPTION = val[1];
+					gameManager.QUIZ_ANSWER = answer;
+
+					gameManager.quizObj = [];
+
+					for (var i = 0; i < gameManager.QUIZ_OPTION.length; i++) {
+						gameManager.quizObj.push(gameManager.QUIZ_OPTION[i]);
+					}
+
+					gameManager.wrapperPos = [{top:327, left:827}];
+					gameManager.zoomRate = 0;
+					gameManager.BOUNDING_TYPE = 'left';
+					gameManager.soundEffct = 'media/connect.mp3';
+					gameManager.quizPosition = [];
+
+					gameManager.dabCount = 0;
+					gameManager.dropArea = [];
+					gameManager.dropIdx;
+
+					gameManager.value = [];
+					gameManager.key = [];
+
+					var streamSound;
+
+					initScale();
+
+					initScene();
+
+					initSound();
+
+
+
+					logCounter = new LogCounter();
+					logCounter.startTime();
+					logCounter.onTimer();
+
+				});
+
+
+			}
+
+			/*---------- test code start -----------*/
+			window.onload = function() {
+
+				setDrillContentsInit([ [15,45,15],[[ [['number', ''], 'spin', 0] ], [ [['number', ''], 'spin', 0] ]]], [1, 3]);
+
+			}
+			/*---------- test code end -----------*/
+
+		</script>
+	</body>
+</html>

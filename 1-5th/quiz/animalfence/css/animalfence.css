@@ -1,0 +1,153 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+
+/*텍스트 박스*/
+#textBox{
+	position: absolute;
+	top: 0;
+	left: 486px;
+	background: url(../images/animalfence_textbox.png) no-repeat;
+	width: 350px;
+	height: 130px;
+	z-index: 10;
+	margin-top: 20px;
+}
+#text0{
+	left: 18px;
+}
+#text1{
+	left: 127px;
+	width: 109px;
+	text-align: center;
+}
+#text2{
+	right: 20px;
+}
+.txt{
+	font-family: NanumGothicExtraBold;
+	position: absolute;
+	font-size: 47px;
+	line-height: 113px;
+	z-index: 10;
+	color: #333333;
+	cursor: default;
+}
+
+/*동물열마리(왼쪽)*/
+#tenBox{
+	position: absolute;
+	width: 499px;
+	top: 150px;
+	left: 76px;
+}
+.tenAnimal{
+	position: relative;
+	width: 115px;
+	height: 130px;
+	padding-top: 5px;
+	padding-left: 5px;
+}
+#tenAnimal0{
+	top: 60px;
+	left: 4px;
+}
+#tenAnimal1{
+	top: 16px;
+	left: 30px;
+}
+#tenAnimal2{
+	top: 44px;
+	left: 67px;
+}
+#tenAnimal3{
+	top: 170px;
+	left: 21px;
+}
+#tenAnimal4{
+	top: 60px;
+	left: -30px;
+}
+#tenAnimal5{
+	top: 5px;
+	left: -15px;
+}
+#tenAnimal6{
+	top: 66px;
+	left: 8px;
+}
+#tenAnimal7{
+	top: 202px;
+	left: -28px;
+}
+#tenAnimal8{
+	top: 52px;
+	left: -7px;
+}
+#tenAnimal9{
+	top: 22px;	
+	left: 31px;
+}
+
+/*동물열마리(오른쪽)*/
+#question1 {
+	position: absolute;
+	text-align: center;
+	width: 446px;
+	height: 461px;
+	bottom: 150px;
+	right: -30px;
+}
+.animal {
+	position: relative;
+	width: 115px;
+	height: 130px;
+	padding-top: 10px;
+}
+#parentObj_0, #parentObj_3, #parentObj_6{
+	left: 0px;
+	top: 20px;
+}
+#parentObj_1, #parentObj_4, #parentObj_7{
+	left: 18px;
+	top: 80px;
+}
+#parentObj_2, #parentObj_5, #parentObj_8{
+	left: 30px;
+}
+
+.circle {
+	border-radius: 20%;
+	border: 0px;
+	background:none;
+	text-align: left;
+	z-index: 2;
+}
+
+.rect{
+	width: 135px;
+	height: 117px;
+	background: url('../images/animalfence_numbox.png') no-repeat;
+	cursor: default;
+	line-height: 102px;
+}
+
+#answerObject {
+	background:none;
+	cursor: default;
+}
+
+/*체크*/
+#answerMark {
+	position: absolute;
+	display: none;
+	z-index: 10;
+}
+

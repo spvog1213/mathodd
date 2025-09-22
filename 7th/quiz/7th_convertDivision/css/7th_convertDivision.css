@@ -1,0 +1,62 @@
+#contentsContainer {
+	background-size: 100%;
+}
+
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	background-size: cover;
+}
+
+.numCard, [class*='dropArea'], .dragObj {
+	position: absolute;
+}
+
+.numCard .text,
+.dragObj .text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: #5d3617;
+	font: 50px NanumGothicExtraBold;
+	text-align: center;
+	line-height: 170px;
+	pointer-events: none
+}
+
+.result {
+	opacity: 0;
+	visibility: hidden;
+}
+.result.on {
+	opacity: 1;
+	visibility: visible;
+}
+
+.numCard.result .text {
+	padding-left: 10px;
+	font-size: 55px;
+	color: #fff;
+	text-align: left;
+}
+
+.symbol {
+	position: absolute;
+}
+
+.text .bunsuDiv {
+	margin-top: -15px;
+	margin-left: -5px;
+}
+
+.arrow {
+	position: absolute;
+}
+.arrow_0 { top: 33px; left: 220px; }
+.arrow_1 { top: 323px; left: 452px; }
+
+
+
+/*hh수정*/
+.bunja, .bunmo {text-align: center;}

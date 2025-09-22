@@ -1,0 +1,92 @@
+body {
+	background: url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+
+.question_box {
+	position: absolute;
+	width: 400px;
+	height: 554px;
+	text-align: left;
+	cursor: default;
+	padding: 13px 10px;
+}
+
+#question1 {
+	background: url("../images/compare_box.png") no-repeat;
+}
+#question2 {
+	background: url("../images/compare_box.png") no-repeat;
+}
+#QTxt3,#QTxt1{
+	bottom: 124px;
+}
+
+#line1{
+	bottom: 85px;
+	left: 5px;
+	letter-spacing: -6px;
+}
+#line2{
+	bottom: 85px;
+	right: 34px;
+	letter-spacing: -6px;	
+}
+.txt {
+	position: absolute;
+	bottom: 50px;
+	font-size: 65px;
+	width: 380px;
+	font-family: NanumGothicExtraBold;
+	text-align: center;
+	cursor: default;
+}
+#molecule{
+	position: absolute;
+}
+.molecules {
+	display: inline-block;
+	width: 70px;
+	float: left;
+	text-align: left;
+
+}
+
+#molecule img{
+	border-right: 2px dashed #75462c;
+	border-bottom: 2px dashed #75462c;
+}
+
+#denominator img{
+	border-right: 2px dashed #baa396;
+	border-bottom: 2px dashed #baa396;
+}
+.compareText{
+	display: none;
+}
+
+.compare{
+	position: absolute;
+	display: inline-block;
+}
+#molecule .molecules:nth-child(5),#molecule .molecules:nth-child(10),#molecule .molecules:nth-child(15),#molecule .molecules:nth-child(20) {
+	border-right: none;
+}
+
+#molecule .molecules:nth-child(16),#molecule .molecules:nth-child(17),#molecule .molecules:nth-child(18),#molecule .molecules:nth-child(19),#molecule .molecules:nth-child(20) {
+	border-bottom: none;
+}
+
+#denominator .molecules:nth-child(5),#denominator .molecules:nth-child(10),#denominator .molecules:nth-child(15),#denominator .molecules:nth-child(20) {
+	border-right: none;
+}
+
+#denominator .molecules:nth-child(16),#denominator .molecules:nth-child(17),#denominator .molecules:nth-child(18),#denominator .molecules:nth-child(19),#denominator .molecules:nth-child(20) {
+	border-bottom: none;
+}

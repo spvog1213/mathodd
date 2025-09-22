@@ -1,0 +1,95 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+.abso{
+	position: absolute;
+}
+
+.circle {
+	width: 233px;
+	height: 152px;
+	font-size: 50px;
+	border: 0px;
+	background: none;
+	line-height: 142px;
+	text-align: center;
+	z-index: 2;
+	background: url(../images/dogfoodFeed_1.png) no-repeat;
+	border-radius: 0;
+}
+#answerObject {
+	position: absolute;
+	width: 304px;
+	height: 127px;
+	text-align: center;
+	cursor: default;
+}
+
+#initAnimal{
+	width: 526px;
+	height: 497px;
+	top: 43px;
+	left:194px;
+	background: url('../images/dogfood_house.png') no-repeat;
+}
+
+#question1 {
+	position: absolute;
+	width: 304px;
+	height: 127px;
+	top:600px; 
+	left: 300px; 
+	background: url(../images/dogfood_bowl_2.png) no-repeat;
+	font-size:40px;
+	z-index:10;
+}
+
+#bowl{
+	top:598px; 
+	left:300px;
+}
+
+#animal{
+	top: 40%;
+	left: 336px;
+	z-index: 1;
+}
+
+
+
+/*추가된 txt + 연산자*/
+#queTxt_wrap{
+    position: absolute;
+    left: 212px;
+    top: 100px;
+    z-index: 10;
+}
+.queText{
+    font-family: NanumGothicExtraBold;
+    font-size: 65px;
+    color: #333333;
+    cursor: default;
+    z-index: 10;
+	line-height: 149px;
+}
+#queTxt{
+    width: 490px;
+    height: 163px;
+    text-align: center;
+}
+#queTxt div{
+    display: inline;
+}
+
+#cal_img{
+    vertical-align: center; 
+    padding-left: 5px;
+    padding-right: 5px;
+}

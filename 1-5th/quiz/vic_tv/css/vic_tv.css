@@ -1,0 +1,76 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 285px;
+}
+#tvWrap{
+	position: absolute;
+	width: 662px;
+	height: 376px;
+	background: url('../images/vic_tv_tv.png') no-repeat;
+	left: 164px;
+	top: 70px;
+	z-index: 0;
+}
+.quetxt{
+	position: absolute; 
+	width: 202px;
+	top: 135px; 
+	right: 78px; 
+	font-family: NanumGothicExtraBold;
+	font-size: 35px;
+	color: #c9c9c9;
+	text-align: center;
+}
+#answer{
+	top: 140px; 
+	color: #000;
+	font-size: 70px;
+}
+#question{
+	width: 292px;
+	top: 60px; 
+	left: 30px;	
+	right: 0px;
+	font-size: 58px;
+	color: #fff;
+}
+#simbol1{
+	width: 144px;
+	right: 0px;
+	left: 31px;
+	top: 200px;
+	font-size: 55px;
+	color: #000;
+}
+#simbol2{
+	width: 144px;
+	right: 0px;
+	left: 177px;
+	top: 200px;
+	font-size: 55px;
+	color: #000;
+}
+#keypadContainerGroup {
+	position: absolute;
+	width: 238px;
+	height: 313px;
+	background: url('../images/vic_tv_remocon_bg.png') no-repeat;
+	padding-top: 37px;
+	padding-left: 15px;
+	left: 52.5%;
+	top: 52%;
+	z-index: 1;
+}
+.key {
+	display: inline-block;
+	cursor: pointer;
+	width: 70px;
+	height: 58px;
+}

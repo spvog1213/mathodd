@@ -1,0 +1,115 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+
+.chocoplate {
+	position: absolute;
+	cursor: pointer;
+	cursor: default;
+	float: left;
+}
+
+#chocoCounter {
+	position: absolute;
+	width: 508px;
+	height: 333px;
+	top: 253px;
+	left: 106px;
+	padding: 32px 51px;
+	z-index: 2;
+}
+
+#wrap{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 0px;
+    width: 424px;
+}
+
+#PlateCounter{
+	position: absolute;
+	width: 508px;
+	height: 333px;
+	top: 253px;
+	left: 110px;
+	z-index: 0;
+}
+.blankChoco{
+	float: left;
+	border-bottom: 2px solid #fff;
+	border-right: 2px solid #fff;
+	
+}
+#chocoOff{
+	width: 461px;
+	height: 333px;
+	position: absolute;
+	z-index: 1;
+	top: 285px;
+	left: 162px;
+	z-index: 1;
+}
+#questionTop {
+	position: absolute;
+	width: 1086px;
+	height: 228px;
+	top:-42px; 
+	left:11%;
+	background: url('../images/chocoplate_textbox.png') no-repeat;
+	padding-left: 109px;
+}
+.questionTop{
+	font-family: NanumGothicExtraBold;
+	font-size: 41px;
+	text-align: center;
+	line-height: 335px;
+	float:left;
+}
+#num2,#num4{
+	color:#db0000;
+}
+
+#answerObject1{
+	position: absolute;
+    width: 556px;
+    height: 392px;
+    padding-top: 147px;
+    pointer-events: none;
+    z-index: 1;
+    top:233px;
+	left: 643px;
+	text-align: center;
+}
+
+
+#blankPlate{
+	position: absolute;
+	top:233px;
+	left: 643px;
+	z-index: -5;
+}
+
+#checkBtn{
+	width: 196px;
+	height: 80px;
+	position: absolute;
+	bottom: 56px;
+	left: 53%;
+	z-index: 0;
+	background: url(../images/boxfill_checkbtn.png) no-repeat;
+	
+}
+
+.blankChoco:nth-child(5),.blankChoco:nth-child(10),.blankChoco:nth-child(15),.blankChoco:nth-child(20) {
+	border-right: none;
+}
+#blankChoco_10,#blankChoco_11,#blankChoco_12,#blankChoco_13,#blankChoco_14{
+	border-bottom: none;
+}

@@ -1,0 +1,111 @@
+
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0px;
+}
+.backImg{
+    position: absolute;
+    top: 23px;
+    left: 69px;
+    width: 780px;
+    height: 668px;
+    display: table;
+	background: url(../images/multipleFraction_stand.png);
+	background-size: cover;
+	z-index: -1;
+}
+.imgWrap{
+	position: absolute;
+    top: 106px;
+    left: 170px;
+    width: 575px;
+    height: 415px;
+	display:table;
+}
+.imgContainer{
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center
+}
+.shapeImg, .shapeImgCom{
+	width: 130px;
+	height: 130px;
+	display:inline-block;
+	margin: 2px 5px;
+}
+
+.questionContainer{
+    margin: 556px 0 0px 73px;
+    width: 771px;
+    height: 135px;
+	text-align: center;
+
+}
+.questionText{
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;
+	color: #333333;
+	display: inline-block;
+}
+.questionContainer img{
+	margin: 0 13px !important;
+}
+
+
+.answerContainer{
+	text-align: center;
+}
+.dragObj{
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;	
+	cursor: pointer;
+	position: absolute;
+	width: 130px;
+	height: 130px;
+	background: url(../images/multipleFraction_textBox.png) no-repeat;
+}
+.drop{
+	width: 130px;
+	height: 130px;
+    display: inline-block;
+    vertical-align: top;
+
+}
+.dropArea{
+	width: 130px;
+	height: 130px;
+	position: absolute;
+	background: url(../images/multipleFraction_questionBox.png) no-repeat;
+}
+
+/* 분수 css */
+.bunsuDiv {
+	display: inline-block;
+	vertical-align: middle;
+}
+.bunsuDiv div {
+	display: inline-block;
+	vertical-align: middle;
+}
+.int {
+	margin-right: 5px;
+}
+.prop {
+	position: relative;
+	line-height: 1.25em;
+}
+.prop > div {
+	display: block;
+}
+.prop::after {
+	content: '';
+	position: absolute;
+	top: calc(50% - .05em);
+	left: 0;
+	width: 100%;
+	height: 0;
+	border-top: .1em solid black;
+}

@@ -1,0 +1,119 @@
+body {
+	background: url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 285px;
+}
+
+#currentQuestion {
+	position: absolute;
+	display: none;
+	z-index: 10;
+}
+
+.rect {
+	width: 210px;
+	height: 115px;
+	top: 100px;
+	background: url('../images/lotto_numbox.png') no-repeat;
+	cursor: default;
+	line-height: 111px;
+	font-size: 72px;
+	text-align: center;
+}
+
+#startBtn {
+	position: absolute;
+	cursor: pointer;
+	top: 13%;
+	left: 22.5%;
+	z-index: 3;
+}
+
+#firstHands {
+	position: absolute;
+	top: 3%;
+	left: 12%;
+	width: 406px;
+	height: 408px;
+	z-index: 2;
+}
+#lotto_bg {
+	position: absolute;
+	top: 3%;
+	left: 12%;
+	width: 406px;
+	height: 408px;
+	z-index: 2;
+}
+
+#lottoMotion, #fist {
+	position: absolute;
+	top: 30%;
+	left: 17%;
+}
+
+#hand {
+	position: absolute;
+	z-index: 10;
+}
+
+#queText{
+	color: #fff;
+	left: 96px;
+	top: 58px;
+	font-size: 62px;
+}
+
+#question {
+	position: absolute;
+	left: 17.6%;
+	font-family: NanumGothicExtraBold;
+	top: 51%;
+	width: 293px;
+	height: 170px;
+	line-height: 205px;
+	text-align: center;
+	z-index: 1;
+	background: url('../images/lotto_body.png') no-repeat;
+}
+
+#lotto_tray {
+	position: absolute;
+	width: 410px;
+	height: 139px;
+	left: 120px;
+	top: 590px;
+	background: url(../images/lotto_tray.png) no-repeat;
+}
+
+#fisthandBox{
+	position: absolute;
+	top: 439px;
+	left: 27%;
+	z-index: 3;
+}
+
+.ballBox{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	font-family: NanumGothicExtraBold;
+	text-align: center;
+	color: #333333;
+	font-size: 49px;
+	line-height: 104px;
+}
+#ballBox_0{
+	z-index: 1;
+}
+.balls{
+	position: absolute;
+	left: 0px;
+	z-index: -1;
+}

@@ -1,0 +1,129 @@
+html{color:#000;background:none;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+
+@font-face {
+  font-family: NanumGothicExtraBold;
+  src: url("../font/NanumGothicExtraBold.woff");
+}
+@font-face {
+  font-family: DsDigital;
+  src: url("../font/DsDigital.woff");
+}
+@font-face {
+  font-family: DsDigitalBold;
+  src: url("../font/DsDigitalBold.woff");
+}
+@font-face {
+  font-family: DsDigitalBoldItalic;
+  src: url("../font/DsDigitalBoldItalic.woff");
+}
+@font-face {
+  font-family: DsDigitalItalic;
+  src: url("../font/DsDigitalItalic.woff");
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+    -webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* Internet Explorer/Edge */
+	user-select: none;			 /* Non-prefixed version, currently not supported by any browser */
+
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+}
+
+div, img {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* Internet Explorer/Edge */
+	user-select: none;			 /* Non-prefixed version, currently not supported by any browser */
+
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+}
+
+.circle {
+	font-family: NanumGothicExtraBold;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	font-size: 50px;
+	color: #333333;
+	line-height: 100px;
+	text-align: center;
+	background: #FFFFFF;
+	border: 8px solid #66d1f1;
+	cursor: pointer;
+	cursor: default;
+}
+
+.rect {
+	font-family: NanumGothicExtraBold;
+	position: absolute;
+	width: 111px;
+	height: 115px;
+	font-size: 50px;
+	color: #333333;
+	line-height: 100px;
+	text-align: center;
+	cursor: pointer;
+	cursor: default;
+	background-image: url('../images/num_box.png');
+}
+
+#choiceQuestionContainer {
+	text-align: center;
+}
+#quizContainer {
+	text-align: center;
+}
+
+.line {
+	position: absolute;
+	width: 100%;
+	height: 9px;
+	top: 580px;
+	background: none;
+}
+
+#circleAnswer {
+	color: #CCCCCC;
+}
+
+.starObj {
+	position: absolute;
+	z-index: 50;
+}
+
+#numberPanel {
+	position: absolute;
+	width: 55px;
+	height: 80px;
+	background-image: url('../images/num_panel.png');
+	display: none;
+	font-family: NanumGothicExtraBold;
+	font-size: 25px;
+	color: #FFFFFF;
+	text-align: center;
+	z-index: 1;
+}
+
+#circleButton {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #FF6600;
+	border: 1px solid #FFFFFF;
+	cursor: pointer;
+	cursor: default;
+	z-index: 20;
+	pointer-events : none;
+}

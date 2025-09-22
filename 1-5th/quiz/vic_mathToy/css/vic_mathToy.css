@@ -1,0 +1,100 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0px;
+}
+
+#mathToy {
+	position: absolute;
+	left: 270px;
+	top: 135px;
+}
+
+.numBoxText {
+	position: absolute;
+	font-family: NanumGothicExtraBold;
+	font-size: 60px;
+	color: #333333;
+	width: 211px;
+	text-align: center;
+}
+
+.numBox {
+	position: absolute;
+	cursor: pointer;
+	cursor: default;
+	text-align: center;
+}
+
+
+#startButton {
+	position: absolute;
+	left: 935px;
+	top: 104px;
+	z-index: 1;
+}
+
+#totalCoinContainer {
+	position: absolute;
+	width: 940px;
+	height: 300px;
+	top: 450px;
+	text-align: center;
+	display: none;
+}
+
+#coinbox100, #coinbox10, #coinbox1 {
+	margin-top: 20px;
+	display: inline-block;
+	vertical-align: top;
+	width: 240px;
+}
+
+#answerMark {
+	position: absolute;
+	display: none;
+	z-index: 10;
+}
+
+#coinbox100 {
+	margin-right: 30px;
+}
+
+#front {
+	position: absolute;
+	left: 295px;
+	top: 198px;
+}
+
+#backSeat{
+	position: absolute;
+	left: 538px;
+	top: 198px;
+}
+
+#endFigure{
+	position: absolute;
+	left: 780px;
+	top: 198px;
+}
+
+#calculation{
+	position: absolute;
+	left: 416px;
+	top: 198px;
+}
+
+#calculation2{
+	position: absolute;
+	left: 660px;
+	top: 198px;
+}
+
+
+

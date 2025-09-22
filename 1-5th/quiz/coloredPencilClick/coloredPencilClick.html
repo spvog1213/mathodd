@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd : coloredPencilClick</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/coloredPencilClick.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<script type="text/javascript" src="../../js/libs/event.js"></script>
+		<script type="text/javascript" src="../../js/libs/scene.js"></script>
+		<script type="text/javascript" src="../../js/libs/dragdrop.js"></script>
+		<script type="text/javascript" src="../../js/libs/animation.js"></script>
+		<script type="text/javascript" src="../../js/libs/sound.js"></script>
+		<script type="text/javascript" src="../../js/libs/logCounter.js"></script>
+		<script type="text/javascript" src="js/coloredPencilClick.js"></script>
+	</head>
+
+	<body>
+		<div id="bgCanvas">
+			<div id="answerMark"><img src="images/checkmark.png">
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			function setDrillContentsInit(val, answer) {
+
+				gameManager.TOTAL_ANSWER_ARRAY = val;
+				gameManager.CURRENT_ANSWER = answer;
+
+				gameManager.calculation = gameManager.TOTAL_ANSWER_ARRAY[gameManager.TOTAL_ANSWER_ARRAY.length - 1];
+
+				gameManager.choiceQuestion = [];
+				gameManager.choiceQuestionText = [];
+				for (var i = 2; i < gameManager.TOTAL_ANSWER_ARRAY.length - 1; i++) {
+					gameManager.choiceQuestion.push(gameManager.TOTAL_ANSWER_ARRAY[i]), gameManager.choiceQuestionText.push(gameManager.TOTAL_ANSWER_ARRAY[i]);
+				}
+
+				gameManager.pencil = Math.floor(5 * Math.random());
+				gameManager.CURRENT_TYPE = 'pencil';
+				gameManager.choiceQuestionPosition = [];
+				gameManager.zoomRate = 0
+
+				var streamSound;
+
+				initScale();
+
+				initScene();
+
+				initPencil();
+
+				initSound();
+
+				logCounter = new LogCounter();
+				logCounter.startTime();
+				logCounter.onTimer();
+
+			}
+
+			/*---------- test code start -----------*/
+			window.onload = function() {
+
+				setDrillContentsInit([28, 10, 11, 22, 90, '+'], [90]);
+
+			}
+			/*---------- test code end -----------*/
+
+		</script>
+	</body>
+</html>

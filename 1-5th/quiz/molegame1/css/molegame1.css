@@ -1,0 +1,78 @@
+body {
+    background: url("../images/bgImg.png") no-repeat;
+    background-position: 0 -116px;
+}
+
+#bgCanvas {
+    position: absolute;
+    width: 1024px;
+    height: 768px;
+    left: 285px;
+}
+
+#machine {
+    position: absolute;
+    display: inline-block;
+    top: 8%;
+    left: 19%;
+    width: 640px;
+    height: 644px;
+    background: url(../images/machine.png) no-repeat;
+}
+
+.hole {
+    position: absolute;
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    background: url(../images/molegame1_hole.png) no-repeat;
+    pointer-events: none;
+}
+
+#questionTxt {
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    z-index: 5;
+    font-family: NanumGothicExtraBold;
+    font-size: 55px;
+    color: #333333;
+    width: 541px;
+    height: 96px;
+    text-align: center;
+    line-height: 96px;
+    cursor: default;
+    pointer-events: none;
+}
+
+.mole {
+    position: absolute;
+    cursor: default;
+}
+
+.holeFront, .moleHand {
+    position: absolute;
+    cursor: default;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.moleTxt {
+    position: absolute;
+    top: 12px;
+    z-index: 5;
+    font-family: NanumGothicExtraBold;
+    font-size: 40px;
+    color: #333333;
+    width: 160px;
+    text-align: center;
+    cursor: default;
+    pointer-events: none;
+}
+
+.moleWrap {
+    display: inline-block;
+    width: 160px;
+    height: 159px;
+    overflow: hidden;
+}

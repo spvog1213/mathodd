@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>hangingCard_A : 매달린 카드(A)</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/hangingCard_A.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<script src="../../js/libs/require.js"></script>
+	</head>
+
+	<body>
+		<div id="bgCanvas"></div>
+		<script type="text/javascript">
+
+			function setDrillContentsInit(val ,answer) {
+				require.config({
+					baseUrl: '../../js/libs'
+				});
+
+				require(['event', 'sound', 'common', 'scene_n', 'dragdrop_n', 'animation_n', 'logCounter', 'convertNumber', '../../quiz/hangingCard_A/js/hangingCard_A'],
+
+					function (Event, Sound, Scene, Dragdrop, Animation, lCounter, ConvertNumber, hangingCard_A ) {
+					console.log('> setDrillContentsInit! ', val,answer);
+
+	                gameManager.QUIZ_ANSWER = answer;
+					gameManager.QUIZ_TYPE = 'hangingCard_A';
+					gameManager.quizConvertNumber = questionArrayMake(val);
+					gameManager.questionBackNum = parseInt(Math.random()*3+1);
+					gameManager.quizIndex = val[val.length-1];
+					gameManager.quizPosition = [];
+					gameManager.zoomRate = 0;
+
+					gameManager.dabCount = 0;
+					gameManager.dropArea = [];
+					gameManager.soundEffct = 'media/hangingCard_A.mp3';
+					gameManager.index;
+
+					console.log('>> gameManager : ', gameManager);
+
+					initScale();
+					initSound();
+
+					initScene(val);
+					initObject();
+
+					logCounter = new LogCounter();
+					logCounter.startTime();
+					logCounter.onTimer();
+
+
+				});
+
+			}
+
+			/*---------- test code start -----------*/
+			window.onload = function(){
+
+					setDrillContentsInit([ ['figure','circle_1_1'],['real','animal_cat_2'],['figure','hexagon_3_3'], [ ['figure','circle_1_1'], ['figure','hexagon_4_4'], ['figure','hexagon_3_3'] ] , [5] ], [2]);
+			}
+			/*---------- test code end -----------*/
+
+		</script>
+	</body>
+</html>

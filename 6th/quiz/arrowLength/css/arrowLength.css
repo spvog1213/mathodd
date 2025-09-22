@@ -1,0 +1,62 @@
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+}
+
+[class*="choiceQuizImg_"]{
+	position:absolute;
+}
+
+
+.arrowImg_1{
+	width: 200px;
+	height: 70px;
+	padding-left: 80px;
+}
+
+.arrowImg_2{
+	width: 240px;
+	height: 70px;
+	padding-left: 40px;
+}
+
+.arrowImg_3{
+	width: 280px;
+	height: 70px;
+}
+
+
+.content {
+	display: inline-block;
+	text-align: center;
+	width:400px;
+	height:520px;
+	margin-left: 100px;
+	margin-top: 50px;
+}
+
+.question1{
+	position: relative;
+	font-family: NanumGothicExtraBold;
+	text-align: center;
+	vertical-align: top;
+	line-height: 80px;
+	font-size: 50px;
+	width: 1230px;
+	height: 85px;
+	margin-top: 100px;
+	background:url("../images/arrowLength_textBoard.png") no-repeat;
+}
+
+.question2{
+	display: inline-block;
+	width: 380px;
+	height: 510px;
+	background: url("../images/arrowLength_target.png") no-repeat;
+}
+
+.dropArea{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+}

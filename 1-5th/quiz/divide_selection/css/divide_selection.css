@@ -1,0 +1,48 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0px;
+}
+
+#questionBox{
+	position: absolute;
+	width: 650px;
+	height: 100px;
+	top: 105px;
+	left: 340px;
+    font-family: NanumGothicExtraBold;
+    font-size: 50px;
+    color: #333333;
+    background: url('../images/divide_select_textbox.png') no-repeat;
+    cursor: pointer;
+    cursor: default;
+}
+#questionBox div{
+	position: absolute;
+	float: left;
+	line-height: 101px;
+}
+.rect{
+	width: 140px;
+	height: 145px;
+	border: 0;
+	border-radius: 0px;
+	line-height: 193px;
+	font-size: 45px;
+	background: none;
+	z-index: 10;
+}
+
+
+#answerMark {
+	position: absolute;
+	display: none;
+	z-index: 10;
+}
+

@@ -1,0 +1,45 @@
+#contentsContainer {
+	background-size: 100%;
+}
+
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	background-size: cover;
+}
+
+.trainContainer {
+	position: absolute;
+}
+
+.numBox, [class*='dropArea'], .dragObj {
+	position: absolute;
+	width: 210px;
+	height: 160px;
+	/*background-color: rgba(0, 0, 0, .3);*/
+}
+
+.numBox_0 {
+	top: 80px;
+	left: 210px;
+	width: 660px;
+	height: 80px;
+}
+.numBox .text,
+.dragObj .text {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	color: #fff;
+	font: 40px NanumGothicExtraBold;
+	text-align: center;
+	line-height: 77px;
+}
+
+.text.train_2 {
+	color: #080401;
+}
+.numBox_0 .text {
+	font-size: 60px;
+	color: #080401;
+}

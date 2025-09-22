@@ -1,0 +1,122 @@
+body {
+    background:url("../images/bgImg.png") no-repeat;
+    background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 285px;
+}
+
+.titleBox {
+	position: relative;
+	width: 600px;
+	left: -80px;
+}
+.titleBox > div {
+	width: 100%;
+	margin-top: -1px;
+}
+.titleTop {
+	height: 124px;
+	background: url(../images/parking_textbox_top.png) center bottom / 100% auto no-repeat;
+}
+.titleMiddle {
+	position: relative;
+	box-sizing: border-box;
+	padding: 0 40px 5px;
+	font: 45px NanumGothicExtraBold;
+	text-align: center;
+	background: url(../images/parking_textbox_middle.png) repeat;
+}
+.titleBottom {
+	height: 15px;
+	background: url(../images/parking_textbox_bottom.png) center top / 100% auto no-repeat;
+}
+
+.question {
+	/*width: 278px;*/
+	width: 478px;
+	height: 150px;
+	border: 0px;
+	border-radius: 0px;
+	background: none;
+	z-index: 2;
+	pointer-events: none;
+	color: #fff;
+	font-size: 61px;
+	line-height: 140px;
+	text-align: left;
+	padding-left: 30px;
+}
+.question > * {
+	vertical-align: middle;
+}
+
+.question .prop::after {
+	border-color: #fff;
+}
+
+[id*="choiceQuestion"] {
+	width: 330px;
+	height: 204px;
+	border: 0px;
+	border-radius: 0px;
+	background: rgba(0, 0, 0, 0.0);
+	z-index: 2;
+	line-height: 211px;
+	/*background: url('../images/parking/parking_bus_1.png') 0px 0px no-repeat;*/
+	font-size: 60px;
+	color: #000;
+}
+
+.busImg {
+	position: absolute;
+	left: 19px;
+}
+
+.busTxt {
+	position: absolute;
+	top: 79px;
+	left: 38px;
+	width: 191px;
+	height: 61px;
+	font-size: 38px;
+	text-align: center;
+	line-height: 61px;
+	cursor: default;
+
+}
+
+/* 분수 css */
+.bunsuDiv {
+	display: inline-block;
+	vertical-align: middle;
+}
+.bunsuDiv div {
+	display: inline-block;
+	vertical-align: middle;
+}
+.int {
+	margin-right: 5px;
+}
+.prop {
+	position: relative;
+	line-height: 1.25em;
+}
+.prop > div {
+	display: block;
+}
+.prop::after {
+	content: '';
+	position: absolute;
+	/*top: calc(50% - .05em);*/
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 0;
+	margin-top: -.05em;
+	border-top: .1em solid black;
+}

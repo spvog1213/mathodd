@@ -1,0 +1,59 @@
+body {
+    background: url("../images/bgImg.png") no-repeat;
+    background-position: 0 -116px;
+}
+
+#bgCanvas {
+    position: absolute;
+    width: 1024px;
+    height: 768px;
+    left: 0px;
+}
+
+#panel {
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+    left: 31.8%;
+    width: 670px;
+    height: 238px;
+    background: url(../images/basketball_panel.png) no-repeat;
+}
+
+.question {
+    font-family: NanumGothicExtraBold;
+    position: absolute;
+    width: 164px;
+    height: 113px;
+    font-size: 65px;
+    color: #333333;
+    line-height: 113px;
+    text-align: center;
+    cursor: default;
+}
+
+#answerObject {
+    display: inline-block;
+    position: absolute;
+    width: 112px;
+    height: 112px;
+    background: url(../images/basketball_questionbox.png) no-repeat;
+}
+
+.basketballText {
+    display: none;
+}
+
+.basketball {
+    position: absolute;
+    display: inline-block;
+}
+
+#goalpost {
+    position: absolute;
+    display: inline-block;
+    top: 195px;
+    left: 230px;
+    pointer-events: none;
+    z-index: 5;
+}

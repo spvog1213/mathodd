@@ -1,0 +1,140 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+
+.chocoplate {
+	position: absolute;
+	cursor: pointer;
+	cursor: default;
+	float: left;
+}
+
+#chocoCounter {
+	position: absolute;
+	width: 508px;
+	height: 333px;
+	top: 140px;
+	left: 170px;
+	padding: 30px 33px;
+	z-index: 2;
+}
+
+#PlateCounter{
+	position: absolute;
+	width: 508px;
+	height: 333px;
+	top: 220px;
+	left: 110px;
+	z-index: 0;
+}
+.blankChoco{
+	float: left;
+	border-bottom: 2px solid #fff;
+	border-right: 2px solid #fff;
+	
+}
+
+#answerMark {
+	position: absolute;
+	display: none;
+	z-index: 10;
+}
+
+/*#chocoCutArrowBox{
+	position: absolute;
+	top:60px;
+	left:500px;
+}*/
+
+#chocoOff{
+	width: 461px;
+	height: 333px;
+	position: absolute;
+	z-index: 1;
+	top: 252px;
+	left: 162px;
+	z-index: 1;
+}
+#questionTop {
+	position: absolute;
+	width: 802px;
+	height: 228px;
+	top:580px; 
+	left:8%;
+	background: url('../images/chocodivide_textbox.png') no-repeat;
+	padding-left: 43px;
+}
+.questionTop{
+	font-family: NanumGothicExtraBold;
+	font-size: 41px;
+	text-align: center;
+	line-height: 159px;
+	float:left;
+}
+
+#num6{
+	background:url('../images/chocodivide_questionbox.png') no-repeat 14px 20px;
+	width:105px;
+	height:140px;
+	letter-spacing: -10px;
+	position: relative;
+}
+
+#num2,#num4{
+	color:#db0000;
+}
+
+#answerObject1{
+	position: absolute;
+    width: 470px;
+    height: 392px;
+    padding: 60px 23px 0px 75px;
+    pointer-events: none;
+    z-index: 1;
+    top:202px;
+	left: 643px;
+}
+#answerObject1 img{
+	left:0px;
+	top: 0px;
+}
+
+.rect{
+	background-image: url('../images/chocodivide_numbox.png');
+	background-repeat: no-repeat;
+	width:140px;
+	height:145px;
+}
+
+
+#blankPlate{
+	position: absolute;
+	top:202px;
+	left: 643px;
+	z-index: -5;
+}
+
+#checkBtn{
+	width: 196px;
+	height: 80px;
+	position: absolute;
+	bottom: 100px;
+	left: 53%;
+	z-index: 0;
+	background: url(../images/boxfill_checkbtn.png) no-repeat;
+	
+}
+
+.blankChoco:nth-child(5),.blankChoco:nth-child(10),.blankChoco:nth-child(15),.blankChoco:nth-child(20) {
+	border-right: none;
+}
+#blankChoco_10,#blankChoco_11,#blankChoco_12,#blankChoco_13,#blankChoco_14{
+	border-bottom: none;
+}

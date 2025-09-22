@@ -1,0 +1,85 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 285px;
+}
+
+#UiText {
+	position: absolute;
+	top: 50%;
+	left: 300px;
+	font-family: NanumGothicExtraBold;
+	font-size: 100px;
+	color: #66d1f1;
+}
+#choiceQuestion_0, #choiceQuestion_1, #choiceQuestion_2 {
+}
+.rect {
+	font-family: NanumGothicExtraBold;
+	position: absolute;
+	width: 196px;
+	height: 180px;
+	font-size: 36px;
+	color: #333333;
+	line-height: 125px;
+	padding-left: 30px;
+	text-align: center;
+	cursor: pointer;
+	background: url(../images/lock_key.png) no-repeat;
+	cursor: default;
+}
+#lockOri {
+	position: absolute;
+	top: 100px;
+	left: 103px;
+}
+#txt {
+	top: 299px;
+	left: 359px;
+	width: 173px;
+	height: 76px;
+	background: none;
+	position: absolute;
+	color: #ffb923;
+	line-height: 83px;
+	font-size: 50px;
+	text-align: center;
+	font-weight: bold;
+}
+#answer1 {
+	top: 393px;
+	left: 359px;
+	width: 173px;
+	height: 76px;
+	background: none;
+	position: absolute;
+	color: #ffffff;
+	font-size: 50px;
+	line-height: 77px;
+	text-align: center;
+	font-weight: bold;
+}
+#answer2 {
+	top: 484px;
+	left: 359px;
+	width: 173px;
+	height: 76px;
+	background: none;
+	position: absolute;
+	color: #ffffff;
+	font-size: 50px;
+	line-height: 68px;
+	text-align: center;
+	font-weight: bold;
+}
+#currentQuestion {
+	position: absolute;
+	display: none;
+	z-index: 10;
+}

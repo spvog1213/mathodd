@@ -1,0 +1,127 @@
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0;
+	font-family: NanumGothicExtraBold;
+}
+.title {
+	position: absolute;
+	top: 35px;
+	left: 360px;
+	width: 516px;
+	height: 116px;
+	line-height: 100px;
+	font-size: 50px;
+	text-align: center;
+	background: url(../images/textBox.png) center no-repeat;
+	/*opacity: 0.5;*/
+}
+.title > span {
+	display: inline-block;
+	vertical-align: middle;
+}
+.title > span.que {
+	width: 94px;
+	height: 77px;
+	background: url(../images/answerBox.png) center no-repeat;
+	line-height: 80px;
+}
+
+.mobileContainer {
+	transform-origin: 620px 250px;
+}
+
+.mobile {
+	position: absolute;
+	top: 150px;
+	left: 116px;
+	width: 1000px;
+	height: 550px;
+	background: center no-repeat;
+}
+.mobile > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+}
+.bar {
+	position: absolute;
+	top: 288px;
+	left: 110px;
+	width: 100%;
+	height: 32px;
+	background: center no-repeat;
+	transform-origin: center center;
+	z-index: -1;
+}
+
+[class*="dropArea"] {
+	position: absolute;
+	background: center no-repeat;
+}
+[class*="dropArea"] img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	z-index: -1;
+}
+[class*="dropArea"] .text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font-size: 40px;
+	color: #fff;
+	text-align: center;
+	line-height: 145px;
+}
+[class*="dropArea"] .text .bunsuDiv {
+	margin-left: -10px;
+}
+.dragObj {
+	position: absolute;
+    width: 96px;
+    height: 120px;
+	background: center no-repeat;
+}
+.dragObj .text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font-size: 40px;
+	color: #fff;
+	text-align: center;
+	line-height: 145px;
+}
+.answer {
+	position: absolute;
+	top: 190px;
+	left: 1000px;
+	width: 150px;
+	height: 191px;
+	background-color: rgba(0, 0, 255, 0.1);
+}
+.answer .text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font-size: 50px;
+	color: #fff;
+	text-align: center;
+	line-height: 175px;
+}
+.text span {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	color: #fff;
+	background-color: rgba(0, 0, 255, 0.1);
+}

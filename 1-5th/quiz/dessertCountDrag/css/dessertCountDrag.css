@@ -1,0 +1,61 @@
+body {
+	background: url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+
+.circle {
+	width: 100px;
+	height: 104px;
+	border: none;
+	background: url("../images/complete_numbox.png") no-repeat;
+}
+
+#answerObject {
+	width: 100px;
+	height: 104px;
+	border: none;
+	background: url("../images/complete_questionbox.png") no-repeat;
+}
+
+#dessertContainer {
+	text-align: center;
+	position: absolute;
+	top:60px;
+	left:165px;
+	width: 990px;
+	height: 220px;
+	border: none;
+	background: url("../images/complete_tray.png") no-repeat;
+}
+#questionWrap {
+	position: absolute;
+	top: 333px;
+	left:223px;
+	width: 870px;
+	height: 120px;
+	border: none;
+	background: url("../images/complete_textbox.png") no-repeat;
+}
+
+#txtQuestionLeft {
+	position: absolute;
+	font-family: NanumGothicExtraBold;
+	font-size: 58px;
+	top: 26px;
+	left: 90px;
+}
+
+#txtQuestionRight {
+	position: absolute;
+	font-family: NanumGothicExtraBold;
+	font-size: 58px;
+	top: 26px;
+	left: 422px;
+	
+}

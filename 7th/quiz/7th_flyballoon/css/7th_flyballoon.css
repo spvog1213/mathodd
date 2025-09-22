@@ -1,0 +1,78 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0px;
+}
+
+.balloonContainer {
+	position: absolute;
+}
+
+.balloonHead {
+	position: absolute;
+	top: 270px;
+	left: 210px;
+}
+
+.balloon,
+[class*='dropArea_'],
+.dragObj {
+	position: absolute;
+}
+
+.balloon img {
+	vertical-align: middle;
+}
+
+.balloon .text,
+[class*='dropArea_'] .text,
+.dragObj .text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	font: 45px NanumGothicExtraBold;
+	color: #333333;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 140px;
+}
+
+.text .bunsuDiv {
+	margin-left: -5px;
+}
+
+/* 분수 css */
+.bunsuDiv {
+	display: inline-block;
+	vertical-align: middle;
+}
+.bunsuDiv div {
+	display: inline-block;
+	vertical-align: middle;
+}
+.int {
+	margin-right: 5px;
+}
+.prop {
+	position: relative;
+	line-height: 1.25em;
+}
+.prop > div {
+	display: block;
+}
+.prop::after {
+	content: '';
+	position: absolute;
+	top: calc(50% - .05em);
+	left: 0;
+	width: 100%;
+	height: 0;
+	border-top: .1em solid black;
+}

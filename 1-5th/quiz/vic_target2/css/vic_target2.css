@@ -1,0 +1,53 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0px;
+}
+
+.rect{
+	width: 262px;
+	height: 460px;
+	border: 0;
+	border-radius: 0px;
+	line-height: 260px;
+	font-size: 50px;
+	background: none;
+	z-index: 10;
+
+}
+.txt{
+	position: absolute;
+	font-family: NanumGothicExtraBold;
+    font-size: 50px;
+    color: #333333;
+    text-align: center;
+    cursor: default;
+}
+
+#choiceBg{
+    position: absolute;
+    left: 0px;
+    z-index: -15;
+}
+
+#queTxt{
+	position: absolute;
+	width: 522px;
+	height: 163px;
+	left: 405px;
+	top: 100px;
+	z-index: 5;
+	line-height: 135px;
+}
+
+#hand{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}

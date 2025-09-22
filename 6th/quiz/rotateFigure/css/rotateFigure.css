@@ -1,0 +1,67 @@
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	background-size: cover;
+	text-align: center;
+}
+
+.board{
+	width: 940px;
+	height: 366px;
+	background: url(../images/rotateFigure_board.png) no-repeat;
+	display: inline-block;
+	margin-top: 60px;y
+}
+
+.quizImg{
+	position: absolute;
+	top: 130px;
+	left: 260px;
+}
+
+.dropArea_0 {
+	width: 220px;
+	height: 220px;
+	position: absolute;
+	cursor: default;
+}
+
+.rotation{
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: 205px;
+}
+.rotation_0{
+	left: 500px;
+}
+.rotation_1{
+	left: 560px;
+}
+.dragObj{
+	border: 0px;
+	position: absolute;
+	z-index: 2;
+}
+
+.trainText{
+	font-size: 45px;
+	font-family: NanumGothicExtraBold;
+	text-align: center;
+	position: absolute;
+	top: 205px;
+	left: 420px;
+	width: 614px;
+	height: 90px;
+	border-left: 2px solid;
+	border-right: 2px solid;
+	background: url('../images/connectTrain_arrow.png') no-repeat;
+	background-position: 0 40px
+}
+
+.line {
+	width: 9px;
+	height: 100%;
+	top: 0px;
+	left: 743px;
+}

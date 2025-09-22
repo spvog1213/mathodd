@@ -1,0 +1,93 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	background-position: 184px 40px;
+	width: 1292px;
+	height: 768px;
+}
+#que_bg{
+	position: absolute;
+	top: 190px;
+	left: 590px;
+}
+#mart_lathe:nth-child(4){
+	margin-top: 162px;
+
+}
+
+#lathetxt{
+	position: absolute;
+	top: -46px;
+	left: 13px;
+	width: 154px;
+	height: 83px;
+	line-height: 83px;
+	background:url('../images/mart_lathe_textbox.png') no-repeat;
+
+}
+#lathetxt:nth-child(1){
+	margin-top: 226px;
+}
+
+.answer{
+	position: absolute;
+	width: 422px;
+	height: 240px;
+}
+.circle {
+	border: 0px;
+	border-radius: 0px;
+	background: none;
+	line-height: 126px;
+	font-size: 40px;
+	text-align: center;
+	z-index: 2;
+
+}
+#mart_girl{
+	position: absolute;
+	left: 160px;
+	bottom: 180px;
+	z-index: -1;
+}
+#cart{
+	position: absolute;
+	bottom: 40px;
+	left: 100px;
+	width: 422px;
+	height: 268px;
+	background:url('../images/mart_cart.png') no-repeat;
+}
+
+#things{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -5;
+	
+}
+
+#txtBg{
+	position: absolute;
+	left: 208px;
+	top: 90px;
+	width: 200px;
+	height: 126px;
+	background:url('../images/mart_cart_textbox.png') no-repeat;
+	text-align: center;
+}
+#txtGroup{
+	width: 200px;
+	line-height: 100px;
+
+}
+#txtGroup div{
+	display: inline-block;
+	font-family: NanumGothicExtraBold;
+	font-size: 60px;
+	color: #333333;
+}

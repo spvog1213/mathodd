@@ -1,0 +1,190 @@
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	background-size: cover;
+	font-family: NanumGothicExtraBold;
+}
+.board{
+	width: 1014px;
+	height: 530px;
+	background: url(../images/board.png);
+	position: absolute;
+	top: 100px;
+	left: 110px;
+	z-index: -1
+}
+
+.clock {
+	width: 360px;
+	height: 364px;
+	position: absolute;
+	top: 204px;
+	left: 190px;
+}
+.dot{
+	width: 360px;
+	height: 364px;
+	position: absolute;
+	top: 204px;
+	left: 190px;
+	background: url(../images/clockDot.png);
+	z-index: 5
+}
+.hour{
+	width: 360px;
+	height: 364px;
+	position: absolute;
+	top: 204px;
+	left: 190px;
+	background: url(../images/hour.png);
+}
+.minute{
+	width: 360px;
+	height: 364px;
+	position: absolute;
+	top: 204px;
+	left: 190px;
+	background: url(../images/minute.png);
+}
+.second{
+	width: 360px;
+	height: 364px;
+	position: absolute;
+	top: 204px;
+	left: 190px;
+	background: url(../images/second.png);
+}
+
+.digitalClock {
+	width: 420px;
+	height: 200px;
+	position: absolute;
+	top: 280px;
+	left: 165px;
+}
+.digitalTopText{
+	font-family: NanumGothicExtraBold;
+	font-size: 40px;
+	position: absolute;
+	top: 126px;
+	left: 212px;
+	width: 320px;
+	text-align: center;
+	color: #fff;
+}
+.digitalText{
+	display: table-cell;
+	width: 430px;
+	height: 200px;
+	text-align: center;
+	vertical-align: middle;
+	font-family: DsDigitalBold;
+	font-size: 100px;
+	color: #78393f;
+}
+
+
+.swWrapper {
+	position:absolute;
+	width: 411px;
+	font-family: NanumGothicExtraBold;
+}
+.swBg {
+	position:absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 215px;
+	border-width: 16px;
+}
+
+.swSlotsWrapper {
+	position:relative;
+	display: block;
+	height: 232px;
+	overflow: hidden;
+}
+
+.swSlots {
+	display: inline-block;
+}
+
+.swSlots div {
+	display: inline-block;
+	height: 100%;
+	width: 100px;
+	text-align: center;
+	vertical-align: top;
+}
+
+.slot_1,.slot_2{
+	padding-left: 46px;
+}
+
+
+
+.swSlots ul{
+	margin-top: 50px;
+}
+
+.swSlots li {
+	height: 112px;
+	width: 116px;
+	text-align: center;
+	overflow: hidden;
+	font-size: 75px;
+	font-family: NanumGothicExtraBold;
+	opacity: 0.2;
+	line-height: 134px;
+}
+
+.doneBtn{
+	width: 98px;
+	height: 106px;
+	position: absolute;
+	top: 570px;
+	left: 1080px;
+	z-index: 100;
+	background: url('../../../images/common/checkBtnRed.png');
+}
+.doneBtn_on{
+	width: 98px;
+	height: 106px;
+	position: absolute;
+	top: 570px;
+	left: 1080px;
+	z-index: 100;
+	background: url('../../../images/common/checkBtnRed_on.png');
+}
+
+.afterText{
+	position: absolute;
+	top: 130px;
+    left: 703px;
+    font-size: 34px;
+	width: 320px;
+	text-align: center;
+}
+
+.spinClock{
+	width: 414px;
+	height: 234px;
+	background: url('../images/spinClock.png');
+	position: absolute;
+	top: 268px;
+	left: 648px;
+}
+
+.text_0,.text_1{
+	position: absolute;
+	/*width: 100px;*/
+	/*height: 50px;*/
+	top: 348px;
+	left: 771px;
+	font-size: 65px;
+	color: black;
+	text-align: center;
+	font-weight: bold;
+}
+
+.text_1{left: 917px;}

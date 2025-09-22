@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>icCube(7x1)_A : 아이스 큐브</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/iceCube(7x1)_A.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<script src="../../js/libs/require.js"></script>
+	</head>
+
+	<body>
+		<div id="bgCanvas"></div>
+
+		<script type="text/javascript">
+
+
+			function setDrillContentsInit(val, answer) {
+
+				require.config({
+					baseUrl: '../../js/libs'
+				});
+
+				require(['event', 'sound', 'common', 'scene_n', 'dragdrop_n', 'animation_n', 'logCounter', 'convertNumber', '../../quiz/iceCube(7x1)_A/js/iceCube(7x1)_A'],
+
+					function (Event, Sound, Scene, Dragdrop, Animation, lCounter, ConvertNumber, icCube7x1 ) {
+
+
+	                gameManager.QUIZ_ANSWER = answer;
+					gameManager.QUIZ_TYPE = 'iceCube(7x1)_A';
+					gameManager.quizConvertNumber = questionArrayMake(val);
+					gameManager.quizIndex = val[val.length-1];
+					gameManager.quizPosition = [];
+					gameManager.zoomRate = 0;
+					gameManager.dabCount = 0;
+					gameManager.dropArea = [];
+					gameManager.dropIdx;
+					gameManager.soundEffct = 'media/iceCube(7x1)_A.mp3';
+
+
+					console.log('>> gameManager : ', gameManager);
+
+					initScale();
+					initSound();
+
+					initScene(val);
+					initObject();
+
+					logCounter = new LogCounter();
+					logCounter.startTime();
+					logCounter.onTimer();
+
+
+				});
+
+			}
+
+			/*---------- test code start -----------*/
+			window.onload = function(){
+
+				setDrillContentsInit([ ['figure','circle_1_1'], ['figure','triangle_2_2'], ['figure','hexagon_3_3'], [ ['figure','triangle_3_3'], ['figure','circle_1_1'], ['figure','square_1_1'] ], [0] ], [1]);
+			}
+			/*---------- test code end -----------*/
+
+		</script>
+	</body>
+</html>

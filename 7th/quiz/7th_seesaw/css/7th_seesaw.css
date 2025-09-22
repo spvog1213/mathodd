@@ -1,0 +1,346 @@
+/* 분수 css */
+.bunsuDiv {
+	display: inline-block;
+	vertical-align: middle;
+}
+.bunsuDiv div {
+	display: inline-block;
+	vertical-align: middle;
+}
+.int {
+	margin-right: 5px;
+}
+.prop {
+	position: relative;
+	line-height: 1.25em;
+}
+.prop > div {
+	display: block;
+}
+.prop::after {
+	content: '';
+	position: absolute;
+	top: calc(50% - .05em);
+	left: 0;
+	width: 100%;
+	height: 0;
+	border-top: .1em solid #000;
+}
+
+#queTxt .prop::after {
+	content: '';
+	position: absolute;
+	top: calc(50% - .05em);
+	left: 0;
+	width: 100%;
+	height: 0;
+	border-top: .1em solid #68421e;
+}
+
+
+#bgCanvas {
+	position: absolute;
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+	font-family: NanumGothicExtraBold;
+}
+
+#seesawContainer {
+	position: absolute;
+	display: block;
+	top:196px;
+	left:122px;
+	width:984px;
+	height:225px;
+}
+
+#seesawContainer > .seesaw_shadow {
+	position: absolute;
+	display: block;
+	top:186px;
+	left:12px;
+	width:960px;
+	height:39px;
+}
+
+#seesawContainer > .seesaw_shadow {
+	position: absolute;
+	display: block;
+	top:186px;
+	left:12px;
+	width:960px;
+	height:39px;
+	background-image:url('../images/seesaw_shaodw.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#seesawContainer > .seesaw_bon2 {
+	position: absolute;
+	display: block;
+	top:0px;
+	left:420px;
+	width:144px;
+	height:186px;
+	background-image:url('../images/seesaw_bon2.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#seesawContainer > .seesaw_hor {
+	position: absolute;
+	display: block;
+	top:0px;
+	left:0px;
+	width:984px;
+	height:94px;
+	background-image:url('../images/seesaw_hor.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#seesawContainer > .seesaw_bon1 {
+	position: absolute;
+	display: block;
+	top:28px;
+	left:417px;
+	width:150px;
+	height:188px;
+	background-image:url('../images/seesaw_bon1.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#ballAreaContainer{
+	font-size: 48px;
+	color:#000;
+}
+
+.number{
+	position: absolute;
+	display: block;
+	width:139px;
+	height:139px;
+	line-height: 139px;
+}
+
+.number > span{
+	display: inline-block;
+	margin-top:30px;
+}
+.number .bunsuDiv {
+	margin-top: -25px;
+}
+
+.sign{
+	position: absolute;
+	display: block;
+	width: 130px;
+	height: 140px;
+	line-height: 125px;
+}
+
+.sign > span{
+	display: inline-block;
+	/*margin-top:30px;*/
+}
+.sign img {
+	vertical-align: middle;
+}
+
+.ballArea1{
+	top:111px;
+	left:135px;
+}
+
+.ballArea2{
+	top:111px;
+	left:952px;
+}
+
+.ballArea3{
+	top:237px;
+	left:548px;
+}
+.number > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.number1{
+	background-image:url('../images/ball_red.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.number2{
+	background-image:url('../images/ball_mint.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.number3{
+	background-image:url('../images/ball_yellow.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.number4{
+	background-image:url('../images/ball_blue.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.number5{
+	background-image:url('../images/ball_green.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#ballContainer{
+	font-size: 48px;
+	color:#000;
+}
+
+.ballList1{
+	cursor: pointer;
+	top:490px;
+	left:312px;
+}
+
+.ballList2{
+	cursor: pointer;
+	top:490px;
+	left:551px;
+}
+
+.ballList3{
+	cursor: pointer;
+	top:490px;
+	left:775px;
+}
+
+.hintList1{
+	cursor: pointer;
+	top:530px;
+	left:312px;
+}
+
+.hintList2{
+	cursor: pointer;
+	top:530px;
+	left:551px;
+}
+
+.hintList3{
+	cursor: pointer;
+	top:530px;
+	left:775px;
+}
+
+.sign1{
+	background-image:url('../images/cylinder_yellow.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.sign2{
+	background-image:url('../images/cylinder_blue.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.sign3{
+	background-image:url('../images/cylinder_green.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.left_clear {
+			transform: rotate(-15deg);
+		-ms-transform: rotate(-15deg);
+	   -moz-transform: rotate(-15deg);
+	-webkit-transform: rotate(-15deg);
+			transform-origin: center center;
+		-ms-transform-origin: center center;
+	   -moz-transform-origin: center center;
+	-webkit-transform-origin: center center;
+}
+
+.right_clear {
+			transform: rotate(15deg);
+	    -ms-transform: rotate(15deg);
+	   -moz-transform: rotate(15deg);
+	-webkit-transform: rotate(15deg);
+			transform-origin: center center;
+		-ms-transform-origin: center center;
+	   -moz-transform-origin: center center;
+	-webkit-transform-origin: center center;
+}
+
+#hintContainer {
+	position: absolute;
+	display: block;
+	top:0px;
+	left:0px;
+	width:100%;
+	text-align: center;
+	z-index: 200;
+	font-size: 48px;
+	color:#000;
+}
+
+#hintContainer > .hint_box{
+	position: absolute;
+	display: block;
+	top:440px;
+	left:146px;
+	width:940px;
+	height:259px;
+	background-image:url('../images/hintBox.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#hintContainer > .hint_title{
+	position: absolute;
+	display: block;
+	top:450px;
+	left:321px;
+	width:625px;
+	height:56px;
+}
+
+#hintContainer > .hint_title > span{
+	font-size: 40px;
+	color:#fff;
+	text-shadow: 0 0 2px #345e29;
+	-moz-text-shadow: 0 0 2px #f00;
+	-webkit-text-shadow: 0 0 2px #f00;
+}
+
+#hintContainer > .hint_close_btn{
+	position: absolute;
+	display: block;
+	cursor: pointer;
+	top:458px;
+	left:1028px;
+	width:44px;
+	height:44px;
+}
+
+#btnContainer > .hint_btn{
+	position: absolute;
+	display: block;
+	cursor: pointer;
+	top:440px;
+	left:1099px;
+	width:105px;
+	height:100px;
+	background-image:url('../images/hintBtn.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}

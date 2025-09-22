@@ -1,0 +1,72 @@
+body {
+	/*background: url(../images/bgimg.png);*/
+	/*background-size: cover;*/
+}
+#bgCanvas {
+	position: absolute;
+	width: 1229px;
+	height: 768px;
+	background-position: 130px 150px;
+}
+.blackBord{
+	width: 1150px;
+	height: 670px;
+	margin: 24px 39px;
+}
+
+.inText{
+	font-family: NanumGothicExtraBold;
+	display: inline-block;
+	color: #65431B;
+	font-size: 46px;
+	margin-top: 34px;
+	margin-left: 150px;
+}
+
+.setText{
+	font-size: 45px;
+	font-family: NanumGothicExtraBold;
+	position: absolute;
+	line-height: 180px;
+	text-align: center;
+	top: 155px;
+	left: 255px;
+	width: 315px;
+	height: 177px;
+	color: #64401C;
+}
+.pin{
+	position: absolute;
+	top: 157px;
+	left: 396px;
+	z-index: 1;
+	width: 35px;
+	height: 34px;
+	background: url(../images/nail.png);
+}
+.dropArea{
+	width: 320px;
+	height: 150px;
+	position: absolute;
+}
+
+.dragObj{
+	width: 315px;
+	height: 177px;
+	background: url(../images/diameter_dragBox.png);
+	font-size: 45px;
+	text-align: center;
+	line-height: 180px;
+	font-family: NanumGothicExtraBold;
+	position: absolute;
+	cursor: pointer;
+	color: #64401C;
+}
+.gori{
+	position: absolute;
+	top: 0px;
+	left: 150px;
+	width: 26px;
+	height: 21px;
+	background: url(../images/hangerRing.png);
+}

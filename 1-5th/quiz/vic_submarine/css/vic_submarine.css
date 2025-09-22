@@ -1,0 +1,62 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 20px;
+}
+
+#submarineContainer , .submarineAnswer, .vic{
+	position: absolute;
+	cursor: default;
+}
+
+.submarineText,.vicText {
+	position: absolute;
+	font-family: NanumGothicExtraBold;
+	font-size: 45px;
+	color: #333333;
+	width: 146px;
+	text-align: center;
+}
+.cal{
+	position: absolute;
+	top: 347px;
+	z-index: 3;
+}
+
+#Equal {
+	left: 807px;
+}
+#Symbol{
+	left: 588px;
+}
+#Symbol2 {
+	left: 368px;
+}
+
+#submarineTextBgWrap{
+	position: absolute;
+	width: 1500px;
+	top: 306px;
+	left: 195px;
+	z-index: 0;
+}
+#submarineTextBg{
+	padding-left: 163px;
+}
+#submarineBody {
+	position: absolute;
+	left: 120px;
+	top: 51px;
+}
+#propeller{
+	position: absolute;
+	left: 1030px;
+	top: 244px;
+	z-index: -1;
+}

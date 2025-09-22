@@ -1,0 +1,150 @@
+body {
+	/*background: url('../images/bgImg.png') no-repeat;*/
+	/*background-position: 0 -116px;*/
+	/*background-size: cover;*/
+}
+#bgCanvas {
+	width: 1024px;
+	height: 768px;
+	font-family: NanumGothicExtraBold;
+}
+.dragBottom{
+	position: absolute;
+	top: 516px;
+	left: 553px;
+	width: 120px;
+	height: 115px;
+	border-radius: 3px;
+	background-color: #a96721;
+}
+.dropObj{
+	position: absolute;
+	width: 106px;
+	height: 108px;
+}
+.blank{
+	position: absolute;
+}
+.dropBox{
+	position: absolute;
+	width: 449px;
+	height: 221px;
+	font-size: 32px;
+	color: #000;
+}
+.dropBox div{
+	text-align: center;
+	vertical-align: middle;
+}
+.dropBox span{
+	display: inline-block;
+	margin-top: 20px;
+}
+.dropBox_0{
+	top:30px;
+	left:90px;
+}
+.dropBox_1{
+	top:250px;
+	left:90px;
+}
+.dropBox_2{
+	top:30px;
+	left:685px;
+}
+.dropBox_3{
+	top:250px;
+	left:685px;
+}
+
+.dropObj0{
+	position: absolute;
+	top: 30px;
+	width: 106px;
+	height: 108px;
+	background: url(../images/dropObj1.png) no-repeat;
+}
+.dropBox_0 .dropObj0, .dropBox_1 .dropObj0{
+	left:80px;
+}
+.dropBox_2 .dropObj0, .dropBox_3 .dropObj0{
+	left:265px;
+}
+
+.dropObj1{
+	position: absolute;
+	top: 30px;
+	width: 106px;
+	height: 108px;
+	background: url(../images/dropObj2.png) no-repeat;
+}
+.dropBox_0 .dropObj1, .dropBox_1 .dropObj1{
+	left:190px;
+}
+.dropBox_2 .dropObj1, .dropBox_3 .dropObj1{
+	left:155px;
+}
+
+.dropObj2{
+	position: absolute;
+	top: 30px;
+	width: 106px;
+	height: 108px;
+	background: url(../images/dropObj3.png) no-repeat;
+}
+.dropBox_0 .dropObj2, .dropBox_1 .dropObj2{
+	left:300px;
+}
+.dropBox_2 .dropObj2, .dropBox_3 .dropObj2{
+	left:42px;
+}
+
+/* 드래그 */
+.drgObj{
+	position: absolute;
+	width:106px;
+	height:108px;
+	font-size: 32px;
+	color: #000;
+	cursor: pointer;
+	text-align: center;
+}
+.drgObj span{
+	display: inline-block;
+	margin-top: 20px;
+}
+
+
+/* 분수 css */
+ .bunsuDiv {
+	/*position: absolute;*/
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 32px;
+	color: #000;
+	/*left: 30px;*/
+}
+.bunsuDiv div {
+	display: inline-block;
+	vertical-align: middle;
+}
+.int {
+	margin-right: 5px;
+}
+.prop {
+	position: relative;
+	line-height: 2.25em;
+}
+.prop > div {
+	display: block;
+} 
+.prop::after {
+	content: '';
+	position: absolute;
+	top: calc(50% - .05em);
+	left: 0;
+	width: 100%;
+	height: 0;
+	border-top: .1em solid #000;
+}

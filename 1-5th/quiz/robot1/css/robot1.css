@@ -1,0 +1,42 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0px;
+}
+.rect{
+	height: 92px;
+	border: 0;
+	color: #ffd321;
+	border-radius: 0px;
+	line-height: 93px;
+	font-size: 55px;
+	background: none;
+	z-index: 10;
+	/*padding-left: 18px;*/
+	letter-spacing: 34px;
+}
+
+.answerText{
+	position: absolute;
+	bottom: 110px;
+	left: 237px;
+	font-family: NanumGothicExtraBold;
+    font-size: 55px;
+    color: #000;
+    text-align: center;
+    cursor: default;
+    z-index: 10;
+}
+
+
+#choiceBg{
+    position: absolute;
+    left: 0px;
+    z-index: -15;
+}

@@ -1,0 +1,66 @@
+body {
+/*	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+	width: 1229px;
+	height: 768px;
+	background-size: cover;	
+*/}
+
+#bgCanvas {
+	/*outline: 1px solid red;*/
+	position: absolute;
+	width: 1229px;
+	height: 768px;
+	background-position: 130px 150px;
+}
+.circleImg{
+	width: 600px;
+	height: 460px;
+	position: absolute;
+	top: 53px;
+	left: 320px;
+}
+.circleBg{
+	width: 600px;
+	height: 460px;
+	position: absolute;
+}
+.circleText{
+	font-size: 45px;
+	font-family: NanumGothicExtraBold;
+	position: absolute;
+	background: #fff;
+	border-radius: 50%;
+}
+
+.dropArea{
+	width: 200px;
+	height: 102px;
+	position: absolute;
+	background: url(../images/radius_questionBox.png);
+}
+.dragObj{
+	width: 200px;
+	height: 102px;
+	background: url(../images/radius_dragBox.png);
+	font-size: 55px;
+	text-align: center;
+	line-height: 92px;
+	font-family: NanumGothicExtraBold;
+	position: absolute;
+}
+
+.radiusLine_0{
+	position: absolute;
+	width: 174px;
+	height: 50px;
+	background: url(../images/radius_circle_line_1.png);
+	z-index: -1;
+}
+.radiusLine_1{
+	position: absolute;
+	width: 116px;
+	height: 32px;
+	background: url(../images/radius_circle_line_2.png);
+	z-index: -1;
+}

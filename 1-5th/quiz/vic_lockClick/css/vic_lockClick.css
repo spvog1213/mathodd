@@ -1,0 +1,69 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 285px;
+}
+
+.rect {
+	font-family: NanumGothicExtraBold;
+	position: absolute;
+	width: 196px;
+	height: 180px;
+	font-size: 36px;
+	color: #333333;
+	line-height: 125px;
+	padding-left: 30px;
+	text-align: center;
+	cursor: pointer;
+	background: url(../images/lock_key.png) no-repeat;
+	cursor: default;
+}
+#lockOri {
+	position: absolute;
+	top: 85px;
+	left: 103px;
+}
+
+.answer{
+	position: absolute;
+	width: 173px;
+	height: 76px;
+	z-index: 10;
+	background: none;
+	color: #ffffff;
+	font-size: 50px;
+	text-align: center;
+	font-weight: bold;
+	cursor: default;
+}
+
+#txt {
+	top: 286px;
+	left: 359px;
+	color: #ffb923;
+}
+#answer1 {
+	top: 378px;
+	left: 359px;
+}
+#answer2 {
+	top: 469px;
+	left: 359px;
+}
+#answer3 {
+	top: 555px;
+	left: 359px;
+}
+
+#currentQuestion {
+	position: absolute;
+	display: none;
+	z-index: 10;
+}
+

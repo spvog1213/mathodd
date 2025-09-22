@@ -1,0 +1,154 @@
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0;
+}
+
+.bgBoxes {
+	position: absolute;
+	top: 0;
+	left: 100px;
+	width: 100%;
+	height: 475px;
+	background: url(../images/bgBox.png) center no-repeat;
+}
+
+.topContainer,
+.midContainer,
+.dropArea_0 {
+	position: absolute;
+	/*border: 8px solid #eee;*/
+	/*border-radius: 25px;*/
+	text-align: center;
+	/*background-color: rgba(0, 0, 0, 0.2);*/
+}
+
+.topContainer > img,
+.midContainer > img,
+.dropArea_0 > img {
+	width: auto;
+	height: 140px;
+	margin: 4px;
+	vertical-align: middle;
+}
+
+.dropArea_1 {
+	position: absolute;
+}
+
+.dragObj {
+	position: absolute;
+	width: auto;
+	height: 140px;
+	z-index: 1;
+}
+
+/* 체크 버튼 */
+.checkBtnContainer {
+	position: absolute;
+	top: 550px;
+	left: 975px;
+	width: 98px;
+	height: 106px;
+	cursor: pointer;
+}
+.checkBtnContainer > .checkBtn,
+.checkBtnContainer > .checkBtn_on {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: center / auto 100% no-repeat;
+}
+.checkBtnContainer > .checkBtn { background-image: url(../../../images/common/checkBtnRed.png); }
+.checkBtnContainer > .checkBtn_on { background-image: url(../../../images/common/checkBtnRed_on.png); }
+.checkBtnContainer.on .checkBtn {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.popup {
+	position: absolute;
+	top: 530px;
+	left: 300px;
+	width: 555px;
+	height: 142px;
+	z-index: 2;
+	text-align: center;
+	font: 50px NanumGothicExtraBold;
+	background: url(../images/answerBox.png) center no-repeat;
+}
+
+.popup > span {
+	line-height: 125px;
+}
+
+.popup > span.boxed {
+	width: 120px;
+	line-height: 124px;
+	background: url(../images/answerBoxBlue.png) center no-repeat;
+}
+.popup > span.boxed .bunsuDiv {
+	margin-left: -10px;
+}
+
+.popup.on {
+	display: block;
+}
+
+.popupTitle {
+	position: relative;
+	display: inline-block;
+	top: 0;
+	left: 0;
+	padding: 10px 20px;
+	font: 45px NanumGothicExtraBold;
+	color: #333;
+	background-color: white;
+}
+
+.hintBtn {
+	position: absolute;
+	left: 1130px;
+	bottom: 270px;
+	width: 100px;
+	height: 60px;
+	background-color: blue;
+	z-index: 3;
+	font: 45px NanumGothicExtraBold;
+	color: #fff;
+	line-height: 60px;
+	text-align: center;
+	cursor: pointer;
+}
+
+/* 분수 css */
+.bunsuDiv {
+	display: inline-block;
+	vertical-align: middle;
+}
+.bunsuDiv div {
+	display: inline-block;
+	vertical-align: middle;
+}
+.int {
+	margin-right: 5px;
+}
+.prop {
+	position: relative;
+	line-height: 1.25em;
+}
+.prop > div {
+	display: block;
+}
+.prop::after {
+	content: '';
+	position: absolute;
+	top: calc(50% - .05em);
+	left: 0;
+	width: 100%;
+	height: 0;
+	border-top: .1em solid black;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd : dataCategorize</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/dataCategorize.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<script src="../../js/libs/require.js"></script>
+	</head>
+
+	<body>
+		<div id="bgCanvas"></div>
+
+		<script type="text/javascript">
+			function setDrillContentsInit(val, answer) {
+
+				console.log('> setDrillContentsInit! ', val, answer);
+								
+				require.config({
+					baseUrl: '../../js/libs'
+				});
+
+				require(['event', 'sound', 'common', 'scene_n', 'dragdrop_n', 'animation_n', 'logCounter', 'convertNumber', '../../quiz/dataCategorize/js/dataCategorize'], 
+				function (Event, Sound, Scene, Dragdrop, Animation, lCounter, ConvertNumber, dataCategorize) {
+
+					gameManager.QUIZ_OPTION = val;
+					gameManager.QUIZ_ANSWER = answer;
+
+					gameManager.quizObj = [];
+
+					for (var i = 0; i < gameManager.QUIZ_OPTION.length; i++) {
+						gameManager.quizObj.push(gameManager.QUIZ_OPTION[i]);
+					}
+
+					gameManager.objCount = [];
+
+					for (var i = 3; i < gameManager.QUIZ_OPTION.length; i++) {
+						gameManager.objCount.push(gameManager.QUIZ_OPTION[i]);
+					}
+
+					gameManager.count = [0, 0, 0];
+
+					gameManager.quizTableText = [5,4,3,2,1];
+
+					gameManager.soundEffct = 'media/connect.mp3';
+					gameManager.temp;
+					var streamSound;
+
+					initScale();
+
+					initScene();
+					CheckButton();
+
+					initSound();
+
+					logCounter = new LogCounter();
+					logCounter.startTime();
+					logCounter.onTimer();
+
+				});	
+
+
+			}
+
+			/*---------- test code start -----------*/
+			window.onload = function() {
+
+				setDrillContentsInit(['apple', 'orange', 'watermelon', 5, 3, 4], [5, 3, 4]);
+
+			}
+			/*---------- test code end -----------*/
+
+		</script>
+	</body>
+</html>

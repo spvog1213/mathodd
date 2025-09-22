@@ -1,0 +1,120 @@
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0;
+	font-family: NanumGothicExtraBold;
+}
+.title {
+	position: absolute;
+	top: 55px;
+	left: 27px;
+	width: 500px;
+	height: 124px;
+	background: url(../images/textBox_1.png) center / auto 100% no-repeat;
+	line-height: 160px;
+	font-size: 40px;
+	text-align: center;
+}
+.arrow {
+	position: absolute;
+	top: 112px;
+	left: 542px;
+	width: auto;
+	height: 35px;
+}
+.numbersBox {
+	position: absolute;
+	background: url(../images/textBox_4.png) left center / auto 100% no-repeat;
+}
+.number {
+	position: relative;
+	float: left;
+	line-height: 50px;
+	font-size: 60px;
+	color: #fff;
+	text-align: right;
+	/*background: rgba(255, 255, 255, 0.1);*/
+}
+.number.complete {
+	width: 100px;
+	height: 106px;
+	background: url(../images/numberBox_2.png) center / auto 100% no-repeat;
+	color: #fff;
+	text-align: center;
+	line-height: 106px;
+}
+[class*="dropArea"] {
+	position: absolute;
+	width: 100px;
+	height: 106px;
+	font-size: 50px;
+	color: #000;
+	text-align: center;
+	line-height: 106px;
+}
+[class*="dropArea"] img {
+	vertical-align: middle;
+	z-index: -1;
+}
+[class*="dropArea"] .text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font-size: 50px;
+	color: #000;
+	text-align: center;
+	line-height: 106px;
+}
+[class*="dropArea"] .text .bunsuDiv ~ span {
+	display: inline-block;
+	vertical-align: middle;
+}
+.dragObj {
+	position: absolute;
+}
+.cardImg {
+	width: auto;
+	height: 106px;
+	vertical-align: middle;
+}
+.dragObj .text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font-size: 50px;
+	color: #000;
+	text-align: center;
+	line-height: 106px;
+}
+.answer {
+	position: absolute;
+	top: 220px;
+	left: 36px;
+	width: auto;
+	min-width: 410px;
+	height: 70px;
+	padding: 0 40px;
+	border: 4px solid #f0898a;
+	border-radius: 2px;
+	line-height: 62px;
+	font-size: 46px;
+	text-align: center;
+	color: #fff;
+}
+/*.answer .text {
+	font-size: 46px;
+	text-align: center;
+	line-height: 68px;
+	color: #fff;
+}*/
+.answer > * {
+	vertical-align: middle;
+}
+.scsBox {
+	position: absolute;
+	top: 85px;
+	left: 669px;
+}

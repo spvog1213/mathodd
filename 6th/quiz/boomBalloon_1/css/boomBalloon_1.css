@@ -1,0 +1,28 @@
+
+#bgCanvas {
+	width: 1024px;
+	height: 768px;
+	font-size: 50px;
+	font-family: NanumGothicExtraBold;
+}
+
+#currentAnswer {
+	position: absolute;
+	width:700px;
+	height:180px;
+	top: -50px;
+	left: 260px;
+	z-index: 1;
+	text-align:center;
+	background: url(../images/vic_balloon_pan.png) no-repeat;
+}
+
+.colorText{
+	color: red;
+}
+.textBox1{
+	/*display: inline-block;*/
+	margin-top:100px;
+	margin-left: 200px;
+	/*text-align:center;*/
+}

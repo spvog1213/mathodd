@@ -1,0 +1,153 @@
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	background-size: cover;
+}
+
+.clock {
+	width: 360px;
+	height: 364px;
+	position: absolute;
+	top: 30px;
+	left: 80px;
+}
+.dot{
+	width: 360px;
+	height: 364px;
+	position: absolute;
+	top: 30px;
+	left: 80px;
+	z-index: 1;
+	background: url(../images/clockDot.png);
+}
+
+.hour{
+	width: 360px;
+	height: 364px;
+	position: absolute;
+	top: 30px;
+	left: 80px;
+	background: url(../images/hour.png);
+}
+.minute{
+	width: 360px;
+	height: 364px;
+	position: absolute;
+	top: 30px;
+	left: 80px;
+background: url(../images/minute.png);
+	}
+.second{
+	width: 360px;
+	height: 364px;
+	position: absolute;
+	top: 30px;
+	left: 80px;
+	background: url(../images/second.png);
+}
+
+
+.swWrapper {
+	position:absolute;
+	width: 500px;
+	font-family: helvetica, sans-serif;
+}
+.swBg {
+	position:absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 277px;
+	border-width: 16px;
+}
+
+.swSlotsWrapper {
+	position:relative;
+	display: block;
+	width: 100%;
+	height: 277px;
+	overflow: hidden;
+}
+
+.swSlots {
+	display: inline-block;
+}
+
+.swSlots div {
+	display: inline-block;
+	height: 100%;
+	width: 100px;
+	/*padding-top: 70px;*/
+	text-align: center;
+	vertical-align: top;
+}
+
+
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.swSlots ul { margin-top: 110px; }
+
+.swSlots li {
+	/*padding: 0 8px;*/
+	height: 130px;
+	overflow: hidden;
+	font-size: 70px;
+	line-height: 64px;
+	font-family: NanumGothicExtraBold;
+	opacity: 0.2;
+}
+
+
+.slot_1,.slot_2{
+	padding-left: 70px;
+}
+
+
+
+
+.doneBtn{
+	width: 98px;
+	height: 106px;
+	position: absolute;
+	top: 500px;
+	left: 1060px;
+	z-index: 100;
+	background: url('../../../images/common/checkBtnRed.png');
+}
+.doneBtn_on{
+	width: 98px;
+	height: 106px;
+	position: absolute;
+	top: 500px;
+	left: 1060px;
+	z-index: 100;
+	background: url('../../../images/common/checkBtnRed_on.png');
+}
+
+.spinClock{
+	width: 716px;
+	height: 410px;
+	background: url('../images/spinClock.png');
+	position: absolute;
+	top: 260px;
+	left: 470px;
+}
+
+.text_0,.text_1{
+	position: absolute;
+	/*width: 100px;*/
+	/*height:180px;*/
+	top: 408px;
+    left: 671px;
+	font-size: 75px;
+	color: black;
+	/*text-align: center;*/
+	/*font-weight: bold;*/
+	font-family: NanumGothicExtraBold;
+}
+
+.text_1{left: 846px;}

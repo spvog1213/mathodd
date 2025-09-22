@@ -1,0 +1,68 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0px;
+}
+
+.numstickText{
+	width: 112px;
+	height: 120px;
+	border: 0;
+	border-radius: 0px;
+	line-height: 38px;
+	background: none;
+	z-index: 10;
+    position: absolute;
+}
+
+#questionBox, .wood, .numstickText{
+	font-family: NanumGothicExtraBold;
+	text-align: center;
+	font-size: 55px;
+}
+
+
+#questionBox{
+	position: absolute;
+	width: 410px;
+	height: 90px;
+	top: 50px;
+	left: 43.5%;
+    color: #333333;
+    background: url('../images/vic_numstick_textbox.png') no-repeat;
+    line-height: 90px;
+    cursor: default;
+    font-size: 50px;
+
+}
+
+#stickWrap{
+	position: absolute;
+	width: 1200px;
+	left: 200px;
+	top: 200px;
+}
+
+.wood{
+	position: relative;
+	display: inline-block;
+	width: 90px;
+	height: 92px;	
+	background: url('../images/vic_numstick_woodstick.png') no-repeat;
+    color: #941717;
+    vertical-align: top;
+    padding-right: 30px;
+   	line-height: 90px;
+}
+
+#answerMark {
+	position: absolute;
+	display: none;
+	z-index: 10;
+}

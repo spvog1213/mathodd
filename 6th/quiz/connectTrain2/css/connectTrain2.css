@@ -1,0 +1,81 @@
+body {
+}
+
+#bgCanvas {
+/*	outline: 1px solid red;
+	position: absolute;
+	background: url("../images/connectTrain_bg.png") no-repeat;
+*/	width: 1229px;
+	height: 768px;
+	background-size: cover;
+}
+.trainRail{
+	width: 100%;
+	background: url("../images/connectTrain_railway.png") no-repeat;
+	height: 78px;
+	position: absolute;
+	top: 292px;
+}
+
+.dropArea_0 {
+	width: 329px;
+	height: 102px;
+	position: absolute;
+	cursor: default;
+}
+.trainRail_s{
+
+}
+.dragObj{
+	width: 315px;
+	height: 78px;
+	border: 0px;
+	position: absolute;
+	background: url('../images/connectTrain_railway_part.png') no-repeat;
+	background-size: cover;
+	z-index: 2;
+	line-height: 190px;
+	font-size: 45px;
+	font-family: NanumGothicExtraBold;
+	text-align: center;
+}
+.trainText{
+	font-size: 45px;
+	font-family: NanumGothicExtraBold;
+	text-align: center;
+	position: absolute;
+	left: 420px;
+	height: 90px;
+	border-left: 2px solid;
+	border-right: 2px solid;
+	/*background: url('../images/connectTrain_arrow.png') no-repeat;*/
+	background-position: 0 40px
+}
+
+.trainText_0{
+	top: 205px;
+	width: 614px;
+	background: url('../images/connectTrain_arrow.png') no-repeat;
+	background-position: 0 40px
+}
+.trainText_1{
+	top: 366px;
+	width: 304px;
+	background: url('../images/connectTrain_arrow_small.png') no-repeat;
+	background-position: 0 40px
+}
+.line {
+	width: 9px;
+	height: 100%;
+	top: 0px;
+	left: 743px;
+}
+.trainTextRail{
+	position: absolute;
+	top: 292px;
+	left: 414px;
+	width: 315px;
+	height: 78px;
+	background: url('../images/connectTrain_railway_part.png') no-repeat;
+	background-size: cover;
+}

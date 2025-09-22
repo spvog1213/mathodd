@@ -1,0 +1,76 @@
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0;
+	font-family: NanumGothicExtraBold;
+}
+.title {
+	position: absolute;
+	top: 0;
+	left: 320px;
+	width: 582px;
+	height: 136px;
+	color: #000;
+	line-height: 170px;
+	font-size: 45px;
+	text-align: center;
+	background: url(../images/textBox.png) no-repeat;
+}
+.transportContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.transport {
+	position: absolute;
+	top: 212px;
+	left: 162px;
+}
+.transport_equal {
+	position: absolute;
+	top: 260px;
+	left: 785px;
+}
+[class*="dropArea"] {
+	position: absolute;
+	width: 148px;
+	height: 147px;
+	background: center / auto 100% no-repeat;
+}
+[class*="dropArea"] .text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font-size: 50px;
+	text-align: center;
+	line-height: 147px;
+}
+[class*="dropArea"] .text .symbol {
+	margin-top: -2px;
+	vertical-align: top;
+}
+[class*="dropArea"] .text .bunsuDiv {
+	margin-top: -5px;
+}
+.dragObj {
+	position: absolute;
+	background: center / auto 100% no-repeat;
+}
+.dragObj .text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font-size: 50px;
+	text-align: center;
+	line-height: 147px;
+}
+.dragObj .text .symbol {
+	margin-top: -2px;
+	vertical-align: top;
+}
+.dragObj .text .bunsuDiv {
+	margin-top: -5px;
+}

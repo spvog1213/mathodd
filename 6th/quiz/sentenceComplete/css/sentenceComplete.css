@@ -1,0 +1,47 @@
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	font-family: NanumGothicExtraBold;
+	text-align: center;
+}
+
+[class*="choiceQuizText_"]{
+	position: absolute;
+	width: 165px;
+	height: 120px;
+	font-size: 45px;
+	line-height: 110px;
+	text-align: center;
+	cursor: pointer;
+	cursor: default;
+}
+
+
+.content {
+	display: inline-block;
+	width:842px;
+	height:310px;
+	margin-top:75px;
+}
+
+
+.question{
+	display: table-cell;
+	vertical-align:middle;
+	width:842px;
+	height:310px;
+	line-height:100px;
+	font-size: 50px;
+}
+
+.drop{
+	/*background:url("../images/sentenceComplete_textBox_s_q.png") no-repeat;*/
+	display: inline-block;
+	vertical-align:middle;
+	height: 120px;
+}
+
+.dropArea {
+	position: absolute;
+}
+

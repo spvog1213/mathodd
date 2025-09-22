@@ -1,0 +1,139 @@
+body {
+	/*background:url("../images/bgImg.png") no-repeat;*/
+	/*background-size: cover;*/
+}
+#bgCanvas {
+	width: 1024px;
+	height: 768px;
+	font-family: NanumGothicExtraBold;
+	font-size: 46px;
+}
+.doneBtn, .doneBtn_on {
+	position: absolute;
+	top: 390px;
+	left: 1088px;
+	width: 98px;
+	height: 106px;
+}
+.doneBtn {
+	background:	url(../../../images/common/checkBtnRed.png) center / 100% auto no-repeat;
+}
+.doneBtn_on {
+	z-index:100;
+	visibility:hidden;
+}
+.quizText{
+	position: absolute;
+	width: 500px;
+	top: 70px;
+	left: 410px;
+}
+.swWrapper {
+	position: absolute;
+	width: 100%;
+	margin-left: 5px;
+	margin-top: 4px;
+}
+.swBg {
+	position:absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+}
+
+.swSlotsWrapper {
+	position:relative;
+	display: block;
+	width: 100%;
+	overflow: hidden;
+}
+
+
+.swSlots li {
+	width: 100px;
+	height : 100px;
+	line-height: 195px;
+	opacity : 0.2;
+}
+
+[class*="slot_"] {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 102px;
+	height: 218px;
+	overflow: hidden;
+	margin-right: 2px;
+}
+
+
+
+/**/
+.dapOpenImg{
+	position: absolute;
+	left:470px;
+	width:316px;
+	height:125px;
+	color: #fff;
+}
+.dapText{
+	position: relative;
+	left:160px;
+}
+.dapText_0{
+	top:-10px;
+}
+.dapText_1{
+	top:57px;
+}
+
+.equal{
+	position: absolute;
+    top: 55%;
+    left: 58%;
+}
+
+/**/
+.robot{
+	position: absolute;
+	width:325px;
+	height:410px;
+	z-index: -1;
+}
+
+
+/* 분수 css */
+.bunsuDiv {
+	position: absolute;
+	display: inline-block;
+	vertical-align: middle;
+	top: 305px;
+	font-size: 60px;
+	color: #000;
+	left: 270px;
+}
+.bunsuDiv div {
+	display: inline-block;
+	vertical-align: middle;
+}
+.int {
+	margin-right: 5px;
+}
+.prop {
+	position: relative;
+	line-height: 2.25em;
+}
+.prop > div {
+	display: block;
+}
+/*.prop::after {
+	content: '';
+	position: absolute;
+	top: calc(50% - .05em);
+	left: 0;
+	width: 100%;
+	height: 0;
+	border-top: .1em solid #F3C720;
+}*/

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd : 7th_transport</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/7th_transport.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<script src="../../js/libs/require.js"></script>
+	</head>
+
+	<body>
+		<div id="bgCanvas"></div>
+
+		<script type="text/javascript">
+			function setDrillContentsInit(val, answer) {
+
+				require.config({
+					baseUrl: '../../js/libs'
+				});
+
+				require(['event', 'sound', 'common', 'scene_n', 'dragdrop_n', 'animation_n', 'logCounter', 'convertNumber', '../../quiz/7th_transport/js/7th_transport'],
+				function (Event, Sound, Scene, Dragdrop, Animation, lCounter, ConvertNumber, spider) {
+
+					gameManager.QUIZ_OPTION = val;
+					gameManager.QUIZ_ANSWER = answer;
+
+					gameManager.quizPosition = [];
+					gameManager.zoomRate = 0;
+					gameManager.BOUNDING_TYPE = 'left';
+
+					gameManager.dabCount = 0;
+					gameManager.dropArea = [];
+					gameManager.dropIdx;
+
+					gameManager.soundEffct = 'media/connect.mp3';
+
+					gameManager.temp;
+
+					gameManager.blankCount = [];
+					// for (var i = 0; i < gameManager.QUIZ_ANSWER.length; i++) {
+					// 	gameManager.blankCount.push(gameManager.QUIZ_ANSWER[i]);
+					// }
+
+
+
+					var streamSound;
+
+					initScale();
+
+					initScene();
+
+					initSound();
+
+					logCounter = new LogCounter();
+					logCounter.startTime();
+					logCounter.onTimer();
+
+				});
+
+
+
+
+			}
+
+			/*---------- test code start -----------*/
+			window.onload = function() {
+
+				// 배열의 순서 - 왼쪽 배 위(파랑,노랑,분홍) 아래(파랑,노랑,분홍), 오른쪽 위(파랑,노랑,분홍) 아래(파랑,노랑,분홍) 순서
+
+
+				setDrillContentsInit([ [[0,1,2],[0,5,10],0.5], [[0,1,20],'',0.05], [[0,4,3],[0,100,75], ''],[[0,1,5],'','']], [[0,10,200], 1.33, [0,10,50], 0.2]);
+			}
+			/*---------- test code end -----------*/
+
+		</script>
+	</body>
+</html>
+
+<!-- '0,1,20', 0.75, '0,1,50', 0.2 -->

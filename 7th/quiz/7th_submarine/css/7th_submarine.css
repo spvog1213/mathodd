@@ -1,0 +1,135 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0;
+}
+
+.submarineContainer {
+	position: absolute;
+	cursor: default;
+}
+.submarineBody {
+	position: absolute;
+	left: 100px;
+	top: 40px;
+}
+
+.propeller {
+	position: absolute;
+	left: 1010px;
+	top: 235px;
+	z-index: -1;
+}
+
+.windowsContainer {
+	position: absolute;
+	width: 1500px;
+	top: 285px;
+	left: 190px;
+	z-index: 0;
+}
+
+.symbolWindow {
+	position: absolute;
+}
+
+.symbolWindow > span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	line-height: 140px;
+}
+
+[class*="dropArea"],
+.dragObj {
+	position: absolute;
+}
+
+[class*="dropArea"] img {
+	vertical-align: middle;
+}
+
+[class*="dropArea"] .text,
+.dragObj .text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font: 45px NanumGothicExtraBold;
+	color: #333333;
+	line-height: 150px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+[class*="dropArea"] .text .bunsuDiv,
+.dragObj .text .bunsuDiv {
+	margin-top: -0.3em;
+	margin-left: -0.3em;
+}
+
+.popupCover {
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: white;
+	opacity: .25;
+}
+
+.popup {
+	position: absolute;
+	display: none;
+	left: 180px;
+	bottom: 65px;
+	width: 790px;
+	height: 270px;
+	background: url(../images/hintBox.png) center / auto 100% no-repeat;
+	z-index: 2;
+	text-align: center;
+}
+
+.popup.on {
+	display: block;
+}
+
+.popupTitle {
+	position: relative;
+	display: inline-block;
+	top: 0;
+	left: 0;
+	padding: 10px 20px;
+	font: 40px NanumGothicExtraBold;
+	color: #fff;
+	text-shadow: 0 0 2px #345e29;
+}
+.hintBtn {
+	position: absolute;
+	left: 1050px;
+	bottom: 190px;
+	width: 105px;
+	height: 100px;
+	background: url(../images/hintBtn.png) center / auto 100% no-repeat;
+	z-index: 3;
+	font: 45px NanumGothicExtraBold;
+	cursor: pointer;
+}
+
+.hintBtn.on {
+	left: 890px;
+	bottom: 280px;
+	width: 45px;
+	height: 45px;
+	background: none;
+	/*background-color: gray;*/
+}

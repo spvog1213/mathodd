@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd2</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<style type="text/css">
+			body {
+				padding: 0;
+				margin: 0;
+			}
+			ul {
+				width: 100%;
+				padding: 0;
+				list-style-type : none;
+			}
+			ul li {
+				padding: 6px 20px 6px 20px;
+				background-color: #ededed;
+				color: #333;
+				font-weight: bold;
+				line-height: 26px;
+				border-bottom: 1px solid #ccc;
+
+			}
+			ul li:nth-child(1) {
+				padding: 8px 20px 9px 20px;
+				background-color: #333;
+				color: #fff;
+				font-size: 20px;
+
+			}
+			button {
+				/*position: absolute;*/
+				/*right: 20px;*/
+				width: 70px;
+				height: 25px;
+
+			}
+			li span {
+				vertical-align: top;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>MathOdd2 - demonstration</li>
+
+			<!-- 1st -->
+			<li class="monkey"><span>원숭이</span></li>
+			<li class="lockClick"><span>자물쇠</span></li>
+			<li class="seeSaw"><span>시소</span></li>
+			<li class="numstick"><span>두 수의 차</span></li>
+			<li class="busStop"><span>버스정류장E</span></li>
+			<li class="oxArrow"><span>ox퀴즈</span></li>
+			<li class="sentenceComplete"><span>문장완성</span></li>
+			<li class="animalShip"><span>자료의 정리</span></li>
+			<li class="connectTrain"><span>기차(길이 재기)</span></li>
+			<li class="connectTrain2"><span>기차(길이 재기) 2</span></li>
+			<li class="pairCard"><span>짝찾기(도형) 3×2</span></li>
+			<li class="pairCard2"><span>짝찾기(도형) 4×2</span></li>
+
+			<!-- 2st -->
+			<li class="boomBalloon_1"><span>풍선터트리기 3×2</span></li>
+			<li class="boomBalloon"><span>풍선터트리기 4×2</span></li>
+			<li class="compareH"><span>비교하기(높이)</span></li>
+			<li class="compareA"><span>비교하기(양)</span></li>
+			<li class="compareW"><span>비교하기(무게)</span></li>
+			<li class="arrowLength"><span>과녁판</span></li>
+			<li class="animalCage"><span>동물우리</span></li>
+			<li class="ruler"><span>자로 재기</span></li>
+			<li class="compareRuler"><span>길이 재기(비교)</span></li>
+			<li class="rulerLength"><span>길이 재기</span></li>
+			<li class="radius"><span>원 드래그 드랍</span></li>
+			<li class="diameter"><span>원 드래그 드랍</span></li>
+
+			<!-- 3st -->
+			<li class="iceCube(7x1)_A"><span>아이스큐브(7×1_1)</span></li>
+			<li class="iceCube(7x2)_A"><span>아이스큐브(7×2_1)</span></li>
+			<li class="hangingCard_A"><span>매달린 카드(A)</span></li>
+			<li class="rotateFigure"><span>평면도형 조작-선택형</span></li>
+			<li class="dragBuildBlock"><span>쌓기나무 조작 - 드래그 드랍</span></li>
+			<li class="mathTable"><span>덧곱셈표(5×5)</span></li>
+			<li class="mathTable2"><span>덧곱셈표(4×4)</span></li>
+			<li class="mathTable3"><span>덧곱셈표(3×3)</span></li>
+			<li class="tableCalendar_A"><span>디지털시계맞추기_A</span></li>
+			<li class="tableCalendar_B"><span>디지털시계맞추기_B</span></li>
+			<li class="tableCalendar_C"><span>디지털시계맞추기_C</span></li>
+
+			<!-- 4st -->
+			<li class="calendar"><span>달력</span></li>
+			<li class="categorize"><span>분류하기</span></li>
+			<li class="dragFigure"><span>도형찾기</span></li>
+			<li class="objectCount"><span>분류하여 세기2</span></li>
+			<li class="figureCount"><span>분류하여 세기2</span></li>
+			<li class="circleCount"><span>분류하여 세기1</span></li>
+			<li class="tangram"><span>칠교판</span></li>
+			<li class="dataCategorize"><span>자료의 정리 - 드래그 드랍</span></li>
+			<li class="spider"><span>거미줄_4*3</span></li>
+			<li class="spider_1"><span>거미줄_3*3</span></li>
+
+			<!-- 5st -->
+			<li class="setClock_MS"><span>바늘 시계 맞추기_분초</span></li>
+			<li class="setClock_HM"><span>바늘 시계 맞추기_시분</span></li>
+			<li class="setDigitalClock_HMS"><span>바늘 시계 읽기</span></li>
+			<li class="sumTime"><span>시간의 계산</span></li>
+			<li class="setDigitalClock_HM"><span>디지털 시계 맞추기</span></li>
+			<li class="buildBlock"><span>규칙 찾기-쌓기</span></li>
+			<li class="slotMachine"><span>슬롯머신(도형)</span></li>
+			<li class="verticalSumTime3"><span>측정 세로셈(3)</span></li>
+			<li class="verticalSumTime2"><span>측정 세로셈(2)</span></li>
+			<li class="magneticMathCylinder"><span>mathCylinder(3*12)</span></li>
+			<li class="verticalSum"><span>가로셈</span></li>
+
+		</ul>
+
+	</body>
+	<script type="text/javascript">
+window.onload = function () {
+	var list = document.querySelectorAll('li'),
+		nameArray = [];
+
+	for (var i = 0; i < list.length; i++) {
+		if (list[i].getAttribute('class')) {
+			var name = list[i].className,
+				listText = document.createElement('span'),
+				clickBtn = document.createElement('button');
+
+			nameArray.push(name);
+			listText.innerHTML = '(' + name + ')';
+			listText.style.marginLeft = '20px';
+			clickBtn.innerHTML = "click";
+			clickBtn.className = "clickBtn_" + i;
+			clickBtn.style.marginLeft = '20px';
+			clickBtn.addEventListener('mousedown', function(e){
+				var idx = e.target.className.split('_')[1];
+				loadingDemo(nameArray[idx-1]);
+			});
+
+			list[i].appendChild(listText);
+			list[i].appendChild(clickBtn);
+		}
+	}
+}
+
+function loadingDemo (type) {
+	window.location.href = 'CUI.html?type=' + type;
+}
+	</script>
+</html>

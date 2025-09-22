@@ -1,0 +1,85 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+.abso{
+	position: absolute;
+}
+
+#balloonWrap{
+	position: absolute;
+}
+.circle {
+	width: 152px;
+	height: 97px;
+	font-size: 50px;
+	border: 0px;
+	background: none;
+	line-height: 109px;
+	text-align: center;
+	z-index: 2;
+	text-align: center;
+	border-radius: 0px;
+	background: url(../images/vic_balloon2_basket.png) no-repeat;
+}
+
+#answerObject {
+	position: absolute;
+	width: 152px;
+	height: 97px;
+	cursor: default;
+	background: url(../images/vic_balloon2_questionbasket.png) no-repeat;
+}
+
+#animal{
+	top: 492px;
+	left: 423px;
+	z-index: 4;
+}
+
+#balloon{
+	top: 104px;
+	left: 266px;
+}
+
+
+
+/*추가된 txt + 연산자*/
+#queTxt_wrap{
+    position: absolute;
+    width: 1200px;
+    left: 266px;
+    top: 232px;
+    z-index: 10;
+}
+.queText{
+    font-family: NanumGothicExtraBold;
+    font-size: 50px;
+    color: #333333;
+    cursor: default;
+    z-index: 10;
+    line-height: 92px;
+    text-align: center;
+}
+
+#queTxt div{
+	float: left;
+}
+.calculation{
+	vertical-align: center; 
+	width: 60px;
+	text-align: center;
+}
+
+#queText1,#queText3{
+	width: 107px;
+}
+#queText2{
+	width: 110px;
+}

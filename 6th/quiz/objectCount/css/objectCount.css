@@ -1,0 +1,106 @@
+body {
+}
+
+#bgCanvas {
+	/*outline: 1px solid red;*/
+	position: absolute;
+	/*background: url("../images/bgImg.png") no-repeat;*/
+	width: 1229px;
+	height: 768px;
+	/*background-size: cover;*/
+	font-family: NanumGothicExtraBold;
+	font-size: 45px;
+	text-align: center;
+	color: #8c5e26;
+}
+
+[class*='dragObj_'] {
+	/*margin: 20px 20px;*/
+	width: 152px; 
+	height: 105px; 
+	border: 0px;
+	display: inline-block;
+	border-radius: 0px;
+	background: rgba(0, 0, 0, 0.0);
+	background: url('../images/objectCount_dragObj.png') no-repeat;
+	z-index: 2;
+	cursor: default;
+	line-height: 94px;
+	position: absolute;
+}
+
+/*--------------------------------------*/
+.productTable{
+	width: 475px;
+	height: 598px;
+	background: url("../images/objectCount_cart.png") no-repeat;
+	position: absolute;
+	top: 70px;
+	left: 120px;
+	padding: 100px 5px 5px 5px ;
+	/*border: 2px solid;*/
+	border-radius: 20px;
+}
+.product {
+	width: 120px;
+	height: 120px;
+	display: inline-block;
+	margin: -10px -5px;
+	position: relative;
+	/*margin-top: -5px;*/
+	/*border : 1px solid;*/
+}
+
+.questionTextWrap{
+	width: 442px;
+	height: 346px;
+	background: url(../images/objectCount_textWindow.png) no-repeat;
+	position: absolute;
+	top: 40px;
+	left: 679px;
+	display: table;
+}
+.questionText{
+	width: 190px;
+    top: 17px;
+    left: 29px;
+	position: absolute;
+	top: 22px;
+	z-index: 1;
+}
+
+.questionText_1 {
+	left: 227px;
+}
+
+.dropArea{
+	position: absolute; 
+	width: 152px; 
+	height: 105px; 
+	top: 200px;
+	background: url(../images/objectCount_dropObj.png) no-repeat;
+}
+.dropArea_0{
+	left: 855px;
+}
+.dropArea_1{
+	left: 1060px;
+}
+
+.dragWrap{
+	width: 516px;
+	height: 510px;
+	background: url(../images/objectCount_textBg.png) no-repeat;
+	position: absolute;
+	top: 170px;
+	left: 640px;
+	z-index: -2
+}
+.questionText > img {
+	vertical-align: top;
+}
+.verticalMiddle {
+	height: 110px;
+    vertical-align: middle;
+    display: table-cell;
+}

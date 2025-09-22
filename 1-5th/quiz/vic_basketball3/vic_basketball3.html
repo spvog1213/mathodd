@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd : Basketball</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/vic_basketball3.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<script type="text/javascript" src="../../js/libs/event.js"></script>
+		<script type="text/javascript" src="../../js/libs/scene.js"></script>
+		<script type="text/javascript" src="../../js/libs/dragdrop.js"></script>
+		<script type="text/javascript" src="../../js/libs/animation.js"></script>
+		<script type="text/javascript" src="../../js/libs/sound.js"></script>
+		<script type="text/javascript" src="../../js/libs/logCounter.js"></script>
+		<script type="text/javascript" src="js/vic_basketball3.js"></script>
+	</head>
+
+	<body>
+		<div id="bgCanvas">
+			<div id="panel"></div>
+		</div>
+
+		<script type="text/javascript">
+
+			function setDrillContentsInit(val, answer) {
+
+				gameManager.TOTAL_ANSWER_ARRAY = val;
+                gameManager.CURRENT_ANSWER = answer;
+
+                // gameManager.choiceQuestion = ['>','<'];
+                // gameManager.choiceQuestionText = ['>','<'];
+                
+                gameManager.choiceQuestionImg=['images/basketball_ball.png','images/basketball_ball.png','images/basketball_ball.png'];
+
+                gameManager.choiceQuestion = [];
+				gameManager.choiceQuestionText = [];
+				for (var i = 3; i < gameManager.TOTAL_ANSWER_ARRAY.length - 2; i++) {
+					gameManager.choiceQuestion.push(gameManager.TOTAL_ANSWER_ARRAY[i]);
+					gameManager.choiceQuestionText.push(gameManager.TOTAL_ANSWER_ARRAY[i]);
+				}
+				
+
+				gameManager.CURRENT_TYPE = 'vic_basketball';
+				gameManager.choiceQuestionPosition = [];
+				gameManager.zoomRate = 0
+
+				var streamSound;
+
+				initScale();
+
+				initScene();
+
+				queTxt();
+
+				initSound();
+
+				logCounter = new LogCounter();
+				logCounter.startTime();
+				logCounter.onTimer();
+
+            }
+
+			/*---------- test code start -----------*/ 
+			window.onload = function () {
+			
+				setDrillContentsInit([999,888,777,999,888,777,'+','*'], [999]);					
+
+			}
+			/*---------- test code end -----------*/ 
+
+		</script>
+	</body>
+</html>

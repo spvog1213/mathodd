@@ -1,0 +1,61 @@
+
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;
+}
+
+.currentAnswer{
+	position: absolute;
+	top:40px;
+	left: 271px;
+	width:634px;
+	height:128px;
+	background: url('../images/textBoard.png') no-repeat;
+
+}
+
+.quizText {	display: inline-block;	margin-top: 32px; }
+
+.quizContainer{
+	position: absolute;
+	top: 183px;
+	width: 900px;
+	height: 600px;
+}
+.ruler{	position: absolute;	left:90px; width:925px; height:128px; }
+.rulerBox_0{ top:135px; }
+.rulerBox_1{ top:395px; }
+
+.rulerNum{	position: relative;}
+.rulerNum1{ top: 112px; left: -300px;}
+.rulerNum2{ top: -64px; left: 212px;}
+.rulerNum3{ top: 112px; left: -300px;}
+.rulerNum4{ top: -64px; left: 263px;}
+
+.hidden{visibility: hidden;}
+
+.dap_1{position: relative; top:5px; left:-49px;}
+.dap_2{position: relative; top:5px; left:-33px;}
+.arrow1{position: relative; top: 13px; left:-43px;}
+.arrow2{position: relative; top: 13px; left:-17px;}
+
+.quizObj{
+	position: absolute;
+	width:606px;
+	height:117px;
+}
+.quizObj_0{	top:40px; left:295px; }
+.quizObj_1{	top:303px; left:180px;}
+
+.pointText{	color:#c71804;}
+
+.checkObj{
+	position: absolute;
+	width:130px;
+	height:112px;
+	background: url('../images/checkBox.png') no-repeat;
+}
+#checkImg{	padding-top: 15px;}

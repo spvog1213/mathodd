@@ -1,0 +1,65 @@
+body {
+}
+
+#bgCanvas {
+/*	outline: 1px solid red;
+	position: absolute;
+	background: url("../images/connectTrain_bg.png") no-repeat;
+*/	width: 1229px;
+	height: 768px;
+	background-size: cover;
+}
+
+
+
+
+/*------------------------------*/
+
+.tube{
+	width: 642px;
+	height: 282px;
+	position: absolute;
+	left: 77px
+}
+
+.textBoard {
+	font-family: NanumGothicExtraBold;
+	width: 440px;
+	height: 150px;
+	position: absolute;
+	left: 180px;
+	line-height: 150px;
+	font-size: 43px;
+	text-align: center;
+}
+.textBordSuccess {
+	font-family: NanumGothicExtraBold;
+	width: 440px;
+	height: 150px;
+	position: absolute;
+	left: 180px;
+	line-height: 150px;
+	font-size: 43px;
+	text-align: center;
+}
+
+.dropArea {
+	width: 555px;
+	height: 180px;
+	position: absolute;
+	cursor: default;
+	left: 120px;
+}
+
+.dragObj{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+}
+
+.imgBoard{
+	width: 120px;
+	height: 120px;
+	margin-left: 160px;
+	margin-top: 13px;
+}

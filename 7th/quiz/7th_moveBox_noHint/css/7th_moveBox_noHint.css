@@ -1,0 +1,78 @@
+#bgCanvas {
+	position: absolute;
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+	font-family: NanumGothicExtraBold;
+}
+
+/* 제목 */
+.title {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 136px;
+	font-size: 43px;
+	line-height: 165px;
+	background: url(../images/textBox.png) center no-repeat;
+}
+
+/* 기차 영역 */
+.trainContainer {
+	position: absolute;
+}
+.train {
+	position: absolute;
+	top: 199px;
+	left: 853px;
+	width: 220px;
+	height: 188px;
+	background: url(../images/train.png) center / 100% 100% no-repeat;
+}
+.trainLine {
+	position: absolute;
+	opacity: 0;
+}
+
+/* 드래그 */
+[class*='dropArea_'] {
+	position: absolute;
+}
+.dragObj {
+	position: absolute;
+	background: center / auto 100% no-repeat;
+}
+.dragObj > .text {
+	color: #000;
+	font-size: 45px;
+	line-height: 145px;
+}
+.dragObj > .text > .bunsuDiv {
+	margin-top: -25px;
+}
+
+/* 체크 버튼 */
+.checkBtnContainer {
+	position: absolute;
+	top: 228px;
+    left: 880px;
+	width: 98px;
+	height: 106px;
+	cursor: pointer;
+}
+.checkBtnContainer > .checkBtn,
+.checkBtnContainer > .checkBtn_on {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: center / auto 100% no-repeat;
+}
+.checkBtnContainer > .checkBtn { background-image: url(../../../images/common/checkBtnPurple.png); }
+.checkBtnContainer > .checkBtn_on { background-image: url(../../../images/common/checkBtnPurple_on.png); }
+.checkBtnContainer.on .checkBtn {
+	opacity: 0;
+	visibility: hidden;
+}

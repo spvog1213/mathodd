@@ -1,0 +1,39 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 20px;
+}
+.abso,.vic,.cal{
+	position: absolute;
+	cursor: default;
+}
+.peaText,.vicText {
+	position: absolute;
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;
+	color: #333333;
+	width: 122px;
+	text-align: center;
+}
+.peaImgWrap{
+	position: absolute;
+}
+#peaText{
+	top: 37px;
+}
+.bg{
+	position: absolute;
+	left: 241px;
+	top: 140px;
+	z-index: -1;
+	pointer-events : none;
+}
+#peaFront{
+	z-index: 10;
+}

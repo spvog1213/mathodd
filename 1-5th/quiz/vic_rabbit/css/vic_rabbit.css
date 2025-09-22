@@ -1,0 +1,78 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+.abso{
+	position: absolute;
+}
+
+.circle {
+	width: 109px;
+	height: 188px;
+	font-size: 50px;
+	border: 0px;
+	background: none;
+	padding-top: 20px;
+	text-align: center;
+	z-index: 2;
+	text-align: center;
+	background: url(../images/vic_rabbit_carrot.png) no-repeat;
+}
+
+#answerObject {
+	position: absolute;
+	width: 410px;
+	height: 210px;
+	cursor: default;
+}
+
+
+#question1 {
+	position: absolute;
+	width: 410px;
+	height: 210px;
+	top:450px; 
+	left: 273px; 
+	background: url(../images/vic_rabbit_manger2.png) no-repeat;
+	font-family: NanumGothicExtraBold;
+	font-size:40px;
+	text-align: center;
+	color: #fff;
+	z-index:10;
+	line-height: 320px;
+}
+
+#bowl{
+	top:450px; 
+	left:273px;
+	z-index: 2;
+}
+
+#rabbit{
+	top: 20%;
+	left: 388px;
+	z-index: 1;
+}
+
+#bigText,#smallText{
+	display: inline-block;
+}
+.questionText{
+	vertical-align: top;
+	height: 30px;
+}
+#line{
+	margin-top: 3px;
+	margin-left: -5px;
+	letter-spacing: -5px;
+}
+#bigText{
+	vertical-align: top;
+	line-height: 160px;
+}

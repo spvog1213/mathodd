@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd : dragFigure</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/7th_findNumber.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<script src="../../js/libs/require.js"></script>
+	</head>
+
+	<body>
+		<div id="bgCanvas"></div>
+
+		<script type="text/javascript">
+			var streamSound, logCounter;
+
+			function setDrillContentsInit (val, answer) {
+				console.log('> setDrillContentsInit! ', val, answer);
+
+				require.config({
+					baseUrl: '../../js/libs'
+				});
+
+				require(['event', 'sound', 'common', 'scene_n', 'dragdrop_n', 'animation_n', 'logCounter', 'convertNumber', '../../quiz/7th_findNumber/js/7th_findNumber'],
+					function (Event, Sound, Scene, Dragdrop, Animation, lCounter, ConvertNumber, Fishing) {
+
+	                gameManager.QUIZ_ANSWER = answer;
+	                gameManager.dabCount = 0;
+					gameManager.QUIZ_TYPE = 'dragFigure';
+					gameManager.soundEffct = 'media/dragFigure.mp3'
+					gameManager.dropArea = [];
+
+					gameManager.answerPosition = [];
+					gameManager.choicePosition = [];
+					gameManager.zoomRate = 0;
+					gameManager.answerLeftTop;
+					gameManager.choiceLeftTop;
+					gameManager.quizText = val[0]
+
+					console.log('>> gameManager : ', gameManager);
+
+					initScale();
+					initSound();
+
+					initScene();
+					initObject(val);
+
+					logCounter = new LogCounter();
+					logCounter.startTime();
+					logCounter.onTimer();
+				});
+			}
+			var dragColor = 'black';//드래그 안에 텍스트
+			var dragFontSize = 55; // 드래그 안에 텍스트
+			//==== test code start ======================================================================
+			window.onload = function () {
+
+				setDrillContentsInit(
+					[
+						['6의 약수를 모으세요.'],2,5,6,1,3,4
+					],
+					[1, 3, 4, 5]
+				);
+
+
+			}
+			//==== test code end ========================================================================
+				/*제목 [[이미지 경로, 이미지 두번째 경로, 안에 들어갈 텍스트]]*/
+
+		</script>
+
+	</body>
+</html>

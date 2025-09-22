@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>verticalSumTime3</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/verticalSumTime3.css" >
+		<script src="../../js/libs/require.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="bgCanvas">
+			<div id="result"></div>
+		</div>
+		<script>
+			var cellHeight = 100;
+			function setDrillContentsInit(val, answer) {
+
+				// console.log('> setDrillContentsInit! ', val, answer);
+
+				require.config({
+					baseUrl: '../../js/libs'
+				});
+
+				require(['event', 'sound', 'common', 'scene_n', 'dragdrop_n', 'animation_n', 'logCounter', 'convertNumber', 'spinPicker', '../../quiz/verticalSumTime3/js/verticalSumTime3'],
+				function (Event, Sound, Scene, Dragdrop, Animation, lCounter, ConvertNumber, Fishing) {
+
+					gameManager.QUIZ_TEXT = val[0];
+					gameManager.QUIZ_OPTION = val[1];
+					gameManager.QUIZ_ANSWER = answer;
+					gameManager.QUIZ_TYPE = 'verticalSumTime3';
+
+					gameManager.quizObj = [];
+					gameManager.wrapperPos = [{top:360, left:250}];
+					gameManager.zoomRate = 0;
+					gameManager.BOUNDING_TYPE = 'left';
+					gameManager.soundEffct ='media/verticalSumTime3.mp3';
+					gameManager.dabCount = 0;
+
+					gameManager.value;
+					gameManager.key;
+
+					initScale();
+					initScene();
+					initSound();
+
+					logCounter = new LogCounter();
+					logCounter.startTime();
+					logCounter.onTimer();
+
+					console.log('> initDateSpinPicker...');
+				});
+
+			}
+
+			/*---------- test code start -----------*/
+			window.onload = function() {
+				
+				setDrillContentsInit( [ ['plus', [5,'시간'], [18,'분'], [33,'초'], [3,'시간'],[16,'분'], [45,'초'],['시간','분','초'] ], [  [['number', 10],'spin', 0], [['number', 10], 'spin', 0], [['number', 10], 'spin', 0],  [['number', 10], 'spin', 3], [['number', 10], 'spin', 0]  ] ], [8,3,5,1,8] );
+
+			}
+
+		</script>
+	</body>
+
+</html>

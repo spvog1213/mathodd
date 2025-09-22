@@ -1,0 +1,284 @@
+#bgCanvas {
+	position: absolute;
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+	font-family: NanumGothicExtraBold;
+}
+
+#listCardAreaContainer{
+	position: absolute;
+	display: block;
+	top:0px;
+	left:0px;
+	width: 100%;
+	text-align: center;
+}
+
+#listCardAreaContainer .cardArea{
+	position: absolute;
+	width:101px;
+	height:112px;
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+}
+
+#listCardAreaContainer > div:nth-child(1){
+	top:570px;
+	left:940px;
+}
+
+#listCardAreaContainer > div:nth-child(2){
+	top:437px;
+	left:940px;
+}
+
+#listCardAreaContainer > div:nth-child(3){
+	top:304px;
+	left:940px;
+}
+
+#listCardAreaContainer > div:nth-child(4){
+	top:171px;
+	left:940px;
+}
+
+#listCardAreaContainer > div:nth-child(5){
+	top:38px;
+	left:940px;
+}
+
+#listCardAreaContainer > div:nth-child(6){
+	top:570px;
+	left:1070px;
+}
+
+#listCardAreaContainer > div:nth-child(7){
+	top:437px;
+	left:1070px;
+}
+
+#listCardAreaContainer > div:nth-child(8){
+	top:304px;
+	left:1070px;
+}
+
+#listCardAreaContainer > div:nth-child(9){
+	top:171px;
+	left:1070px;
+}
+
+#listCardAreaContainer > div:nth-child(10){
+	top:38px;
+	left:1070px;
+}
+
+#answerCardAreaContainer{
+	position: absolute;
+	display: block;
+	top:0px;
+	left:0px;
+	width: 100%;
+	text-align: center;
+}
+
+#answerCardAreaContainer .cardArea{
+	position: absolute;
+	width:99px;
+	height:110px;
+	background-image:url('../images/numCard_questionBox.png');
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+}
+.cardArea.wrong .number_card,
+.cardArea.wrong .point_card {
+	transition: background-image 200ms;
+	background-image:url('../images/point_wrong_card.png') !important;
+}
+
+#answerCardAreaContainer > div:nth-child(1){
+	top:410px;
+	left:220px;
+}
+
+#answerCardAreaContainer > div:nth-child(2){
+	top:410px;
+	left:330px;
+}
+
+#answerCardAreaContainer > div:nth-child(3){
+	top:410px;
+	left:440px;
+}
+
+#answerCardAreaContainer > div:nth-child(4){
+	top:410px;
+	left:550px;
+}
+
+#answerCardAreaContainer > div:nth-child(1).leftPlus{
+	top:410px;
+	left:330px;
+}
+
+#answerCardAreaContainer > div:nth-child(2).leftPlus{
+	top:410px;
+	left:440px;
+}
+
+#answerCardAreaContainer > div:nth-child(3).leftPlus{
+	top:410px;
+	left:550px;
+}
+
+
+.number_card{
+	position: absolute;
+	display: inline-block;
+	cursor: pointer;
+	left:0px;
+	top:0px;
+	width:99px;
+	height:112px;
+	text-align: center;
+	font-size:48px;
+	line-height: 112px;
+	color:#000;
+	background-image:url('../images/numCard_num.png');
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+}
+.number_card.on {
+	background-image:url('../images/point_on_card.png');
+}
+
+.point_card_off{
+	display: inline-block;
+	pointer-events: none;
+	width:99px;
+	height:112px;
+	text-align: center;
+	font-size:48px;
+	line-height: 112px;
+	color:#000;
+	background-image:url('../images/numCard_num.png');
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+	opacity: 0.5;
+}
+
+.point_card_on{
+	display: inline-block;
+	pointer-events: default;
+	cursor: pointer;
+	width:99px;
+	height:112px;
+	text-align: center;
+	font-size:48px;
+	line-height: 112px;
+	color:#000;
+	background-image:url('../images/point_on_card.png');
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+}
+
+
+#arithmeticContainer{
+	position: absolute;
+	display: block;
+	top:0px;
+	left:0px;
+	width: 100%;
+}
+
+#arithmeticContainer .arithmetic_note{
+	position: absolute;
+	display:block;
+	top:122px;
+	left:99px;
+	width:671px;
+	height:466px;
+	background-image:url('../images/note.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#arithmeticContainer > .arithmetic_top{
+	position: absolute;
+	display:block;
+	top:211px;
+	left:394px;
+	width:241px;
+	height:73px;
+	text-align: right;
+}
+
+#arithmeticContainer > .arithmetic_bottom{
+	position: absolute;
+	display:block;
+	top:287px;
+	left:394px;
+	width:241px;
+	height:73px;
+	text-align: right;
+}
+
+#arithmeticContainer > .arithmetic_top > span,
+#arithmeticContainer > .arithmetic_bottom > span{
+	display: inline-block;
+	padding-right:10px;
+	font-size:62px;
+	color:#000;
+	line-height:73px;
+	letter-spacing: 20px;
+}
+
+#arithmeticContainer .arithmetic_sign{
+	position: absolute;
+	display:block;
+	top:287px;
+	left:197px;
+	width:87px;
+	height:89px;
+	text-align: center;
+}
+#arithmeticContainer > .arithmetic_sign > span{
+	display: inline-block;
+	font-size:62px;
+	color:#000;
+	line-height:73px;
+}
+
+#arithmeticContainer .arithmetic_bar{
+	position: absolute;
+	display:block;
+	top:375px;
+	left:200px;
+	width:468px;
+	height:7px;
+	border-bottom:5px solid #000;
+}
+
+#checkContainer{
+	position: absolute;
+	display: block;
+	top:0px;
+	left:0px;
+	width: 100%;
+}
+
+#checkContainer .check_btn{
+	position: absolute;
+	display: block;
+	cursor: pointer;
+	top:523px;
+	left:720px;
+	width:96px;
+	height:104px;
+	background-image: url('../../../images/common/checkBtnRed.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+#checkContainer .check_btn.on {
+	background-image: url('../../../images/common/checkBtnRed_on.png');
+}

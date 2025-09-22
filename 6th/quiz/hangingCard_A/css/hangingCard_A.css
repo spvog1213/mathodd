@@ -1,0 +1,63 @@
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+}
+
+div[class*="question_"]{
+	position: absolute;
+	width: 140px;
+	height: 165px;
+	text-align: center;
+	font-size:0;
+
+}
+
+img[class*="question_"]{
+	width: 90px;
+	height: 90px;
+	margin-top: 40px;
+}
+
+div[class*="drag_"]{
+	position: absolute;
+	width: 140px;
+	height: 165px;
+	text-align: center;
+	font-size:0;
+}
+
+img[class*="drag_"]{
+	width: 90px;
+	height: 90px;
+	margin-top: 40px;
+	z-index: 1000;
+}
+
+div[class*="dropArea_"]{
+	position:absolute;
+	background:blue;
+	background:url("../images/hangingCard_questionCard.png") no-repeat;
+	width: 140px;
+	height: 165px;
+}
+
+div[class*="back_"]{
+	position: absolute;
+	width: 140px;
+	height: 165px;
+}
+
+img[class*="back_"]{
+	width: 90px;
+	height: 90px;
+	margin-top: 40px;
+}
+
+
+.content {
+	display: inline-block;
+	width:1229px;
+	height:181px;
+	margin-top: 65px;
+}
+

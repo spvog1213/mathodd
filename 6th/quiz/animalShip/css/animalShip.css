@@ -1,0 +1,87 @@
+
+#bgCanvas {
+	width: 1024px;
+	height: 768px;
+	font-family: NanumGothicExtraBold;
+	font-size: 25px;
+}
+
+.currentAnswer{
+	position: absolute;
+	top: -55px;
+	left: 180px;
+	width:670px;
+	height:190px;
+	font-size: 50px;
+	background: url('../images/animalShip_textBoard.png') no-repeat;
+}
+.answerText1 {
+	display: inline-block;
+	margin-top: 100px;
+	margin-left: 72px;
+}
+
+.ship{
+	position: absolute;
+	top: 140px;
+	left: 50px;
+	width: 790px;
+	height: 558px;
+	background: url('../images/animalShip_ship.png') no-repeat;
+}
+
+.checkBtn{
+	position: absolute;
+	top: 565px;
+	left: 353px;
+	width: 196px;
+	height: 80px;
+	background: url('../images/boxfill_checkbtn.png') no-repeat;
+}
+
+
+.drag{
+	position: absolute;
+}
+.drag1{
+	width:102px;
+	height:106px;
+}
+.drag2{
+	width:122px;
+	height:126px;
+}
+.drag3{
+	width:142px;
+	height:146px;
+}
+
+.text{
+	position: relative;
+	left: 820px;
+	width:100px;
+}
+.text01{
+	top:200px;
+}
+.text02{
+	top:400px;
+}
+
+.dropArea {
+	position: absolute;
+	top: 220px;
+	right: 193px;
+	width: 757px;
+	height: 418px;
+	z-index: 1;
+	pointer-events: none;
+	/*border:1px dotted red;*/
+}
+
+.colorText {
+	color: red;
+}
+.drag_9{
+	pointer-events: none;
+}

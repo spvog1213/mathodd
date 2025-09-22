@@ -1,0 +1,81 @@
+body {
+	background: url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+
+.penciSetl {
+	float: left;
+	cursor: default;
+}
+
+#dessertContainer {
+	text-align: center;
+	background: #FDFDFD;
+	border-radius: 25px;
+	height: 90px;
+	position: absolute;
+	border: 7px solid #66d1f1;
+}
+
+#calculation {
+	position: absolute;
+	top: 357px;
+	left: 471px
+}
+
+.question_box {
+	position: absolute;
+	width: 312px;
+	height: 457px;
+	text-align: left;
+	line-height: 0px;
+	cursor: default;
+	padding: 13px 10px;
+}
+
+#question1 {
+	background: url("../images/strawsum_box_1.png") no-repeat;
+}
+#question2 {
+	background: url("../images/strawsum_box_2.png") no-repeat;
+}
+
+.txt {
+	position: absolute;
+	top: 434px;
+	left: 0px;
+	font-size: 65px;
+	width: 330px;
+	font-family: NanumGothicExtraBold;
+	text-align: center;
+	cursor: default;
+}
+
+.rect {
+	width: 151px;
+	height: 115px;
+	font-size: 65px;
+	line-height:115px;
+	background: url("../images/num_box.png") no-repeat;
+	cursor: default;
+}
+
+.pencilWrap {
+	display: inline-block;
+	width: 70px;
+	float: left;
+	text-align: left;
+}
+
+
+#answerMark {
+	position: absolute;
+	display: none;
+	z-index: 10;
+}

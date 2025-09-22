@@ -1,0 +1,94 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+
+.donut {
+	position: absolute;
+	cursor: pointer;
+	cursor: default;
+}
+
+#donutCounter {
+	width: 473px;
+	height: 169px;
+	position: absolute;
+	z-index: 1;
+	top:155px;
+	left:351px;
+	background: url('../images/donutdevide_donutbox.png') no-repeat;
+	padding: 25px 75px;
+}
+
+#donutPos {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	top: 0px;
+	left: 146px;
+}
+
+#questionTopWrp {
+	position: absolute;
+	width: 800px;
+	height: 80px;
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;
+	text-align: center;
+	line-height: 78px;
+	background: url('../images/donutdevide_numbg.png') no-repeat;
+}
+.questionTop{
+	display: inline-block;
+}
+
+#answerObject1Text, #answerObject2Text, #answerObject1, #answerObject2 {
+	position: absolute;
+    width: 441px;
+    height: 191px;
+    padding: 19px 0px 1px 30px;
+    pointer-events: none;
+}
+
+#answerObject1Text, #answerObject1 {
+	top: 66%;
+	left: 15%;
+	
+}
+#answerObject2Text, #answerObject2 {
+	top: 66%;
+	left: 68%;
+	
+}
+
+#answertxt1,#answertxt2{
+	display: none;
+	float: left;
+	text-align: center;
+	width: 82px;
+	height: 87px;
+	line-height: 80px;
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;
+	color: #000;
+	text-shadow: 2px 2px 2px #fff;
+
+
+}
+#answerObject1{
+	background: url('../images/donutdevide_donuttray_blue.png') no-repeat;
+}
+#answerObject2{
+	background: url('../images/donutdevide_donuttray_green.png') no-repeat;
+}
+
+
+.donutNum{
+	display: inline-block;
+}

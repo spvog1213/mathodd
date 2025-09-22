@@ -1,0 +1,54 @@
+body {
+/*	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+	width: 1229px;
+	height: 768px;
+	background-size: cover;	
+*/}
+
+#bgCanvas {
+	/*outline: 1px solid red;*/
+	position: absolute;
+	width: 1229px;
+	height: 768px;
+	background-position: 130px 150px;
+}
+.blackBord{
+	width: 1150px;
+	height: 670px;
+	margin: 24px 39px;
+	background: url(../images/diameter_blackboard.png);
+}
+.circleImg{
+	width: 410px;
+	height: 410px;
+	position: absolute;
+	top: 150px;
+	left: 220px;
+}
+
+.circleText{
+	font-size: 45px;
+	font-family: NanumGothicExtraBold;
+	position: absolute;
+	background/*: #fff;
+	border-ra*/dius: 50%;
+	color: #fff;
+}
+
+.dropArea{
+	width: 220px;
+	height: 112px;
+	position: absolute;
+	background: url(../images/diameter_questionBox.png);
+}
+.dragObj{
+	width: 220px;
+	height: 112px;
+	background: url(../images/diameter_dragBox.png);
+	font-size: 55px;
+	text-align: center;
+	line-height: 102px;
+	font-family: NanumGothicExtraBold;
+	position: absolute;
+}

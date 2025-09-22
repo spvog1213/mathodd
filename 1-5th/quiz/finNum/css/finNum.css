@@ -1,0 +1,78 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+
+.fruits {
+	cursor: pointer;
+	cursor: default;
+}
+
+#finger img{
+	position: absolute;
+	left:0px;
+	top:0px;
+	width:1320px;
+	height:100%;
+	z-index: 1;
+}
+
+.circle{
+	cursor: default;
+}
+#fruitsContainer {
+	text-align: center;
+	background: #FDFDFD;
+	border-radius: 25px;
+	height: 120px;
+	position: absolute;
+	border: 7px solid #66d1f1;
+}
+
+#UiText {
+	position: absolute;
+	top: 54%;
+	left: 30%;
+	font-family: KoPubDotumBold;
+	font-size: 100px;
+	color: #66d1f1;
+}
+
+#answerObject {
+	width: 220px;
+	height: 335px;
+	border: 0px;
+	border-radius: 0px;
+	background: rgba(0, 0, 0, 0.0);
+	background: url('../images/handpan.png') no-repeat;
+}
+
+#question1, #question2 {
+	width: 103px;
+	height: 107px;
+	border: 0px;
+	border-radius: 0px;
+	background: rgba(0, 0, 0, 0.0);
+	z-index: 2;
+}
+
+#choiceQuestionContainer img{z-index: 2;}
+
+
+#calculation{
+	position: absolute;
+	top:155px;
+	left:445px;
+}
+
+#equalsSign{
+	position: absolute;
+	top:154px;
+	left:804px;
+}

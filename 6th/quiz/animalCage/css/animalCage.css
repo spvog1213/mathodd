@@ -1,0 +1,54 @@
+
+#bgCanvas {
+	width: 1024px;
+	height: 768px;
+	font-family: NanumGothicExtraBold;
+	font-size:50px;
+}
+
+#currentAnswer {
+	position: absolute;
+	width: 637px;
+	height:190px;
+	top: -25px;
+	left: 270px;
+	z-index: 1;
+	text-align: center;
+	background: url(../images/animalCage_textBoard.png) no-repeat;
+}
+.quizText{
+	display: inline-block;
+	margin-top:105px;
+}
+
+.animal {
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+}
+.aaad_0{
+	top: -36px;
+	left: 40px;
+}
+.aaad_1{
+	top: -35px;
+	left: 63px;
+}
+.aaad_2{
+	top: 70px;
+	left: 12px;
+}
+.aaad_3{
+	top:-92px;
+}
+.aaad2_0{
+	top: -53px;
+	left: 13px;
+}
+.aaad2_1{
+	top: -158px;
+	left: 150px;
+}
+.colorText{
+	color:#c71804;
+}

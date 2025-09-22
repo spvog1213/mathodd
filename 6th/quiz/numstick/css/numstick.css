@@ -1,0 +1,86 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0px;
+}
+
+.rect {
+	font-family: NanumGothicExtraBold;
+	position: absolute;
+	width: 90px;
+	height: 90px;	
+	font-size: 50px;
+	color: #333333;
+	line-height: 90px;
+	text-align: center;
+	cursor: pointer;
+	cursor: default;
+	background-image: url('../images/numstick_woodstick.png');
+}
+
+.wood{
+	font-family: NanumGothicExtraBold;
+	text-align: center;
+	position: absolute;
+	display: inline-block;
+	width: 90px;
+	height: 90px;	
+	background: url('../images/numstick_woodstick.png') no-repeat;
+	color: #941717;
+	vertical-align: middle;
+	line-height: 90px;
+	font-size: 50px;
+}
+
+#questionRedStick, #questionGreenStick, #redStick_0, #redStick_1, #redStick_2{
+	position: absolute;
+	width: 90px;
+	font-size:0;
+	z-index: 10;
+	text-align: center;
+}
+
+#questionRedStick{
+	left: 400px;
+}
+
+
+#questionGreenStick{
+	left: 150px;
+}
+
+
+#redStick_0 {
+	left: 750px;
+}
+
+
+#redStick_1{
+	left: 950px;
+}
+
+
+#redStick_2{
+	left: 1150px;
+}
+
+
+(#questionRedStick , #questionGreenStick , #redStick_0 , #redStick_1, #redStick_2) > img{
+	width: 80px;
+	height: 60px;
+}
+
+
+#answerObject{
+	position: absolute;
+	width: 85px;
+	height: 540px;
+	padding-left: 2px;
+	z-index: 1;
+}

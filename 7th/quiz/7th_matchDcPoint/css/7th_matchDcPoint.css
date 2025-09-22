@@ -1,0 +1,249 @@
+#bgCanvas {
+	position: absolute;
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+	font-family: NanumGothicExtraBold;
+}
+
+#queTxt{
+	position: absolute;
+	padding-top:5px;
+	top:30px;
+	left:340px;
+	width: 541px;
+	height: 150px;
+	text-align: center;
+	font-size:55px;
+	color:#000;
+	/*font-weight: bold;*/
+	background-image:url('../images/titleBg.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+#queTxt > span {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 170px;
+}
+
+#queTxt .txt{
+	display: inline-block;
+	margin-top:28px;
+}
+
+#boxContainer{
+	position: absolute;
+	display: block;
+	top:240px;
+	left:0px;
+	width: 100%;
+	text-align: center;
+}
+
+#boxContainer .box{
+	position: relative;
+	float:left;
+	margin:5px 5px;
+	width:101px;
+	height:112px;
+	background-image:url('../images/bg_box.png');
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+}
+
+#boxContainer .number{
+	display: inline-block;
+	width:101px;
+	height:114px;
+	text-align: center;
+	font-size:48px;
+	line-height: 112px;
+	color:#000;
+	background-image:url('../images/number_box.png');
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+}
+
+#boxContainer .point_off{
+	display: inline-block;
+	width:101px;
+	height:114px;
+	text-align: center;
+	font-size:48px;
+	line-height: 112px;
+	color:#000;
+	background-image:url('../images/point_off_box.png');
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+}
+
+#boxContainer .point_on{
+	display: inline-block;
+	width:101px;
+	height:114px;
+	text-align: center;
+	font-size:48px;
+	line-height: 112px;
+	color:#000;
+	background-image:url('../images/point_on_box.png');
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+}
+
+#boxContainer > #topBoxContainer{
+	position: absolute;
+	display: block;
+	top:0px;
+	left:336px;
+}
+
+#boxContainer > #topBoxContainer > div{
+	position: relative;
+	display: inline-block;
+}
+
+#boxContainer > #bottomBoxContainer{
+	position: absolute;
+	display: block;
+	top:120px;
+	left:336px;
+}
+
+#boxContainer > #bottomBoxContainer > div{
+	position: relative;
+	display: inline-block;
+}
+
+#boxContainer > #answerBoxContainer{
+	position: absolute;
+	display: block;
+	top:270px;
+	left:336px;
+}
+
+#boxContainer > #answerBoxContainer > div{
+	position: relative;
+	display: inline-block;
+	opacity: 0;
+	visibility: hidden;
+}
+
+#boxContainer > #answerBoxContainer > div > span{
+	display: none;
+}
+
+#boxContainer > #topBoxContainer:after,
+#boxContainer > #bottomBoxContainer:after,
+#boxContainer > #answerBoxContainer:after{
+	display: block;
+	content:"";
+	clear: both;
+}
+
+#boxContainer .arithmetic{
+	position: absolute;
+	display:block;
+	top:160px;
+	left:274px;
+	font-size:48px;
+	color:#000;
+}
+
+#boxContainer .arithmetic_bar{
+	position: absolute;
+	display:block;
+	top:246px;
+	left:260px;
+	width:714px;
+	height:10px;
+	border-bottom:5px solid #000;
+}
+
+#btnContainer {
+	position: absolute;
+	display: block;
+	top:240px;
+	left:0px;
+	width: 100%;
+}
+
+#btnContainer .left_btn{
+	position: absolute;
+	display: block;
+	left:162px;
+	width:78px;
+	height:105px;
+	cursor: pointer;
+	background-image:url('../images/btn_arrow_left.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#btnContainer .left_btn.top{
+	top:10px;
+}
+
+#btnContainer .left_btn.bottom{
+	top:132px;
+}
+
+#btnContainer .right_btn{
+	position: absolute;
+	display: block;
+	left:982px;
+	width:78px;
+	height:105px;
+	cursor: pointer;
+	background-image:url('../images/btn_arrow_right.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#btnContainer .right_btn.top{
+	top:10px;
+}
+
+#btnContainer .right_btn.bottom{
+	top:132px;
+}
+
+#checkContainer{
+	position: absolute;
+	display: block;
+	top:240px;
+	left:0px;
+	width: 100%;
+	text-align: center;
+}
+
+
+#checkContainer .check_btn {
+	position: absolute;
+	display: block;
+	top:260px;
+	left:1016px;
+	width:96px;
+	height:104px;
+	cursor: pointer;
+	background-image:url('../../../images/common/checkBtnRed.png');
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+}
+#checkContainer .check_btn.on {
+	background-image:url('../../../images/common/checkBtnRed_on.png');
+}
+
+
+.join_box{
+	position: absolute;
+	display: block;
+	top:0px;
+	left:0px;
+	/*width:331px;*/
+	height:120px;
+	border-radius: 10px;
+	background:#ea668c;
+	/*background-repeat: no-repeat;*/
+	/*background-size:100% 100%;*/
+}

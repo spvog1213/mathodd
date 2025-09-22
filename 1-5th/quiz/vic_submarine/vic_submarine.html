@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>MathOdd : Train3n4Row</title>
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/vic_submarine.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+	<script type="text/javascript" src="../../js/libs/event.js"></script>
+	<script type="text/javascript" src="../../js/libs/scene.js"></script>
+	<script type="text/javascript" src="../../js/libs/dragdrop.js"></script>
+	<script type="text/javascript" src="../../js/libs/animation.js"></script>
+	<script type="text/javascript" src="../../js/libs/sound.js"></script>
+	<script type="text/javascript" src="../../js/libs/logCounter.js"></script>
+	<script type="text/javascript" src="js/vic_submarine.js"></script>
+</head>
+
+<body>
+	<div id="bgCanvas">
+		<div id="submarineContainer"></div>
+	</div>
+
+	<script type="text/javascript">
+
+	function setDrillContentsInit(val, answer) {
+		gameManager.TOTAL_ANSWER_ARRAY = val;
+		gameManager.CURRENT_ANSWER = answer;
+
+		gameManager.trainTextArray = [gameManager.TOTAL_ANSWER_ARRAY[2], gameManager.TOTAL_ANSWER_ARRAY[1], gameManager.TOTAL_ANSWER_ARRAY[0]];	
+
+		gameManager.choiceQuestion = [];
+		gameManager.choiceQuestionText = [];
+		for (var i = 3; i < gameManager.TOTAL_ANSWER_ARRAY.length-2; i++) {
+			gameManager.choiceQuestion.push(gameManager.TOTAL_ANSWER_ARRAY[i]);
+			gameManager.choiceQuestionText.push(gameManager.TOTAL_ANSWER_ARRAY[i]);
+		}
+		gameManager.trainPosition = [[285, 641], [285, 423],[285, 203]];
+		switch (gameManager.TOTAL_ANSWER_ARRAY[7]) {
+			case '+' :
+			gameManager.trainSymbolIndex = 0;
+			break;
+			case '-' :
+			gameManager.trainSymbolIndex = 1;
+			break;
+			case '*' :
+			gameManager.trainSymbolIndex = 2;
+			break;
+			case '/' :
+			gameManager.trainSymbolIndex = 3;
+			break;
+		}
+		switch (gameManager.TOTAL_ANSWER_ARRAY[6]) {
+			case '+' :
+			gameManager.trainSymbolIndex2 = 0;
+			break;
+			case '-' :
+			gameManager.trainSymbolIndex2 = 1;
+			break;
+			case '*' :
+			gameManager.trainSymbolIndex2 = 2;
+			break;
+			case '/' :
+			gameManager.trainSymbolIndex2 = 3;
+			break;
+		}
+
+		
+		gameManager.trainImgArray = ['images/train_1.png', 'images/train_2.png', 'images/train_3.png', 'images/train_4.png'];
+		gameManager.trainSymbolArray =  ['images/plus.png', 'images/minus.png', 'images/multiplication.png', 'images/division.png'];
+		gameManager.trainSymbolArray2 = ['images/plus.png', 'images/minus.png', 'images/multiplication.png', 'images/division.png'];
+		gameManager.choiceQuestionPosition = [];
+		
+		gameManager.CURRENT_TYPE = 'vic_submarine'; 
+		gameManager.zoomRate = 0
+		
+		var streamSound;
+
+		initScale();
+
+		initScene();
+
+		initSound ();
+		
+		logCounter = new LogCounter();
+		logCounter.startTime();
+		logCounter.onTimer();
+
+	}
+
+	/*---------- test code start -----------*/ 
+	window.onload = function () {
+		
+		setDrillContentsInit([9999, 999, 99, 9999,9, 99, '/','+'], [9]);					
+
+	}
+	/*---------- test code end -----------*/ 
+
+	</script>
+</body>
+</html>

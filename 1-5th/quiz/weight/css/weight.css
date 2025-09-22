@@ -1,0 +1,109 @@
+body {
+	background: url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+
+.weight {
+	position: absolute;
+	cursor: pointer;
+	cursor: default;
+}
+
+#weightCounter {
+	width: 322px;
+	height: 192px;
+	position: absolute;
+	z-index: 50;
+	top: 300px;
+	right: -440px;
+}
+
+#answerObject1 {
+	position: absolute;
+	margin-top: 60px;
+	right: 97px;
+	width: 267px;
+	height: 358px;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.weight_answer{
+	position: absolute;
+	bottom: 0px;
+}
+
+#checkBtn{
+	width: 196px;
+	height: 80px;
+	position: absolute;
+	left: 40%;
+	bottom: 18.5%;
+	z-index: 10;
+	background: url(../images/boxfill_checkbtn.png) no-repeat;
+	display: none;
+}
+
+#bgweight{
+	position: absolute;
+	left: 20%;
+	bottom: 15%;
+	z-index: 2;
+}
+
+#balance1{
+	position: absolute;
+	left: 438px;
+	margin-top: 368px;
+}
+
+#balance2{
+	position: absolute;
+	left: 242px;
+	margin-top: 387px;
+    transform: rotate(-7deg);
+    -ms-transform: rotate(-7deg); /* IE 9 */
+    -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+}
+
+#balance3{
+	position: absolute;
+	right: 32px;
+	margin-top: 246px;
+}
+
+
+#balance4{
+	position: absolute;
+	left: 115px;
+	margin-top: 365px;
+	z-index: 0;
+}
+#weightBallImg{
+	position: absolute;
+}
+#weightBall{
+	position: absolute;
+	width: 212px;
+	height: 222px;
+	left: 138px;
+	margin-top: 206px;
+	z-index: 2;
+}
+
+#ballNum{
+	position: absolute;
+	width: 212px;
+	height: 222px;
+	font-size: 50px;
+	font-family: NanumGothicExtraBold;
+	color: #333333;
+	text-align: center;
+	z-index: 10;
+}

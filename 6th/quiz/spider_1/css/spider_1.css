@@ -1,0 +1,74 @@
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;
+	color: #17445c;
+}
+
+.mathTableBg{
+	width: 1229px;
+	height: 596px;
+	position: absolute;
+	top: -60px;
+}
+
+.quizBox{
+	width: 102px;
+	height: 102px;
+	background: url('../images/mathTable_dragBox_success.png')no-repeat;
+	position: absolute;
+	line-height: 94px;
+}
+.dragContainer{
+	width: 300px;
+	height: auto;
+}
+.dropArea{
+	position: absolute; 
+	width: 140px; 
+	height: 140px; 
+}
+[class*='dragObj_'] {
+	margin: 20px 20px;
+	width: 102px;
+	height: 105px;
+	border: 0px;
+	display: inline-block;
+	border-radius: 0px;
+	background: rgba(0, 0, 0, 0.0);
+	z-index: 2;
+	cursor: default;
+	line-height: 94px;
+	position: absolute;
+}
+
+.trainText{
+	position: absolute;
+	top: 205px;
+	left: 420px;
+	width: 614px;
+	height: 90px;
+	border-left: 2px solid;
+	border-right: 2px solid;
+	background: url('../images/connectTrain_arrow.png') no-repeat;
+	background-position: 0 40px
+}
+
+.line {
+	width: 9px;
+	height: 100%;
+	top: 0px;
+	left: 743px;
+}
+.spider{
+	position: absolute;
+	z-index: 10;
+}
+.hidden{
+	visibility: hidden;
+}
+.visible{
+	visibility: visible;
+}

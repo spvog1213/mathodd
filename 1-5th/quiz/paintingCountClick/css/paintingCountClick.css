@@ -1,0 +1,91 @@
+body {
+    background:url("../images/bgImg.png") no-repeat;
+    background-position: 0 -116px;  
+}
+
+#bgCanvas {
+    position: absolute;
+	width: 1024px;
+	height: 768px;
+    left: 285px;
+}
+
+.smile {
+	cursor: pointer;
+	cursor: default;
+}
+
+#fruitsContainer {
+	text-align:center;	
+	height: 120px; 
+	position: absolute;
+}
+
+#UiText {
+	position: absolute;
+	top: 60%;
+	left: 300px;
+	font-family: NanumGothicExtraBold;
+	font-size: 100px;
+	color: #66d1f1;
+
+}
+
+.line{display:none;}
+
+#smileContainer{
+	text-align:center;
+	background: #FDFDFD;
+	border-radius: 25px; 
+	height: 120px; 
+	position: absolute;
+	border: 7px solid #66d1f1;
+}
+
+.rect  { 
+	 font-family: NanumGothicExtraBold;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 20%;
+    font-size: 50px;
+    color: #333333;
+    line-height: 100px;
+    text-align: center;
+    background: #FFFFFF;
+    border: 9px solid #66d1f1;
+    cursor: pointer;
+}
+
+.retis{
+	display: inline-block;
+	font-family: NanumGothicExtraBold;   
+    color: #333333;
+    text-align: center;
+    cursor: pointer;
+    cursor: default;
+}
+
+#fruitsQuestion{
+text-align: center;
+    width: 176px;
+    height: 70px;
+    min-height: 60px;
+    position: absolute;
+    line-height: 70px;
+    font-size: 41px;
+    font-family: NanumGothicExtraBold;
+    background: url('../images/smile_textbox_yellow.png') no-repeat;
+}
+
+#fruitsAnswer{
+	text-align: center;
+    width: 700px;
+    height: 70px;
+    min-height: 60px;
+    position: absolute;
+    line-height: 70px;
+    font-size: 41px;
+    font-family: NanumGothicExtraBold;
+    background: url('../images/smile_textbox_long.png') no-repeat;
+}

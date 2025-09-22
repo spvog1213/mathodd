@@ -1,0 +1,111 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+
+#currentQuestion {
+	position: absolute;
+	display: none;
+	z-index: 10;
+}
+
+.rect {
+	border-radius: 20%;
+	width: 174px;
+	height: 97px;
+	font-size: 50px;
+	border: 0px;
+	border-radius: 2px;
+	line-height: 95px;
+	text-align: center;
+	cursor: default;
+	z-index: 1;
+	background: url(../images/frogjump2_textbox.png) no-repeat;
+	padding-left: 0px;
+}
+.circle {
+	border-radius: 0%;
+	width: 237px;
+	height: 197px;
+	font-size: 50px;
+	border: 0px;
+	border-radius: 2px;
+	line-height: 198px;
+	text-align: center;
+	z-index: 1;
+	background: none;
+	padding-left: 0px;
+}
+
+#question1,#question2,#question3,#question4{
+	width: 237px;
+	height: 197px;
+	background: url(../images/frogjump2_lotusleaf.png) no-repeat;
+}
+
+#answerObject {
+	padding: 0px;
+	background: none;
+	cursor: default;
+}
+
+.backBox {
+	position: absolute;
+	width: 226px;
+	height: 197px;
+	background: url(../images/frogjump2_lotusleaf.png) no-repeat;
+}
+
+#frogMotion {
+	position: absolute;
+	top: 7%;
+	right: -22%;
+	z-index: 2;
+}
+
+#frogBg{
+	position: absolute;
+	right: -22%;
+}
+
+#panel{
+	position: absolute;
+	width: 696px;
+	height: 228px;
+	top: 3%;
+	left: 30%;
+	background: url('../images/frogjump2_panel.png') no-repeat;
+
+}
+
+#textBox{
+	position: absolute;
+	display: none;
+	width: 172px;
+	height: 75px;
+	left: 28%;
+	top: 32%;
+	font-family: NanumGothicExtraBold;
+	font-size: 53px;
+	color: #333333;
+	text-align: center;
+	line-height: 72px;
+	background: url('../images/frogjump2_textbox2.png') no-repeat;
+	cursor: default;
+}
+
+#text{
+	position: absolute;
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;
+	color: #333333;
+	right: 24%;
+	top: 35%;
+	cursor: default;
+}

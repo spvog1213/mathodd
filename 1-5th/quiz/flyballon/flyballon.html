@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>MathOdd : Train3n4Row</title>
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/flyballon.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+	<script type="text/javascript" src="../../js/libs/event.js"></script>
+	<script type="text/javascript" src="../../js/libs/scene.js"></script>
+	<script type="text/javascript" src="../../js/libs/dragdrop.js"></script>
+	<script type="text/javascript" src="../../js/libs/animation.js"></script>
+	<script type="text/javascript" src="../../js/libs/sound.js"></script>
+	<script type="text/javascript" src="../../js/libs/logCounter.js"></script>
+	<script type="text/javascript" src="js/flyballon.js"></script>
+</head>
+
+<body>
+	<div id="bgCanvas">
+		<div id="bgObject"></div>
+		<div id="ballonContainer"></div>
+		<div id="UiText"></div>
+	</div>
+
+	<script type="text/javascript">
+
+	function setDrillContentsInit(val, answer) {
+
+		gameManager.TOTAL_ANSWER_ARRAY = val;
+		gameManager.CURRENT_ANSWER = answer;
+
+		gameManager.ballonTextArray = [gameManager.TOTAL_ANSWER_ARRAY[0], gameManager.TOTAL_ANSWER_ARRAY[1], gameManager.TOTAL_ANSWER_ARRAY[2], gameManager.TOTAL_ANSWER_ARRAY[3]];
+		gameManager.choiceQuestion = [gameManager.TOTAL_ANSWER_ARRAY[4], gameManager.TOTAL_ANSWER_ARRAY[5], gameManager.TOTAL_ANSWER_ARRAY[6]];
+		gameManager.choiceQuestionText = [gameManager.TOTAL_ANSWER_ARRAY[4], gameManager.TOTAL_ANSWER_ARRAY[5], gameManager.TOTAL_ANSWER_ARRAY[6]];
+
+
+		switch (gameManager.TOTAL_ANSWER_ARRAY[gameManager.TOTAL_ANSWER_ARRAY.length - 1]) {
+			case 'A' :
+			gameManager.ballonPosition = [[144, 147], [117, 279], [117, 546] ,[142, 677]];
+			break;
+			case 'B' :
+			gameManager.ballonPosition = [[144, 147], [117, 279], [100, 412] ,[117, 546]];
+			break;
+		}
+
+		gameManager.choiceQuestionPosition = [];
+
+		gameManager.CURRENT_TYPE = 'ballon';
+
+		gameManager.zoomRate = 0;
+
+		var streamSound;
+
+		initScale();
+
+		initScene();
+
+		initSound ();
+
+		logCounter = new LogCounter();
+		logCounter.startTime();
+		logCounter.onTimer();
+
+	}
+
+	/*---------- test code start -----------*/ 
+	window.onload = function () {
+		setDrillContentsInit([55, 56, 58, 59, 57, 10, 11, 'A'], [57]);					
+	}
+	/*---------- test code end -----------*/ 
+
+	</script>
+</body>
+</html>

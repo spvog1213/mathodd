@@ -1,0 +1,98 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+
+#store{
+	position: absolute;
+	width: 816px;
+	height: 671px;
+	background: url('../images/fruits_sum_multi_store.png') no-repeat;
+	left: 80px;
+	top: 45px;
+}
+.txt{
+	font-family: NanumGothicExtraBold;
+	position: absolute;
+	bottom: 22px;
+	width: 100px;
+	height: 89px;
+	font-size: 50px;
+	line-height: 82px;
+	text-align: center;
+	z-index: 10;
+	color: #333333;
+}
+
+#questText1{
+	left: 300px;
+}
+#questText2{
+	right: 311px;
+}
+#multiplication{
+	bottom: 24px;
+	right: 363px;
+	background: url('../images/fruits_sum_multi_×.png') 50% 50% no-repeat;
+}
+
+.fruit {
+	/*float: left;*/
+	padding-left: 50px;
+	width: 169px;
+	height: 102px;
+}
+.circle {
+	border-radius: 20%;
+	border: 0px;
+	background:none;
+	text-align: left;
+	z-index: 2;
+}
+.rect{
+	width: 157px;
+	height: 117px;
+	background: url('../images/fruits_sum_multi_textbox.png') no-repeat;
+	cursor: default;
+	line-height: 108px;
+}
+
+#question1 {
+	position: absolute;
+	text-align: center;
+	width: 815px;
+	height: 461px;
+	margin-left: 53px;
+	/*margin-top: 125px;*/
+}
+
+#answerObject {
+	background:none;
+	cursor: default;
+}
+
+#answerMark {
+	position: absolute;
+	display: none;
+	z-index: 10;
+}
+
+#numberPanel {
+    position: absolute;
+    width: 55px;
+    height: 80px;
+    background-image: url('../../../images/num_panel.png');
+    display: none;
+    font-family: NanumGothicExtraBold;
+    font-size: 25px;
+    color: #FFFFFF;
+    line-height: 33px;
+    text-align: center;
+    z-index: -25;
+

@@ -1,0 +1,99 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;	
+}
+
+#bgCanvas {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+}
+#busHi{
+	position: absolute;
+	top: 35%;
+	left: 300px;
+	z-index: 2;
+}
+.rect {
+	border-radius: 20%;
+	width: 140px;
+	height: 78px;
+	font-size: 50px;
+	border: 0px;
+	border-radius: 2px;
+	background: none;
+	line-height: 72px;
+	text-align: center;
+	z-index: 0;
+	/*background: url(../images/busstop_numbox.png) no-repeat;*/
+}
+
+#bus{
+	z-index: 2;
+}
+
+.circle{
+	border:0;
+	background: none;
+}
+
+#answerObject {
+	padding: 0px;
+	background: none;
+	cursor: default;
+}
+
+
+#questionBox{
+	position: absolute;
+	left: 350px;
+	top: 88px;
+	width: 625px;
+	height: 65px;
+	text-align: center;
+}
+
+#questionBox div{
+	display: inline;
+}
+
+
+#answerMark {
+	position: absolute;
+	display: none;
+	z-index: 10;
+}
+.txt {
+	font-family: NanumGothicExtraBold;
+	font-size: 50px;
+	color: #333333;
+	z-index:2;
+	cursor: default;
+}
+
+#correctTxt{
+	position: absolute;
+	width: 470px;
+	text-align: center;
+	font-family: NanumGothicExtraBold;
+	font-size: 100px;
+	color: #333333;
+	z-index:15;
+	top: 183px;
+	left: 175px;
+	cursor: default;
+}
+
+.catScaleTxTBox{
+	position: absolute;
+	left:60px;
+	top:-20px;
+	z-index:-1;
+}
+
+#scaleWeightingMachine{
+	position: absolute;
+	left:-55px;
+	top:-92px;
+	z-index:-1;
+}

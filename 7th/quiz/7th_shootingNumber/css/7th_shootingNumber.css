@@ -1,0 +1,196 @@
+#bgCanvas {
+	position: absolute;
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+	font-family: NanumGothicExtraBold;
+}
+
+#queTxt{
+	position: absolute;
+	padding-top:5px;
+	top:30px;
+	left:330px;
+	width: 561px;
+	height: 119px;
+	text-align: center;
+	font-size:48px;
+	color:#68421e;
+	/*font-weight: bold;*/
+	background-image:url('../images/textBox.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+#queTxt > span{
+	display: block;
+}
+
+#queTxt .txt{
+	display: inline-block;
+	margin-top:28px;
+}
+
+#cardContainer{
+	position: absolute;
+	display: block;
+	top:200px;
+	left:0px;
+	width: 100%;
+	height: 160px;
+	text-align: center;
+	/*z-index: 200;*/
+}
+
+#cardContainer img{
+	width:53px;
+	height:83px;
+}
+
+#cardContainer > span{
+	position: relative;
+	display: inline-block;
+	width:82px;
+	height:90px;
+	font-size: 40px;
+}
+
+#cardContainer > span > span{
+	position: absolute;
+	display: inline-block;
+	left:0px;
+	top:0px;
+	width:82px;
+	height:90px;
+}
+
+#cardContainer .painter1{
+	position: absolute;
+	display: inline-block;
+	left:-12px;
+	top:-10px;
+	width:106px;
+	height:109px;
+	background-image:url('../images/paint_red.png');
+	background-repeat: no-repeat;
+	background-size: auto 109px;
+	background-position: center center;
+}
+
+#cardContainer .painter2{
+	position: absolute;
+	display: inline-block;
+	left:-12px;
+	top:-10px;
+	width:106px;
+	height:109px;
+	background-image:url('../images/paint_blue.png');
+	background-repeat: no-repeat;
+	background-size: auto 109px;
+	background-position: center center;
+}
+
+#cardContainer .painter3{
+	position: absolute;
+	display: inline-block;
+	left:-12px;
+	top:-10px;
+	width:106px;
+	height:109px;
+	background-image:url('../images/paint_green.png');
+	background-repeat: no-repeat;
+	background-size: auto 109px;
+	background-position: center center;
+}
+
+#shooterContainer {
+	position: absolute;
+	display: block;
+	top:460px;
+	left:0px;
+	width: 100%;
+	height: 193px;
+	/*z-index: 100;*/
+}
+
+#shooterContainer > .shooter{
+	position: absolute;
+	top:0;
+	left:500px;
+	/*z-index: 102;*/
+}
+
+#shooterContainer > .shooter > .shoot_body{
+	position: absolute;
+	display: block;
+	cursor: pointer;
+	left:0px;
+	top:0px;
+	width:247px;
+	height:177px;
+	background-image:url('../images/submarine.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	/*z-index: 105;*/
+}
+
+#shooterContainer > .shooter > .shoot_bullet{
+	position: absolute;
+	left:85px;
+	top:-110px;
+	width:21px;
+	height:162px;
+	background-image:url('../images/arrow.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	z-index: -1;
+	/*z-index: 104;*/
+}
+
+.check_btn{
+	position: absolute;
+	display: block;
+	top:-82px;
+	left:60px;
+	width:69px;
+	height:75px;
+	cursor: pointer;
+	/*z-index: 106;*/
+	background-image:url('../images/arrowBtn.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.left_move{
+	position: absolute;
+	display: block;
+	pointer-events: none;
+	top:112px;
+	left:-60px;
+	width:40px;
+	height:21px;
+	background-image:url('../images/direction_left.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.right_move{
+	position: absolute;
+	display: block;
+	pointer-events: none;
+	top:112px;
+	left:256px;
+	width:40px;
+	height:21px;
+	background-image:url('../images/direction_right.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.shooterText {
+	position: absolute;
+	top: 140px;
+	left: -2px;
+	width: 200px;
+	text-align: center;
+	font-size: 27px;
+}

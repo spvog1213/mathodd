@@ -1,0 +1,113 @@
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	font-family: NanumGothicExtraBold;
+}
+
+.content{
+	display: inline-block;
+	margin-top : 90px;
+	margin-left: 160px;
+	background:	url(../images/contentBack.png) no-repeat;
+	width: 972px;
+	height: 616px;
+}
+
+
+.swWrapper {
+	position : absolute;
+	width : 100%;
+	margin-top: 4.5px;
+}
+
+.backgroundGroup{
+	position : absolute;
+	width : 800px;
+	height:100px;
+}
+
+.swBg {
+	position:absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+}
+
+.swSlotsWrapper {
+	position:relative;
+	display: block;
+	width: 100%;
+	overflow: hidden;
+}
+
+
+.swSlots li {
+	width: 100px;
+	height : 100px;
+	line-height: 195px;
+	opacity : 0.2;
+}
+
+[class*="slot_"] {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100px;
+	height: 200px;
+	font-size: 65px;
+	overflow: hidden;
+}
+
+.slot_1{padding-left: 140px;}
+.slot_3{padding-left: 70px;}
+
+[class*="slotBack_"] {
+	background:url(../images/slotBox.png) no-repeat;
+	display: inline-block;
+	width: 100px;
+	height: 210px;
+}
+.slotBack_1{margin-left: 140px;}
+.slotBack_2{margin-left: -2px;}
+.slotBack_3{margin-left: 70px;}
+.slotBack_4{margin-left: -2px;}
+
+
+
+[class*="quizText_"]{
+	position: absolute;
+	display: inline-block;
+	width: 150px;
+	height: 80px;
+	font-size:35px;
+}
+
+.quizText_1,.quizText_4{
+	left:280px
+}
+
+.quizText_2,.quizText_5{
+	left:550px
+}
+
+.quizText_3,.quizText_6{
+	left:820px
+}
+
+.quizText_5,.quizText_6{
+	top : 30px;
+}
+
+.quizText_7,.quizText_8,.quizText_9{top : 445px;}
+.num{ font-size:60px; margin-right:25px;}
+.doneBtn,.doneBtn_on{position: absolute;width: 98px;height: 106px;}
+.doneBtn{
+	left : 1090px;
+	top : 580px;
+	background:	url(../../../images/common/checkBtnRed.png) no-repeat;
+}
+
+.doneBtn_on{z-index:100;visibility:hidden;}
+
+

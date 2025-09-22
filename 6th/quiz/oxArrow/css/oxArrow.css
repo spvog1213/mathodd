@@ -1,0 +1,45 @@
+body {
+	background:url("../images/bgImg.png") no-repeat;
+	background-position: 0 -116px;
+}
+
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	text-align: center;
+}
+
+[class*="choiceQuizImg_"]{
+	font-family: NanumGothicExtraBold;
+	position: absolute;
+	width: 160px;
+	height: 190px;
+	font-size: 60px;
+	line-height: 110px;
+	text-align: center;
+	cursor: pointer;
+	cursor: default;
+}
+
+.dropArea {
+	position:absolute;
+	width: 100px;
+	height: 100px;
+}
+
+.content {
+	display: inline-block;
+	margin-top: 60px;
+}
+
+.question{
+	font-family: NanumGothicExtraBold;
+	display:table-cell;
+	vertical-align: middle;
+	height: 310px;
+	width: 990px;
+	font-size: 50px;
+}
+
+
+

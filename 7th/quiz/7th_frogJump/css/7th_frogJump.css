@@ -1,0 +1,44 @@
+#bgCanvas {
+	width: 1229px;
+	height: 768px;
+	background-size: cover;
+}
+
+.lotusleaf,
+[class*="dropArea"],
+.dragObj {
+	position: absolute;
+}
+
+.lotusleaf .text,
+[class*="dropArea"] .text,
+.dragObj .text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: #333;
+	font: 50px NanumGothicExtraBold;
+	text-align: center;
+	line-height: 200px;
+}
+
+.endFrog,
+.failFrog {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	z-index: 3;
+}
+.endFrog.off {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.touchFrog {
+	position: absolute;
+	top: 75px;
+	left: 100px;
+	cursor: pointer;
+	z-index: 4;
+}
