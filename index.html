@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>MathOdd2</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+		<style type="text/css">
+			body {
+				padding: 0;
+				margin: 0;
+			}
+			ul {
+				width: 100%;
+				padding: 0;
+				list-style-type : none;
+			}
+			ul li {
+				padding: 6px 10px;
+				background-color: #ededed;
+				color: #333;
+				font-weight: bold;
+				line-height: 26px;
+				border-bottom: 1px solid #ccc;
+
+			}
+			ul li:nth-child(1) {
+				padding: 8px 20px 9px 20px;
+				background-color: #333;
+				color: #fff;
+				font-size: 20px;
+
+			}
+			button {
+				font-size: 1em;
+				height: 25px;
+				border: none;
+				outline: none;
+				cursor: pointer;
+			}
+			li span {
+				font-size: .8em;
+				vertical-align: top;
+			}
+			li span:before {content: '- ';}
+
+			.flexBox {
+				display: flex;
+			}
+			ul + ul {
+				border-left: 1px solid;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="flexBox">
+			<ul>
+				<li>MathOdd - 1-2th</li>
+				<li data-src="1-5th" class="numberCandleDrag"><button>숫자초-2개</button></li>
+				<li data-src="1-5th" class="piggyBank"><button>돼지 저금통</button></li>
+				<li data-src="1-5th" class="dessertCountDrag"><button>그림보고 문장완성하기</button></li>
+				<li data-src="1-5th" class="boxfillDrag"><button>상자채우기</button></li>
+				<li data-src="1-5th" class="fruitsSumDrag"><button>과일계산</button></li>
+				<li data-src="1-5th" class="parking"><button>주차하기</button></li>
+				<li data-src="1-5th" class="beadCountClick"><button>그림보고 읽고 쓰기 구슬(3개)</button></li>
+				<li data-src="1-5th" class="beadCountClick1"><button>그림보고 읽고 쓰기 구슬(2개)</button></li>
+				<li data-src="1-5th" class="beadCountClick2"><button>그림보고 읽고 쓰기 구슬(1개)</button></li>
+				<li data-src="1-5th" class="skeweredDrag"><button>과일 꼬치</button></li>
+				<li data-src="1-5th" class="campingcar"><button>가로셈 캠핑카</button></li>
+				<li data-src="1-5th" class="heightLengthBlock"><button>세로셈 블록</button></li>
+				<li data-src="1-5th" class="scale"><button>눈금저울</button></li>
+				<li data-src="1-5th" class="lockClick"><button>자물쇠</button></li>
+				<li data-src="1-5th" class="lotto"><button>로또</button></li>
+				<li data-src="1-5th" class="coloredPencilClick"><button>색연필 셈</button></li>
+				<li data-src="1-5th" class="mathToy"><button>매스토이</button></li>
+				<li data-src="1-5th" class="vendingmachine"><button>세로셈 음료만들기</button></li>
+				<li data-src="1-5th" class="frog"><button>가로셈_개구리</button></li>
+				<li data-src="1-5th" class="handCountClick2"><button>짤짤이(합)</button></li>
+
+				<li data-src="1-5th" class="fruitsCountClick"><button>그림의 수 읽고 쓰기 (click) - 과일</button></li>			
+				<li data-src="1-5th" class="numberCardClick"><button>숫자카드 (click) - 오브젝트</button></li>
+				<li data-src="1-5th" class="fruitsCountClick2"><button>색칠하기</button></li>
+				<li data-src="1-5th" class="fishing"><button>낚시하기</button></li>
+				<li data-src="1-5th" class="Train3Row"><button>기차 연결 - 3열</button></li>
+				<li data-src="1-5th" class="paintingCountClick"><button>색칠하기_개수와순서 스마일</button></li>
+				<li data-src="1-5th" class="xylophone"><button>실로폰</button></li>
+				<li data-src="1-5th" class="fruitsCountDrag1"><button>수자석_가르기 (drag) - 과일A</button></li>
+				<li data-src="1-5th" class="fruitsCountDrag2"><button>수자석_모으기 (drag) - 과일A</button></li>
+				<li data-src="1-5th" class="keypadCountClickH"><button>가로셈</button></li>
+				<li data-src="1-5th" class="keypadCountClickV"><button> 세로셈</button></li>
+				<li data-src="1-5th" class="numberCutDrag"><button>가르기A</button></li>
+				<li data-src="1-5th" class="numberCollectDrag"><button> 모으기</button></li>
+				<li data-src="1-5th" class="beadCountDrag"><button> 구슬 계산</button></li>
+				<li data-src="1-5th" class="handCountClick"><button> 짤짤이</button></li>
+				<li data-src="1-5th" class="donutDevideDrag"><button>나누어 담기</button></li>
+				<li data-src="1-5th" class="finNum"><button>손가락 셈</button></li>
+				<li data-src="1-5th" class="balance"><button>양팔저울</button></li>
+				<li data-src="1-5th" class="balance2"><button>양팔저울(한개짜리)</button></li>
+				<li data-src="1-5th" class="balloon"><button>주머니샘</button></li>
+			</ul>
+			<ul>
+				<li>MathOdd - 3-4th</li>
+				<li data-src="1-5th" class="Train5Row"><button>기차5열</button></li>
+				<li data-src="1-5th" class="numberCandleDragThree"><button>숫자초-3개</button></li>
+				<li data-src="1-5th" class="pair"><button>짝찾기</button></li>
+				<li data-src="1-5th" class="flyballon"><button>풍선 날리기</button></li>
+				<li data-src="1-5th" class="molegame1"><button>두더지게임1</button></li>
+				<li data-src="1-5th" class="molegame2"><button>두더지게임2</button></li>
+				<li data-src="1-5th" class="flyballon2"><button>풍선 날리기2</button></li>
+				<li data-src="1-5th" class="pictureSelect"><button>그림보고 선택하기</button></li>
+				<li data-src="1-5th" class="fruitsBasket"><button>그림보고 셈하기</button></li>
+				<li data-src="1-5th" class="completeClick"><button>그림보고 완성하기2</button></li>
+				<li data-src="1-5th" class="frogJump1"><button>개구리 점프1</button></li>
+				<li data-src="1-5th" class="frogJump2"><button>개구리 점프2</button></li>
+				<li data-src="1-5th" class="comparePencil"><button>그림보고 비교하기</button></li>
+				<li data-src="1-5th" class="archery"><button>과녁 맞추기 </button></li>
+				<li data-src="1-5th" class="archery2"><button>과녁 맞추기2 </button></li>
+				<li data-src="1-5th" class="busStop"><button>버스 정류장</button></li>
+				<li data-src="1-5th" class="Train"><button>기차2</button></li>
+				<li data-src="1-5th" class="basketball"><button> 농구 </button></li>
+				<li data-src="1-5th" class="numberCardKeypad"><button>숫자카드 문자인식</button></li>
+				<li data-src="1-5th" class="gameMachine"><button>오락기</button></li>
+				<li data-src="1-5th" class="bus"><button>버스타기</button></li>
+				<li data-src="1-5th" class="soccerScore"><button>축구</button></li>
+				<li data-src="1-5th" class="soccerScore2"><button>축구-3개</button></li>
+				<li data-src="1-5th" class="puzzle1"><button>퍼즐1</button></li>
+				<li data-src="1-5th" class="puzzle2"><button>퍼즐2</button></li> 
+				<li data-src="1-5th" class="parking2"><button>주차하기2</button></li> 
+				<li data-src="1-5th" class="gameMachine2"><button>오락기2</button></li> 
+				<li data-src="1-5th" class="animalfence"><button>동물 울타리</button></li> 
+
+				<li data-src="1-5th" class="hanger"><button>옷걸기(소수)</button></li> 
+				<li data-src="1-5th" class="hangerTwo"><button>옷걸기(분수) A</button></li> 
+				<li data-src="1-5th" class="hangerTwoB"><button>옷걸기(분수) B</button></li>
+				<li data-src="1-5th" class="weight"><button>분동</button></li> 
+				<li data-src="1-5th" class="digital_balance"><button>디지털 저울</button></li>
+				<li data-src="1-5th" class="catScale"><button>체중계</button></li>
+				<li data-src="1-5th" class="fraction_compare"><button>분수크기비교(짝수)</button></li>
+				<li data-src="1-5th" class="fraction_compare2"><button>분수크기비교(홀수)</button></li>
+				<li data-src="1-5th" class="dandelion"><button>민들레</button></li>
+				<li data-src="1-5th" class="spacecraft"><button>우주선</button></li>
+				<li data-src="1-5th" class="fraction"><button>그림보고 수쓰기_분수</button></li>
+				<li data-src="1-5th" class="fruitstree"><button>과일 나무</button></li>
+				<li data-src="1-5th" class="hammergame_drag"><button>해머치기</button></li>
+				<li data-src="1-5th" class="pierrotbox"><button>용수철 장난감</button></li>					
+				<li data-src="1-5th" class="dogCatFoodA"><button>먹이먹이기_2개_A</button></li>
+				<li data-src="1-5th" class="dogCatFoodB"><button>먹이먹이기_2개_B</button></li>
+				<li data-src="1-5th" class="dogCatFoodTwoA"><button>먹이먹이기_3개_A</button></li>
+				<li data-src="1-5th" class="dogCatFoodTwoB"><button>먹이먹이기_3개_B</button></li>
+				<li data-src="1-5th" class="divide_selection"><button>똑같이 나누기</button></li>
+				<li data-src="1-5th" class="chocoplate"><button>초콜릿 담기</button></li>
+				<li data-src="1-5th" class="beakerfill"><button>분수 알아보기</button></li>
+				<li data-src="1-5th" class="cook"><button>분수 나타내기(양파)</button></li>
+				<li data-src="1-5th" class="cook2"><button>분수 나타내기(파)</button></li>
+				<li data-src="1-5th" class="fraction_bit"><button>분수조각</button></li>
+				<li data-src="1-5th" class="chocobox"><button>초콜릿 상자</button></li>
+				<li data-src="1-5th" class="colorpencilRibbon"><button>색연필 묶기</button></li>					
+				<li data-src="1-5th" class="chocodivideOne"><button>초코렛 쪼개기_묶음_1</button></li>
+				<li data-src="1-5th" class="chocodivideTwo"><button>초코렛 쪼개기_묶음_2</button></li>
+				<li data-src="1-5th" class="chocodivideThree"><button>초코렛 쪼개기_묶음_3</button></li>
+				<li data-src="1-5th" class="grapetree"><button>포도 나무</button></li>
+				<li data-src="1-5th" class="dollshooting"><button>인형 사격장</button></li>
+				<li data-src="1-5th" class="candle"><button>초 꽂기</button></li>
+				<li data-src="1-5th" class="robot1"><button>로봇</button></li>
+				<li data-src="1-5th" class="robot2"><button>로봇2</button></li>		
+				<li data-src="1-5th" class="butterfly"><button>나비와 꽃</button></li>
+				<li data-src="1-5th" class="seeSaw"><button>시소</button></li>
+				<li data-src="1-5th" class="target"><button>과녁판</button></li>
+				<li data-src="1-5th" class="mart"><button>장보기</button></li>
+			</ul>
+			<ul>
+				<li>MathOdd - 5th</li>
+				<li data-src="1-5th" class="vic_target2"><button>과녁판2</button></li>
+				<li data-src="1-5th" class="vic_target3"><button>과녁판3</button></li>
+				<li data-src="1-5th" class="vic_busStop_A"><button>버스 정류장A</button></li>
+				<li data-src="1-5th" class="vic_busStop_B"><button>버스 정류장B</button></li>
+				<li data-src="1-5th" class="vic_busStop_C"><button>버스 정류장C</button></li>
+				<li data-src="1-5th" class="vic_busStop_D"><button>버스 정류장D</button></li>
+				<li data-src="1-5th" class="vic_basketball2"><button> 농구2 </button></li>
+				<li data-src="1-5th" class="vic_basketball3"><button> 농구3 </button></li>
+				<li data-src="1-5th" class="vic_donutDevideDragA"><button>도넛 나누기A</button></li>
+				<li data-src="1-5th" class="vic_donutDevideDragB"><button>도넛 나누기B</button></li>
+				<li data-src="1-5th" class="vic_digital_balance"><button>디지털 저울</button></li>
+
+				<li data-src="1-5th" class="vic_dogCatFoodA"><button>먹이먹이기A</button></li>
+				<li data-src="1-5th" class="vic_dogCatFoodB"><button>먹이먹이기B</button></li>
+				<li data-src="1-5th" class="vic_dollshooting"><button>인형 사격장</button></li>
+				<li data-src="1-5th" class="vic_busStop"><button>버스 정류장</button></li>
+				<li data-src="1-5th" class="vic_soccerScore"><button>축구</button></li>
+				<li data-src="1-5th" class="vic_molegame1"><button>두더지게임1</button></li>
+				<li data-src="1-5th" class="vic_keypadCountClickH"><button>가로셈</button></li>
+				<li data-src="1-5th" class="vic_keypadCountClickV"><button>세로셈</button></li>
+				<li data-src="1-5th" class="vic_Campingcar"><button>가로셈 캠핑카</button></li>
+				<li data-src="1-5th" class="vic_heightLengthBlock"><button>세로셈 블록</button></li>
+				<li data-src="1-5th" class="vic_heightLengthBlock_multi"><button>세로셈 블록2</button></li>
+				<li data-src="1-5th" class="vic_mathToy"><button>매스토이</button></li>
+				<li data-src="1-5th" class="vic_frog"><button>가로셈 개구리</button></li>
+				<li data-src="1-5th" class="vic_Train"><button>가로셈 기차</button></li>
+
+				<li data-src="1-5th" class="vic_balloon"><button>주머니셈_3개</button></li>
+				<li data-src="1-5th" class="vic_lockClick"><button>자물쇠</button></li>
+				<li data-src="1-5th" class="vic_lotto"><button>로또</button></li>
+				<li data-src="1-5th" class="vic_numberCutDrag"><button>가르고 가르기</button></li>
+				<li data-src="1-5th" class="vic_numberCollectDrag"><button>모으고 모으기</button></li>
+				<li data-src="1-5th" class="vic_molegame2"><button>두더지게임2</button></li>
+				<li data-src="1-5th" class="vic_rabbit"><button>토끼</button></li>
+				<li data-src="1-5th" class="vic_selectcard"><button>카드 뒤집기</button></li>
+				<li data-src="1-5th" class="vic_pizza"><button>피자담기</button></li>
+				<li data-src="1-5th" class="vic_monkey"><button>원숭이</button></li>
+				<li data-src="1-5th" class="vic_numstick"><button>수막대 연산</button></li>
+				<li data-src="1-5th" class="vic_carterpillar"><button>애벌레</button></li>
+				<li data-src="1-5th" class="vic_balloon2"><button>열기구</button></li>
+
+				<li data-src="1-5th" class="vic_fancylamp"><button>장식전구</button></li>
+				<li data-src="1-5th" class="vic_motorcycle"><button>오토바이 타기</button></li>	
+				<li data-src="1-5th" class="vic_bowling"><button>볼링</button></li>	
+				<li data-src="1-5th" class="vic_balloon2"><button>열기구</button></li>
+				<li data-src="1-5th" class="vic_submarine"><button>잠수함</button></li>	
+				<li data-src="1-5th" class="vic_scale1"><button>디지털저울1</button></li>	
+				<li data-src="1-5th" class="vic_scale2"><button>디지털저울2</button></li>
+				<li data-src="1-5th" class="vic_squirrel"><button>다람쥐</button></li>
+				<li data-src="1-5th" class="vic_slide"><button>미끄럼틀</button></li>	
+				<li data-src="1-5th" class="vic_pea"><button>완두콩</button></li>
+				<li data-src="1-5th" class="vic_rabbitcave"><button>토끼굴</button></li>
+				<li data-src="1-5th" class="vic_tv"><button>TV</button></li>
+			</ul>
+			<ul>
+				<li>MathOdd - 6th</li>
+				<li data-src="6th" class="monkey"><button>원숭이</button></li>
+				<li data-src="6th" class="lockClick"><button>자물쇠</button></li> 
+				<li data-src="6th" class="seeSaw_n"><button>시소</button></li> 
+				<li data-src="6th" class="numstick"><button>두 수의 차</button></li>
+				<li data-src="6th" class="busStop"><button>버스정류자E</button></li>
+				<li data-src="6th" class="oxArrow"><button>ox퀴즈</button></li>
+				<li data-src="6th" class="sentenceComplete"><button>문장완성</button></li>
+				<li data-src="6th" class="animalShip"><button>자료의 정리</button></li>
+				<li data-src="6th" class="connectTrain"><button>기차(길이 재기)</button></li>
+				<li data-src="6th" class="connectTrain2"><button>기차(길이 재기) 2</button></li>
+				<li data-src="6th" class="pairCard"><button>짝찾기(도형) 3X2</button></li>
+				<li data-src="6th" class="pairCard2"><button>짝찾기(도형) 4X2</button></li>
+				<!-- 2st -->
+				<li data-src="6th" class="boomBalloon"><button>풍선 터트리기 4X2</button></li>
+				<li data-src="6th" class="boomBalloon_1"><button>풍선 터트리기 3X2</button></li>
+				<li data-src="6th" class="compareH"><button>비교하기(높이)</button></li>
+				<li data-src="6th" class="compareA"><button>비교하기(양)</button></li>
+				<li data-src="6th" class="compareW"><button>비교하기(무게)</button></li>
+				<li data-src="6th" class="arrowLength"><button>과녁판</button></li>
+				<li data-src="6th" class="animalCage"><button>동물 우리</button></li>
+				<li data-src="6th" class="ruler"><button>자로 재기</button></li>
+				<li data-src="6th" class="compareRuler"><button>길이 재기(비교)</button></li>
+				<li data-src="6th" class="rulerLength"><button>길이 재기</button></li>
+				<li data-src="6th" class="radius"><button>원1</button></li>
+				<li data-src="6th" class="diameter"><button>원2</button></li>
+				<!-- 3st -->
+				<li data-src="6th" class="iceCube1"><button>아이스큐브(7×1)</button></li>
+				<li data-src="6th" class="iceCube2"><button>아이스큐브(7×2)</button></li>
+				<li data-src="6th" class="hangingCard_A"><button>매달린 카드</button></li>
+				<li data-src="6th" class="rotateFigure"><button>평면도형 조작</button></li>
+				<li data-src="6th" class="dragBuildBlock"><button>쌓기나무 조작</button></li>
+				<li data-src="6th" class="mathTable"><button>덧곱셈표(5×5)</button></li>
+				<li data-src="6th" class="mathTable2"><button>덧곱셈표(4×4)</button></li>
+				<li data-src="6th" class="mathTable3"><button>덧곱셈표(3×3)</button></li>
+				<li data-src="6th" class="tableCalendar_A"><button>디지털시계맞추기_A</button></li>
+				<li data-src="6th" class="tableCalendar_B"><button>디지털시계맞추기_B</button></li>
+				<li data-src="6th" class="tableCalendar_C"><button>디지털시계맞추기_C</button></li>
+				<!-- 4st -->
+				<li data-src="6th" class="calendar"><button>달력</button></li>
+				<li data-src="6th" class="categorize"><button>분류하기</button></li>
+				<li data-src="6th" class="dragFigure"><button>도형찾기</button></li>
+				<li data-src="6th" class="objectCount"><button>분류하여 세기2</button></li>
+				<li data-src="6th" class="figureCount"><button>분류하여 세기2</button></li>
+				<li data-src="6th" class="circleCount"><button>분류하여 세기1</button></li>
+				<li data-src="6th" class="tangram"><button>칠교판</button></li>
+				<li data-src="6th" class="dataCategorize"><button>자료의 정리 - 드래그 드랍</button></li>
+				<li data-src="6th" class="spider"><button>거미줄_4*3</button></li>
+				<li data-src="6th" class="spider_1"><button>거미줄_3*3</button></li>
+				<!-- 5st -->
+				<li data-src="6th" class="setClock_HM"><button>바늘 시계 맞추기_시분(1)</button></li>
+				<li data-src="6th" class="setClock_HM2"><button>바늘 시계 맞추기_시분(2)</button></li>
+				<li data-src="6th" class="setClock_MS"><button>바늘 시계 맞추기_분초</button></li>
+				<li data-src="6th" class="setDigitalClock_HMS"><button>바늘 시계 읽기</button></li>
+				<li data-src="6th" class="sumTime"><button>시간의 계산</button></li>
+				<li data-src="6th" class="setDigitalClock_HM"><button>디지털 시계 맞추기</button></li>
+				<li data-src="6th" class="verticalSumTime3"><button>측정 세로셈(3)</button></li>
+				<li data-src="6th" class="verticalSumTime2"><button>측정 세로셈(2)</button></li>
+				<li data-src="6th" class="slotMachine"><button>슬롯머신(도형)</button></li>
+				<li data-src="6th" class="magneticMathCylinder"><button>mathCylinder(3*9)</button></li>
+				<li data-src="6th" class="verticalSum"><button>세로셈</button></li>
+				<li data-src="6th" class="buildBlock"><button>규칙 찾기-쌓기</button></li>
+
+				<!-- <li data-src="6th" class="tangram_square1"><button>칠교판 square1</button></li>
+				<li data-src="6th" class="tangram_square2"><button>칠교판 square2</button></li>
+				<li data-src="6th" class="tangram_square3"><button>칠교판 square3</button></li>
+				<li data-src="6th" class="tangram_square4"><button>칠교판 square4</button></li>
+				<li data-src="6th" class="tangram_square5"><button>칠교판 square5</button></li>
+				<li data-src="6th" class="tangram_square6"><button>칠교판 square6</button></li>
+				<li data-src="6th" class="tangram_square7"><button>칠교판 square7</button></li>
+				<li data-src="6th" class="tangram_square8"><button>칠교판 square8</button></li>
+				<li data-src="6th" class="tangram_triangle1"><button>칠교판 triangle1</button></li>
+				<li data-src="6th" class="tangram_triangle2"><button>칠교판 triangle2</button></li>
+				<li data-src="6th" class="tangram_triangle3"><button>칠교판 triangle3</button></li>
+				<li data-src="6th" class="tangram_triangle4"><button>칠교판 triangle4</button></li>
+				<li data-src="6th" class="tangram_house"><button>칠교판 house</button></li>
+				<li data-src="6th" class="tangram_candleLight"><button>칠교판 candleLight</button></li>
+				<li data-src="6th" class="tangram_tree"><button>칠교판 tree</button></li>
+				<li data-src="6th" class="tangram_bat"><button>칠교판 bat</button></li>
+				<li data-src="6th" class="tangram_ship"><button>칠교판 ship</button></li> -->
+			</ul>
+			<ul>
+				<li>MathOdd - 7th</li>
+				<!-- 1st -->
+				<li data-src="7th" class="7th_dollshooting"><button>인형사격장</button></li>
+				<li data-src="7th" class="7th_connectTrain"><button>기차 분수 계산</button></li>
+				<li data-src="7th" class="7th_findNumber"><button>수찾기</button></li>
+				<li data-src="7th" class="7th_flyballoon"><button>풍선날리기 분수 계산</button></li>
+				<li data-src="7th" class="7th_verticalSum_prNumber"><button>소수 세로셈</button></li>
+				<li data-src="7th" class="7th_pairCard"><button>짝찾기</button></li>
+				<li data-src="7th" class="7th_parking2"><button>주차하기2</button></li>
+				<li data-src="7th" class="7th_slotMachine"><button>슬롯머신 분수계산</button></li>
+				<li data-src="7th" class="7th_frogJump"><button>개구리 점프3</button></li>
+				<li data-src="7th" class="7th_secondFloorTrain"><button>기차_큰 수</button></li>
+				<li data-src="7th" class="7th_convertDivision"><button>나눗셈 변환</button></li>
+				
+				<!-- 2st -->
+				<li data-src="7th" class="7th_prNumberHanger"><button>소수로 나누기 가로셈</button></li>
+				<li data-src="7th" class="7th_buyGoods"><button>물건 구매</button></li>
+				<li data-src="7th" class="7th_multipleFraction"><button>진분수×자연수</button></li>
+				<li data-src="7th" class="7th_makeSimpleFraction"><button>매쓰실린더_기약분수</button></li>
+				<li data-src="7th" class="7th_divideWool"><button>털실 나누기</button></li>
+				<li data-src="7th" class="7th_shootingDrop"><button>레일</button></li>
+				<li data-src="7th" class="7th_shootingNumber"><button>레일_자리숫자</button></li>
+				<li data-src="7th" class="7th_shootingOrder"><button>레일_계산 순서</button></li>
+				<li data-src="7th" class="7th_matchDcPoint"><button>소수점 맞추기</button></li>
+				<li data-src="7th" class="7th_findDcPoint"><button>소수점 위치 찾기</button></li>
+	
+				<!-- 3st -->
+				<li data-src="7th" class="7th_numCardSum"><button>세로셈_숫자카드</button></li>
+				<li data-src="7th" class="7th_makeFormula"><button>식 만들기</button></li>
+				<li data-src="7th" class="7th_moveBox"><button>카드 옮기기(힌트)</button></li>
+				<li data-src="7th" class="7th_moveBox_noHint"><button>카드 옮기기</button></li>
+				<li data-src="7th" class="7th_comparePrice"><button>가격 비교</button></li>
+				<li data-src="7th" class="7th_seesaw"><button>시소(힌트)</button></li>
+				<li data-src="7th" class="7th_seesaw_noHint"><button>시소(힌트없음)</button></li>
+				<li data-src="7th" class="7th_submarine"><button>잠수함</button></li>
+	
+				<!-- 4st -->
+				<li data-src="7th" class="7th_panBalance"><button>양팔저울(힌트)</button></li>
+				<li data-src="7th" class="7th_panBalance_noHint"><button>양팔저울(힌트없음)</button></li>
+				<li data-src="7th" class="7th_sumPrFraction"><button>진분수그림 계산</button></li>
+				<li data-src="7th" class="7th_subtractMixFraction"><button>대분수 뺄셈 그림 계산</button></li>
+				<li data-src="7th" class="7th_addMixFraction"><button>대분수 덧셈 그림 계산</button></li>
+				<li data-src="7th" class="7th_GCD_LCM"><button>최대공약수, 최소공배수</button></li>
+				<li data-src="7th" class="7th_transport"><button>화물선</button></li>
+	
+				<!-- 5st -->
+				<li data-src="7th" class="7th_mobile"><button>모빌</button></li>
+				<li data-src="7th" class="7th_changeBlockM"><button>블록 교체(곱셈)</button></li>
+				<li data-src="7th" class="7th_reduceBlock_2"><button>블록 약분(두 수)</button></li>
+				<li data-src="7th" class="7th_changeBlockD"><button>블록 교체 (나눗셈)</button></li>
+				<li data-src="7th" class="7th_reduceBlock_3"><button>블록 약분(세 수)</button></li>
+				<li data-src="7th" class="7th_changeBlockD_addSymbol"><button>블록 교체(세 수 나눗셈)</button></li>
+				<li data-src="7th" class="7th_changeGoods"><button>화물 교체</button></li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		function loadingDemo (type) {
+			window.location.href = 'CUI.html?type=' + type;
+		}
+		window.onload = function () {
+			const list = document.querySelectorAll('li[data-src]');
+
+			Array.from(list).forEach((list) => {
+				const src = list.getAttribute('data-src');
+				const type = list.getAttribute('class');
+				const name = document.createElement('span');
+				const button = list.querySelector('button');
+				name.append(type);
+				list.append(name);
+				button.addEventListener('click', () => {
+					window.location.href = `${src}/CUI.html?type=${type}`;
+				});
+			});
+		}
+	</script>
+</html>
